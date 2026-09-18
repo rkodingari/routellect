@@ -1,0 +1,13 @@
+.git
+.venv
+.pytest_cache
+.ruff_cache
+frontend/node_modules
+frontend/dist
+data
+models
+outputs
+work
+*.db
+*.sqlite3
+*.gguf
