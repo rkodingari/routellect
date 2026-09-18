@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling==1.29.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "routellect"
+version = "0.5.0"
+description = "Private, evidence-backed LLM model and configuration advisor"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Routellect contributors" }]
+dependencies = [
+  "cryptography==50.0.1",
+  "fastapi==0.141.1",
+  "pydantic==2.13.5",
+  "uvicorn[standard]==0.53.0",
+]
+
+[project.optional-dependencies]
+assessor = ["llama-cpp-python==0.3.16"]
+dev = [
+  "httpx==0.28.1",
+  "pytest==8.4.2",
+  "pytest-cov==6.3.0",
+  "ruff==0.16.7",
+]
+
+[project.scripts]
+routellect = "routellect.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/routellect"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/routellect/data" = "routellect/data"
+"src/routellect/static" = "routellect/static"
+
+[tool.pytest.ini_options]
+addopts = "-q --strict-markers --disable-warnings"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
