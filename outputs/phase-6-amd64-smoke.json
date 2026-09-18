@@ -1,0 +1,62 @@
+{
+  "cleanup": {
+    "container_removed": true,
+    "image_retained": true,
+    "volume_removed": true
+  },
+  "generated_at": "2026-09-16T10:28:23.023575+00:00",
+  "image": {
+    "digest": "sha256:c344f83f15771cc5b81139aeb2cb5220e66446facc79b44561341c5d3a8873a7",
+    "id": "ffa908b8771c317a4d5dee6ae6680e9484e79e54b9686baae3d92034f7e3b1c9",
+    "reference": "localhost/routellect:0.5.0-amd64",
+    "size_bytes": 662008808
+  },
+  "performance": {
+    "advisory_latency_mean_ms": 15.453416899981676,
+    "advisory_latency_p50_ms": 13.94737500231713,
+    "advisory_latency_p95_ms": 19.43804199981969,
+    "advisory_throughput_requests_per_second": 64.70670070208669,
+    "podman_stats": {
+      "avg_cpu": "114.68%",
+      "block_io": "22.84MB / 610.8kB",
+      "cpu_percent": "114.68%",
+      "cpu_time": "8.305321s",
+      "id": "c0f1baff12a9",
+      "mem_percent": "3.01%",
+      "mem_usage": "122.9MB / 4.077GB",
+      "name": "routellect-g5-qa",
+      "net_io": "1.36kB / 628B",
+      "pids": "7"
+    },
+    "readiness_seconds": 5.324695084003906,
+    "sequential_advisory_requests": 20
+  },
+  "runtime": {
+    "capabilities_dropped": [
+      "CAP_CHOWN",
+      "CAP_DAC_OVERRIDE",
+      "CAP_FOWNER",
+      "CAP_FSETID",
+      "CAP_KILL",
+      "CAP_NET_BIND_SERVICE",
+      "CAP_SETFCAP",
+      "CAP_SETGID",
+      "CAP_SETPCAP",
+      "CAP_SETUID",
+      "CAP_SYS_CHROOT"
+    ],
+    "gid": 10001,
+    "health_status": "healthy",
+    "read_only_rootfs": true,
+    "ready_body": {
+      "catalog_version": "2026-09-15.g2-starter.1",
+      "status": "ok",
+      "version": "0.5.0"
+    },
+    "rootless": true,
+    "security_options": [
+      "no-new-privileges"
+    ],
+    "uid": 10001
+  }
+}
