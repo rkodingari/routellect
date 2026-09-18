@@ -1,0 +1,829 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Routellect API",
+    "version": "0.1.0-g1",
+    "description": "Advisory-only API for selecting an LLM and configuration. A bounded local assessor may produce semantic prompt features, but deterministic policy/scoring makes the final decision. The service never invokes a target model, requests provider credentials, reserves budget, or incurs provider charges."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8080"
+    }
+  ],
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "paths": {
+    "/health/live": {
+      "get": {
+        "operationId": "getLiveness",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Process is alive",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health/ready": {
+      "get": {
+        "operationId": "getReadiness",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Catalog and local stores are ready",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "$ref": "#/components/responses/ProblemResponse"
+          }
+        }
+      }
+    },
+    "/v1/model-recommendations": {
+      "post": {
+        "operationId": "createModelRecommendation",
+        "summary": "Recommend model configurations without executing them",
+        "description": "Analyzes the prompt locally, applies hard constraints, and returns up to three ranked configurations with reasons, estimates, uncertainty, and evidence freshness.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecommendationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ranked non-executing recommendation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecommendationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ProblemResponse"
+          },
+          "422": {
+            "$ref": "#/components/responses/ProblemResponse"
+          },
+          "429": {
+            "$ref": "#/components/responses/ProblemResponse"
+          }
+        }
+      }
+    },
+    "/v1/model-recommendations/{recommendation_id}": {
+      "get": {
+        "operationId": "getRecommendationReceipt",
+        "summary": "Get a content-free recommendation receipt",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/RecommendationId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Receipt without prompt content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecommendationReceipt"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/ProblemResponse"
+          }
+        }
+      }
+    },
+    "/v1/model-recommendations/{recommendation_id}/feedback": {
+      "post": {
+        "operationId": "createRecommendationFeedback",
+        "summary": "Record content-minimized recommendation feedback",
+        "description": "Stores structured outcome data without raw prompt or free-text feedback.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/RecommendationId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeedbackRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Feedback recorded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeedbackResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/ProblemResponse"
+          },
+          "422": {
+            "$ref": "#/components/responses/ProblemResponse"
+          }
+        }
+      }
+    },
+    "/v1/catalog/summary": {
+      "get": {
+        "operationId": "getCatalogSummary",
+        "summary": "Get catalog scope, provenance, and freshness",
+        "responses": {
+          "200": {
+            "description": "Active catalog summary",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogSummary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/benchmarks/runs": {
+      "get": {
+        "operationId": "listBenchmarkRuns",
+        "summary": "List offline benchmark runs",
+        "responses": {
+          "200": {
+            "description": "Run summaries",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["items"],
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/BenchmarkRun"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createBenchmarkRun",
+        "summary": "Start an offline replay benchmark",
+        "description": "Uses imported evidence only and performs no target-model calls.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BenchmarkRunRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Run accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BenchmarkRun"
+                }
+              }
+            }
+          },
+          "422": {
+            "$ref": "#/components/responses/ProblemResponse"
+          }
+        }
+      }
+    },
+    "/v1/benchmarks/runs/{run_id}": {
+      "get": {
+        "operationId": "getBenchmarkRun",
+        "summary": "Get offline benchmark status and metrics",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^run_[A-Za-z0-9_-]{12,64}$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Run details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BenchmarkRun"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/ProblemResponse"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Optional local deployment token. No provider credential is accepted."
+      }
+    },
+    "parameters": {
+      "RecommendationId": {
+        "name": "recommendation_id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "pattern": "^rec_[A-Za-z0-9_-]{12,64}$"
+        }
+      }
+    },
+    "responses": {
+      "ProblemResponse": {
+        "description": "Problem details",
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "HealthResponse": {
+        "type": "object",
+        "required": ["status", "version"],
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["ok", "degraded"]
+          },
+          "version": {
+            "type": "string"
+          },
+          "catalog_version": {
+            "type": ["string", "null"]
+          }
+        },
+        "additionalProperties": false
+      },
+      "PromptMessage": {
+        "type": "object",
+        "required": ["role", "content"],
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": ["system", "user", "assistant", "tool"]
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200000
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecommendationRequest": {
+        "type": "object",
+        "required": ["messages", "objective", "privacy"],
+        "properties": {
+          "messages": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 100,
+            "items": {
+              "$ref": "#/components/schemas/PromptMessage"
+            }
+          },
+          "objective": {
+            "type": "string",
+            "enum": ["balanced", "best_quality", "lowest_cost", "fastest"]
+          },
+          "privacy": {
+            "type": "string",
+            "enum": ["standard", "no_training", "local_only"],
+            "default": "no_training"
+          },
+          "max_cost_usd": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "latency_slo_ms": {
+            "type": ["integer", "null"],
+            "minimum": 1
+          },
+          "min_quality": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "required_capabilities": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": ["text", "vision", "audio", "tools", "structured_output", "long_context", "reasoning", "code"]
+            }
+          },
+          "expected_output_tokens": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1000000,
+            "default": 1000
+          },
+          "feedback_profile_id": {
+            "type": ["string", "null"],
+            "maxLength": 100,
+            "description": "Optional local profile used for private personalization."
+          },
+          "assessor_mode": {
+            "type": "string",
+            "enum": ["auto", "always", "off"],
+            "default": "off",
+            "description": "Off is the safe G2 default. Auto invokes the bounded local assessor only when deterministic profiling is uncertain."
+          }
+        },
+        "additionalProperties": false
+      },
+      "ModelConfiguration": {
+        "type": "object",
+        "required": ["configuration_id", "provider", "model_id", "settings"],
+        "properties": {
+          "configuration_id": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "model_id": {
+            "type": "string"
+          },
+          "settings": {
+            "type": "object",
+            "description": "Catalog-approved settings such as reasoning effort and output limit.",
+            "additionalProperties": true
+          },
+          "deployment": {
+            "type": "string",
+            "enum": ["hosted", "local", "self_hosted"]
+          }
+        },
+        "additionalProperties": false
+      },
+      "RangeEstimate": {
+        "type": "object",
+        "required": ["low", "expected", "high", "unit"],
+        "properties": {
+          "low": {
+            "type": "number",
+            "minimum": 0
+          },
+          "expected": {
+            "type": "number",
+            "minimum": 0
+          },
+          "high": {
+            "type": "number",
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "enum": ["usd", "ms", "score_0_1"]
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvidenceReference": {
+        "type": "object",
+        "required": ["evidence_id", "title", "observed_at", "source_type"],
+        "properties": {
+          "evidence_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": ["string", "null"],
+            "format": "uri"
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source_type": {
+            "type": "string",
+            "enum": ["provider_documentation", "public_benchmark", "local_benchmark", "user_feedback", "curated_rule"]
+          }
+        },
+        "additionalProperties": false
+      },
+      "RankedRecommendation": {
+        "type": "object",
+        "required": ["rank", "configuration", "confidence", "reasons", "quality", "cost", "latency", "evidence"],
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "label": {
+            "type": "string",
+            "enum": ["recommended", "economical_alternative", "privacy_latency_alternative"]
+          },
+          "configuration": {
+            "$ref": "#/components/schemas/ModelConfiguration"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "reasons": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "maxLength": 240
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 240
+            }
+          },
+          "quality": {
+            "$ref": "#/components/schemas/RangeEstimate"
+          },
+          "cost": {
+            "$ref": "#/components/schemas/RangeEstimate"
+          },
+          "latency": {
+            "$ref": "#/components/schemas/RangeEstimate"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvidenceReference"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PromptAnalysis": {
+        "type": "object",
+        "required": ["task_family", "difficulty", "estimated_input_tokens", "privacy_flags", "assessor"],
+        "properties": {
+          "task_family": {
+            "type": "string"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "uncertain"]
+          },
+          "estimated_input_tokens": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "privacy_flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "assessor": {
+            "$ref": "#/components/schemas/AssessorReport"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssessorReport": {
+        "type": "object",
+        "required": ["mode", "invoked", "status"],
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": ["auto", "always", "off"]
+          },
+          "invoked": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["not_needed", "disabled", "completed", "timed_out", "invalid_output", "unavailable"]
+          },
+          "assessor_version": {
+            "type": ["string", "null"]
+          },
+          "confidence": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "fallback_used": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecommendationResponse": {
+        "type": "object",
+        "required": ["recommendation_id", "created_at", "non_executing", "catalog_version", "catalog_observed_at", "analysis", "recommendations"],
+        "properties": {
+          "recommendation_id": {
+            "type": "string",
+            "pattern": "^rec_[A-Za-z0-9_-]{12,64}$"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "non_executing": {
+            "const": true
+          },
+          "catalog_version": {
+            "type": "string"
+          },
+          "catalog_observed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "analysis": {
+            "$ref": "#/components/schemas/PromptAnalysis"
+          },
+          "recommendations": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "$ref": "#/components/schemas/RankedRecommendation"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecommendationReceipt": {
+        "type": "object",
+        "required": ["recommendation_id", "created_at", "non_executing", "catalog_version", "objective", "privacy", "assessor", "selected_configuration_ids"],
+        "properties": {
+          "recommendation_id": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "non_executing": {
+            "const": true
+          },
+          "catalog_version": {
+            "type": "string"
+          },
+          "objective": {
+            "type": "string"
+          },
+          "privacy": {
+            "type": "string"
+          },
+          "assessor": {
+            "$ref": "#/components/schemas/AssessorReport"
+          },
+          "selected_configuration_ids": {
+            "type": "array",
+            "maxItems": 3,
+            "items": {
+              "type": "string"
+            }
+          },
+          "feedback_received": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FeedbackRequest": {
+        "type": "object",
+        "required": ["used_recommendation", "outcome"],
+        "properties": {
+          "used_recommendation": {
+            "type": "boolean"
+          },
+          "used_configuration_id": {
+            "type": ["string", "null"]
+          },
+          "outcome": {
+            "type": "string",
+            "enum": ["worked", "did_not_work", "unknown"]
+          },
+          "quality_rating": {
+            "type": ["integer", "null"],
+            "minimum": 1,
+            "maximum": 5
+          },
+          "observed_cost_usd": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "observed_latency_ms": {
+            "type": ["integer", "null"],
+            "minimum": 0
+          },
+          "preferred_over_configuration_id": {
+            "type": ["string", "null"],
+            "description": "Optional pairwise preference against another suggested configuration."
+          }
+        },
+        "additionalProperties": false
+      },
+      "FeedbackResponse": {
+        "type": "object",
+        "required": ["feedback_id", "recorded_at", "prompt_stored"],
+        "properties": {
+          "feedback_id": {
+            "type": "string"
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "prompt_stored": {
+            "const": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "CatalogSummary": {
+        "type": "object",
+        "required": ["catalog_version", "observed_at", "providers", "configuration_count", "freshness_status", "offline_available"],
+        "properties": {
+          "catalog_version": {
+            "type": "string"
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "providers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "configuration_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "freshness_status": {
+            "type": "string",
+            "enum": ["fresh", "aging", "stale"]
+          },
+          "offline_available": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BenchmarkRunRequest": {
+        "type": "object",
+        "required": ["evidence_snapshot_id", "advisor_versions", "split"],
+        "properties": {
+          "evidence_snapshot_id": {
+            "type": "string"
+          },
+          "advisor_versions": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "split": {
+            "type": "string",
+            "enum": ["development", "validation", "hidden_test", "feedback_holdout"]
+          },
+          "seed": {
+            "type": "integer",
+            "default": 42
+          }
+        },
+        "additionalProperties": false
+      },
+      "BenchmarkRun": {
+        "type": "object",
+        "required": ["run_id", "status", "non_executing", "created_at"],
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "pattern": "^run_[A-Za-z0-9_-]{12,64}$"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["queued", "running", "completed", "failed"]
+          },
+          "non_executing": {
+            "const": true
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completed_at": {
+            "type": ["string", "null"],
+            "format": "date-time"
+          },
+          "metrics": {
+            "type": ["object", "null"],
+            "additionalProperties": {
+              "type": ["number", "integer", "string", "boolean", "null"]
+            }
+          },
+          "error": {
+            "type": ["string", "null"]
+          }
+        },
+        "additionalProperties": false
+      },
+      "Problem": {
+        "type": "object",
+        "required": ["type", "title", "status"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "format": "uri-reference"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "minimum": 100,
+            "maximum": 599
+          },
+          "detail": {
+            "type": ["string", "null"]
+          },
+          "instance": {
+            "type": ["string", "null"],
+            "format": "uri-reference"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
