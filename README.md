@@ -14,6 +14,29 @@ Routellect is a private, evidence-backed advisor that recommends an LLM and infe
 - Private feedback: structured outcomes without raw-prompt retention.
 - One rootless Podman container, one port, one volume.
 
+## Architecture at a glance
+
+```mermaid
+flowchart LR
+    U[User prompt and constraints] --> I[Web dashboard, CLI, or API]
+    I --> P[Deterministic prompt profiler]
+    P --> A{Local assessor enabled?}
+    A -->|Auto or Always| E[SmolLM2 embeddings and task prototypes]
+    A -->|Off or safe fallback| H[Hard eligibility policy]
+    E --> V[Bounded semantic merge]
+    V --> H
+    C[(Versioned model catalog)] --> H
+    H --> S[Cost, latency, quality, and evidence scoring]
+    F[(Bounded local feedback)] --> S
+    S --> R[Pareto shortlist and explanations]
+    R --> U
+```
+
+The recommended model is never called. The local assessor can refine prompt understanding, while
+deterministic policy remains the final authority for privacy, eligibility, ranking, and cost. See
+[the detailed architecture](docs/architecture.md) for component, data-flow, privacy, feedback, and
+Podman deployment diagrams.
+
 ## Quick start with Podman
 
 ```sh
