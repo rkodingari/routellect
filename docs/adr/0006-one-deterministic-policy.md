@@ -1,7 +1,7 @@
 # ADR 0006: Expose one deterministic recommendation policy
 
 Date: 2026-09-24
-Status: Implemented at G8-B; awaiting sponsor verification approval
+Status: Implemented and approved at G8-B; G8-C pending
 
 ## Context
 

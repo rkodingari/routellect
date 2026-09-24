@@ -1,9 +1,9 @@
 # Routellect Phase 8-B Single-Policy Verification Report
 
 Date: 2026-09-24
-Status: Implementation complete; awaiting sponsor decision
+Status: Implementation approved; G8-C authorized
 Release authorized: **No**
-Container rebuild authorized: **No**
+Container verification: **Authorized at G8-C**
 
 ## Outcome
 
@@ -86,5 +86,5 @@ before any release decision. No Podman result is claimed here.
 
 ## Recommendation
 
-Approve G8-B as the completed single-policy implementation and authorize G8-C container/release
-verification. Approval must not authorize a release tag or a benchmark-quality claim.
+G8-B was approved on 2026-09-24. G8-C container/release verification is authorized, but a release
+tag and benchmark-quality claim remain unauthorized.

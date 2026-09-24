@@ -1,12 +1,13 @@
 # Routellect Phase 8-B Gate Review
 
 Date: 2026-09-24
-Status: **Awaiting sponsor decision**
+Status: **Approved as complete; G8-C authorized**
 
-## Decision requested
+## Sponsor decision
 
-Approve G8-B as the completed single-policy implementation and authorize G8-C container and release
-verification.
+On 2026-09-24, the sponsor responded `Approve G8-B`. This accepts G8-B as the completed
+single-policy implementation and authorizes G8-C container/release verification. It does not
+authorize a release tag or publication.
 
 ## Acceptance checklist
 

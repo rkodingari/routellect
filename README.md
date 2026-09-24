@@ -154,8 +154,8 @@ compute, regret, and reasoning-slice gates. G8-B now implements the approved sim
 Routellect has one `deterministic-unified-v1` policy, retaining the supported hard constraints and
 ranking while adding isolated boundary, negation, privacy, Unicode, and token-estimation hardening.
 The selector, alternate runtime, sparse module, and packaged strength artifacts are removed. The
-open G7-E range remains prohibited for tuning, and no new quality claim is made. G8-B awaits sponsor
-review; the Podman rebuild and release verification remain gated at G8-C. See the
+open G7-E range remains prohibited for tuning, and no new quality claim is made. G8-B is approved;
+G8-C container verification is in progress, while release publication remains gated. See the
 [G7-E verification report](outputs/phase-7e-verification-report.md) and
 [decision gate](outputs/phase-7e-gate-review.md) for full evidence and limitations, and the
 [G8 consolidation plan](outputs/phase-8-single-policy-consolidation-plan.md) for the approved

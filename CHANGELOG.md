@@ -70,6 +70,11 @@ the first release is approved.
 - Removed the CLI policy selector, alternate v3 advisor/profiler branches, sparse runtime module,
   packaged G7/G7-C2 strength artifacts, and obsolete policy-training implementations.
 
+### Approved gates
+
+- Sponsor approval of G8-B as the completed single-policy implementation, with G8-C container and
+  release verification authorized but release publication still gated.
+
 ### Security
 
 - No provider credentials, target-model adapters, prompt persistence, or runtime model downloads.

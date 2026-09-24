@@ -1,7 +1,7 @@
 # Routellect Phase 8 Single-Policy Consolidation Plan
 
 Date: 2026-09-24
-Status: G8-B implemented and verified; awaiting sponsor decision
+Status: G8-B approved; G8-C execution authorized
 Release status: Not authorized
 
 ## 1. Decision
@@ -151,5 +151,5 @@ change to the currently running production policy.
 The sponsor approved G8-B on 2026-09-24 by responding `Approve G8-B`. The implementation and
 software verification are complete. The verification plan's Podman bullet conflicted with the
 explicit G8-C phase boundary; the phase boundary controls. G8-B therefore verifies the built wheel,
-while G8-C owns the image rebuild and hardened container checks. G8-C and any release remain
-unauthorized pending the G8-B sponsor decision.
+while G8-C owns the image rebuild and hardened container checks. G8-C execution is authorized, but
+release publication remains unauthorized.
