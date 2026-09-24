@@ -53,6 +53,8 @@ the first release is approved.
   and automatic non-promotion after quality, compute, regret, and reasoning-slice gate failures.
 - Sponsor approval of G7-E as a completed one-time evaluation with the non-promotion decision
   accepted, deterministic-v2 retained, v3 inactive, and no second evaluation authorized.
+- G8-A architecture approval for one supported deterministic policy, preserving v2 constraints and
+  ranking while admitting only isolated prompt-safety hardening; implementation remains gated.
 
 ### Security
 

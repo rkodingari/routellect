@@ -162,7 +162,10 @@ frozen candidate improves utility over fixed and content-blind controls, but ret
 fixed quality, saves 9.69% normalized compute, closes 3.02% of Oracle regret, and materially
 underperforms on reasoning. The frozen conjunctive rule therefore rejects production promotion.
 Version 0.5.0 and deterministic-v2 remain the production defaults; v3 remains inactive and the open
-evaluation range is prohibited for tuning. Sponsor approval accepts this non-promotion outcome; it
-does not authorize another evaluation or a new phase. See the
+evaluation range is prohibited for tuning. Sponsor approval accepts this non-promotion outcome.
+G8-A subsequently approved the architecture for consolidating the product to one deterministic
+policy; implementation is gated at G8-B and has not changed runtime behavior. See the
 [G7-E verification report](outputs/phase-7e-verification-report.md) and
-[decision gate](outputs/phase-7e-gate-review.md) for full evidence and limitations.
+[decision gate](outputs/phase-7e-gate-review.md) for full evidence and limitations, and the
+[G8 consolidation plan](outputs/phase-8-single-policy-consolidation-plan.md) for the approved
+single-policy boundary.
