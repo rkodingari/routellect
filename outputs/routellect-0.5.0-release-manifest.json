@@ -1,0 +1,470 @@
+{
+  "assessor": {
+    "file": "smollm2-360m-instruct-q8_0.gguf",
+    "license": "Apache-2.0",
+    "repository": "HuggingFaceTB/SmolLM2-360M-Instruct-GGUF",
+    "revision": "593b5a2e04c8f3e4ee880263f93e0bd2901ad47f",
+    "sha256": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201"
+  },
+  "container": {
+    "architecture": "arm64",
+    "base_manifest_digests": {
+      "node:22-alpine": "sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32",
+      "python:3.12-slim": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea"
+    },
+    "digest": "sha256:7afa312429314eef520a6fb62da6347631e6c0655e81311ccd71cfc44151ca11",
+    "id": "32d70dbcb70d78d962c22b6fd3111ea286b6941fb054676ea6f9f02357682ca6",
+    "labels": {
+      "io.buildah.version": "1.45.0",
+      "org.opencontainers.image.description": "Private, advisory-only LLM model selection",
+      "org.opencontainers.image.licenses": "Apache-2.0",
+      "org.opencontainers.image.title": "Routellect",
+      "org.opencontainers.image.version": "0.5.0"
+    },
+    "os": "linux",
+    "reference": "localhost/routellect:0.5.0",
+    "repo_digests": [
+      "localhost/routellect@sha256:7afa312429314eef520a6fb62da6347631e6c0655e81311ccd71cfc44151ca11"
+    ],
+    "size_bytes": 683668416
+  },
+  "evidence": [
+    {
+      "path": "outputs/routellect-0.5.0.cdx.json",
+      "sha256": "f9c14b5548fc7fd37c9b771be2dbd4298ed1018df0903167056d43667a76a36d",
+      "size": 92122
+    },
+    {
+      "path": "outputs/phase-6-license-report.md",
+      "sha256": "e1d7c936a0368f7d78ddb16c7cf2b021e7e29f586486dcd41bd2990714bc73ef",
+      "size": 7316
+    },
+    {
+      "path": "outputs/phase-6-trivy-sbom-report.json",
+      "sha256": "07ebc4ff94cdb613e251d0191fdd7317043e35f9240d293d5892b5e7c051ebc9",
+      "size": 28090
+    },
+    {
+      "path": "outputs/phase-6-pnpm-audit.json",
+      "sha256": "57ce2f84b4c3d56f745ff3ea2b037c9679add6e166ba1cee2c3e4ad20cb5dd94",
+      "size": 274
+    },
+    {
+      "path": "outputs/phase-6-debian-security.json",
+      "sha256": "a44f4b57ad12d59bcbaaece74b161913369600d7baf47223a2afbcd0d9a1d7d2",
+      "size": 56988
+    },
+    {
+      "path": "outputs/phase-6-secret-scan.json",
+      "sha256": "cfae1bf5e8832dfd12a76489a5eba797d99caca5583eb38993962f72d8b67073",
+      "size": 373
+    },
+    {
+      "path": "outputs/phase-6-vulnerability-report.md",
+      "sha256": "90c9739ffc26667a8260d16af74fd8280835789a9bfcc1a0f0c09f257fc4d5b2",
+      "size": 3729
+    },
+    {
+      "path": "outputs/phase-6-resilience-results.json",
+      "sha256": "ae851d1e48af232c7b13060cde830722a0d3b9f6f5707f2e9eaea051e2a8d391",
+      "size": 2684
+    },
+    {
+      "path": "outputs/phase-6-backup-restore-report.md",
+      "sha256": "fbc2c50163a9e7aed7e3c9b48e1f1811436eff04cb5560283ca3357ece14dfbb",
+      "size": 1392
+    },
+    {
+      "path": "outputs/phase-6-amd64-smoke.json",
+      "sha256": "d656093b81acce026f9ef205469e06c05780f343d8ef4ae073b26d88560f49a1",
+      "size": 1695
+    },
+    {
+      "path": "outputs/phase-6-multiarch-report.md",
+      "sha256": "20cb07e921d82ff30a622b94b651b5760102772ba9fe4958b188333d76f0a193",
+      "size": 1895
+    },
+    {
+      "path": "outputs/phase-6-operator-runbook.md",
+      "sha256": "02df79ac8215652091f3e9d742d4e5631d0732a2b97f9c1f6ba6ae2bff9c1de9",
+      "size": 4668
+    },
+    {
+      "path": "outputs/phase-5-benchmark-results.json",
+      "sha256": "ea07ef961d8bcfa37d7fb3bf54e1871f85d5450b1a2d95d5edbd0b07ce492c58",
+      "size": 113188
+    },
+    {
+      "path": "outputs/phase-5-container-benchmark.json",
+      "sha256": "8a37ea30629191833336d6aabbcc9fdeca7fcc15c2ed4435cabde011c6218d93",
+      "size": 1688
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "5db9e72b00bbbfcc414748b87dda7f6ce7a7b882e978144f5ff46a0fe4370e77",
+      "size": 559
+    },
+    {
+      "path": "frontend/pnpm-lock.yaml",
+      "sha256": "cf8b1f8632c8d00c98f4c92b09b3c22c8ae09ba33a1f1666f1da05e1f016bab5",
+      "size": 23648
+    },
+    {
+      "path": "Containerfile",
+      "sha256": "0bfefb9ddd93d949fa2daaaf108f6af54565236107bdded238c66b5d68009909",
+      "size": 3470
+    }
+  ],
+  "generated_at": "2026-09-16T10:46:58.391703+00:00",
+  "release": {
+    "name": "Routellect",
+    "publication_authorized": false,
+    "status": "gated-release-candidate",
+    "version": "0.5.0"
+  },
+  "schema": "routellect-release-manifest-v1",
+  "source": {
+    "excluded_names": [
+      "*.tsbuildinfo",
+      ".DS_Store",
+      ".coverage"
+    ],
+    "excluded_parts": [
+      ".git",
+      ".pytest_cache",
+      ".ruff_cache",
+      ".venv",
+      "__pycache__",
+      "data",
+      "dist",
+      "node_modules",
+      "outputs",
+      "work"
+    ],
+    "file_count": 63,
+    "files": [
+      {
+        "path": ".containerignore",
+        "sha256": "1cf4a0abfa8b92e0e9a7c8da1f0063c85729118af3273f6747a039854a853dbf",
+        "size": 120
+      },
+      {
+        "path": ".editorconfig",
+        "sha256": "6297da6b1169de32dca2f6184b4eaa63a8bb6c7e1c66c20d6e813166256e3856",
+        "size": 202
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "sha256": "234ba7c8371fa8512edc9dc39533f8cbce0fe6f918aa929d3a160c9e11457ff4",
+        "size": 1017
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "141b1a22e41e3b39f470287cf8b086b6c5b1e01378c54f8649c7d7b3995c8377",
+        "size": 180
+      },
+      {
+        "path": "CHANGELOG.md",
+        "sha256": "20e130b44e4f43885aeec351e27d80e3af8969a69e9343e11a43cb2b6fbe717a",
+        "size": 2881
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "sha256": "3f1d2290fc9482ccaa2e2a48e4117d2d38b6aea5d6d017bc30a40161a2a78230",
+        "size": 900
+      },
+      {
+        "path": "Containerfile",
+        "sha256": "0bfefb9ddd93d949fa2daaaf108f6af54565236107bdded238c66b5d68009909",
+        "size": 3470
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "size": 11357
+      },
+      {
+        "path": "README.md",
+        "sha256": "fc8e29f3cd45b92913014ffe8e53d1d4d2088a1bd59ba96eb8eccd92fc5066a0",
+        "size": 5594
+      },
+      {
+        "path": "SECURITY.md",
+        "sha256": "059e221ed93b959c50e58e5816d8a1f881ae2bdb93b9e2d5f47305290ed78b15",
+        "size": 1598
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "d5f4994254e9bd7bf34fea9413e14a88e5497556a403c615651ed6800a7beb2a",
+        "size": 826
+      },
+      {
+        "path": "docs/adr/0001-advisory-only-hybrid-selection.md",
+        "sha256": "bba442344788a1788deca660027b654e8b7edef59f5ec970df65749bddc50860",
+        "size": 1556
+      },
+      {
+        "path": "docs/adr/0002-signed-catalog-and-bounded-feedback.md",
+        "sha256": "01a8af6fd5595e9dc7d74cdbd3c02f16a24d703bc493b00474f65b807ba45dab",
+        "size": 2714
+      },
+      {
+        "path": "docs/adr/0003-explainable-pareto-advisor.md",
+        "sha256": "af69008ba4e9c34a84e43062a2dd2be18826858347083a136499980c7c2153ab",
+        "size": 2713
+      },
+      {
+        "path": "docs/adr/0004-frozen-external-evidence.md",
+        "sha256": "46c2c7141989cd4b03fcf471203d799f9ba151ee3748058763a2c1e66c06a874",
+        "size": 2138
+      },
+      {
+        "path": "frontend/index.html",
+        "sha256": "86e8a4d36bfb430b44c50e5a55999325bfe8ed03af9c850b2c7394bc99b06860",
+        "size": 456
+      },
+      {
+        "path": "frontend/package.json",
+        "sha256": "493cccb7b24c56c4add9cbb5aea55a6eac585a46cc029d2d4374040ba5b0e9de",
+        "size": 501
+      },
+      {
+        "path": "frontend/pnpm-lock.yaml",
+        "sha256": "cf8b1f8632c8d00c98f4c92b09b3c22c8ae09ba33a1f1666f1da05e1f016bab5",
+        "size": 23648
+      },
+      {
+        "path": "frontend/public/favicon.svg",
+        "sha256": "9a416358fd987af28f7e0c37be12669d03286da3ea67eca32d5d753360e6f09a",
+        "size": 250
+      },
+      {
+        "path": "frontend/src/App.tsx",
+        "sha256": "1d4a1293ba278e60eafc5870f07789025a0afe90f8849433850c42e586a031f4",
+        "size": 23030
+      },
+      {
+        "path": "frontend/src/main.tsx",
+        "sha256": "ccbefe7be6c69706a1bb01c4c3f20492eb002435af6ba7e5a6d45f7c6aa3a140",
+        "size": 232
+      },
+      {
+        "path": "frontend/src/styles.css",
+        "sha256": "1c6cadfa4e96b7c86d3dcc51527b3bb546e5ce5a1dd0d8710e15ae40505b3fa0",
+        "size": 15003
+      },
+      {
+        "path": "frontend/src/vite-env.d.ts",
+        "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+        "size": 38
+      },
+      {
+        "path": "frontend/tsconfig.app.json",
+        "sha256": "a7266d1c85fa6947c70073256d9a73e4c459e97b0b4ef24b5c48dcab498ef4c5",
+        "size": 507
+      },
+      {
+        "path": "frontend/tsconfig.json",
+        "sha256": "b6d51d37a8d51b993bd758b7043fa9233eea24d34a4041198ff73c063d9ed66c",
+        "size": 71
+      },
+      {
+        "path": "frontend/vite.config.ts",
+        "sha256": "022f9f14523ae05386f13d87847476b3ef95d0e7cf42d0930b8b590579c64380",
+        "size": 276
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "6ecc7c747e3534b74220feb1cdeefe5c621a8e24444f6a185e4a8a895cb83717",
+        "size": 1092
+      },
+      {
+        "path": "requirements-dev.lock",
+        "sha256": "5db9e72b00bbbfcc414748b87dda7f6ce7a7b882e978144f5ff46a0fe4370e77",
+        "size": 559
+      },
+      {
+        "path": "scripts/acquire_r2_subset.py",
+        "sha256": "2309a23061f25955b98636d91eb8d5608279860182b54d69b7a5c942c77e1629",
+        "size": 8979
+      },
+      {
+        "path": "scripts/create_release_manifest.py",
+        "sha256": "249dd5b57c63f7953809450aff1ec89555e9618c03ba80203f77bd01097f18e3",
+        "size": 6016
+      },
+      {
+        "path": "scripts/generate_sbom.py",
+        "sha256": "9595bb6211f1ec0393f38db9f97fedf5cce70f0e398c193f30b0ceeaa89f9442",
+        "size": 11829
+      },
+      {
+        "path": "scripts/run_g5_benchmark.py",
+        "sha256": "f5860393c46bbe77a335dc9a493a420fd33e938015528392b1e9c7b4b1e5a1a8",
+        "size": 1892
+      },
+      {
+        "path": "scripts/run_g6_resilience.py",
+        "sha256": "9e0605ced4701e0b0774706d602633108f59c5336011a4ee4f743818d2d885d1",
+        "size": 13983
+      },
+      {
+        "path": "scripts/scan_debian_security.py",
+        "sha256": "559d521ac235df1e5075c4404049e6d66692fddd761b0726f8e49b6b9b60485c",
+        "size": 4607
+      },
+      {
+        "path": "scripts/scan_secrets.py",
+        "sha256": "0625b73c039670fccf91d5b7b41b65f87b29e274d760e3618f75641acc3010d7",
+        "size": 2808
+      },
+      {
+        "path": "scripts/sign_release_manifest.py",
+        "sha256": "2ffef4c5978a84607dd2adc4fd3ec531a800e1fe3ffb2fe7ab9af7adc99f1123",
+        "size": 4278
+      },
+      {
+        "path": "scripts/verify_podman.py",
+        "sha256": "06dd273a3de57b3b75206db573767909d8d02039f2aa3d5138d8fd433a09e2ca",
+        "size": 6979
+      },
+      {
+        "path": "scripts/verify_release_manifest.py",
+        "sha256": "d805d89c4e3cdc4be71c42487ca624c838d72b8a4e785dd873dd39932d05afb2",
+        "size": 2223
+      },
+      {
+        "path": "src/routellect/__init__.py",
+        "sha256": "37ad12827f2487139f223c02967f893ce34934ab19d92a07412bc2b0aa6e79b4",
+        "size": 78
+      },
+      {
+        "path": "src/routellect/advisor.py",
+        "sha256": "3cb810e155e08f16b4cf58acf5bfdc1de722ad3f74561a0ad6689e115433e2dc",
+        "size": 17134
+      },
+      {
+        "path": "src/routellect/api.py",
+        "sha256": "507bf7e368cf77b03629790a0248b1dcb4327f9195ca4a2d38af8f340ee0c364",
+        "size": 9718
+      },
+      {
+        "path": "src/routellect/assessor.py",
+        "sha256": "352a61540eccad12ab9431ac43abdd39e7b430dbe5cf731ad8c0138eda80d898",
+        "size": 10872
+      },
+      {
+        "path": "src/routellect/backup.py",
+        "sha256": "f32e86cb2e18150376c2ba8eb7073e897d29017053c0b11fe9a1d93fc8696a38",
+        "size": 8622
+      },
+      {
+        "path": "src/routellect/benchmark.py",
+        "sha256": "fba997582c449333f5b6caecba490365bc6ccfe77f6aa46cda1f4136b0141d69",
+        "size": 3598
+      },
+      {
+        "path": "src/routellect/catalog.py",
+        "sha256": "e91274e9561b21a8f142e4b8853a156349d253f352a6b8ae18f84cd88b7c08a8",
+        "size": 14934
+      },
+      {
+        "path": "src/routellect/cli.py",
+        "sha256": "3f81d1001b870d6e23669192560066f1c7fbdd9d362a6c2975f34a069027303f",
+        "size": 8971
+      },
+      {
+        "path": "src/routellect/evidence_benchmark.py",
+        "sha256": "228557dd2ddaa0dfee5f11badc6c225c89d4511bd9358f46510ca4ac9d4a19eb",
+        "size": 24065
+      },
+      {
+        "path": "src/routellect/learning.py",
+        "sha256": "963a2794b38b6369648b663586ee91e2ac219d4f500f87b40b9950f1ee154f13",
+        "size": 8427
+      },
+      {
+        "path": "src/routellect/profiler.py",
+        "sha256": "45896cd8f206c8b77bde740d7ed727b39682ba82ed64a48c3c716141500ffe9d",
+        "size": 4943
+      },
+      {
+        "path": "src/routellect/schemas.py",
+        "sha256": "a2863fefae83f54bfe81686a70228e3a5593c3a8cb24989c1ec6dd3291c218e6",
+        "size": 9626
+      },
+      {
+        "path": "src/routellect/security.py",
+        "sha256": "49f1b43dccafcc301d001406e6481b86dba3078c67bc847721e6e4f073e83adc",
+        "size": 1606
+      },
+      {
+        "path": "src/routellect/static/index.html",
+        "sha256": "0b7c0f95770d16b7e2e82a9dcbb83f228ca056bdc31c7bda7d2e7f786099c436",
+        "size": 205
+      },
+      {
+        "path": "src/routellect/storage.py",
+        "sha256": "5839ee31656821451faacb5199f2b45ccb09c2ea0b9f9aa934db90415e22611c",
+        "size": 25432
+      },
+      {
+        "path": "tests/test_advisor.py",
+        "sha256": "dde0b3caf573151ab295e71f85003f74f0c5f76e03e79968f82a0e73e43ae6ee",
+        "size": 3654
+      },
+      {
+        "path": "tests/test_api.py",
+        "sha256": "c2c225cd9787e1c77f3c0b3ef5ab112f3c19869b96a97bbc00368e1ae2f38a77",
+        "size": 6168
+      },
+      {
+        "path": "tests/test_assessor.py",
+        "sha256": "4189c92cd7863df1c85bb31011cb47634ffe5b4d6bd7240a943ca40c505d54a3",
+        "size": 2433
+      },
+      {
+        "path": "tests/test_backup.py",
+        "sha256": "79a7aebfb0a63893a87ef2c9934a4193d5b3654296597b82908d531dfd280fad",
+        "size": 3917
+      },
+      {
+        "path": "tests/test_catalog.py",
+        "sha256": "f882f814c393c2af159206fc407210e4924a443d03629d3e80886143cf28d76f",
+        "size": 4704
+      },
+      {
+        "path": "tests/test_cli.py",
+        "sha256": "581b4ae909395c3188fd41629652cf86541174a169e218b92d51e232287da63c",
+        "size": 943
+      },
+      {
+        "path": "tests/test_evidence_benchmark.py",
+        "sha256": "4fb1778a993dfedbd7d6e9d4ee406eb035496df7d453c78718f76b9892b672c8",
+        "size": 5780
+      },
+      {
+        "path": "tests/test_feedback.py",
+        "sha256": "f0a79cf2dd164caaa05c105ccd895180044d5f52636ab446c616f12999c3c152",
+        "size": 7109
+      },
+      {
+        "path": "tests/test_profiler.py",
+        "sha256": "bc29ca51a366f11fda948174cc2d4c658bf6ff8f95f01b9e065bcf7430c103de",
+        "size": 795
+      },
+      {
+        "path": "tests/test_security.py",
+        "sha256": "2ec3251f3e23a4319a7a3de0f23ae1848ab78c07b0db7b2afb968e066073e819",
+        "size": 804
+      }
+    ],
+    "tree_sha256": "2cd921ce4a05671c1beb68bc32c110b5bb43f5f97e5138fe6190cba0ad60301c"
+  },
+  "toolchain": {
+    "podman": "6.1.0",
+    "python": "Python 3.9.6",
+    "sbom_standard": "CycloneDX 1.6",
+    "vulnerability_scanner": "Trivy 0.74.0, ghcr.io arm64 digest sha256:55ad20f8a239a3e95427e60b8aaea38788550c18a3f1772976bebf732e6ae166"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "artifact": {
+    "nonzero_coefficients": 16384,
+    "path": "src/routellect/data/g7_sparse_strength.json",
+    "sha256": "8c400afbdadec584ab2ae46a927a1688bf3f62bc29367f0fc6807b93b3a2fd44"
+  },
+  "claim_boundary": "Development/validation-only historical evidence for the frozen R2-Bench pool; not a production or universal model-quality claim. Hidden evidence remains unopened.",
+  "data": {
+    "development_rows": 6045,
+    "development_sha256": "43ff060dd693bc95fd9311f9b543dbd11dd2a063a1a90bd654138847a2f4ec20",
+    "internal_fit_rows": 4840,
+    "internal_tune_rows": 1205,
+    "validation_rows": 2006,
+    "validation_sha256": "5813d2a164dc2f4d9fb4dfc08853ef238fc5eb66a3f5fc2a75e846131880cfe0"
+  },
+  "protocol": {
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 314159,
+    "cost_weight": 0.2,
+    "created_at": "2026-09-21T17:52:36.637919+00:00",
+    "hidden_test_runs": 0,
+    "name": "Routellect G7-C development/validation sparse policy",
+    "target_model_calls": 0,
+    "validation_runs": 1
+  },
+  "selected_attempt_index": 5,
+  "tuning_attempts": [
+    {
+      "include_profile_features": false,
+      "l2": 0.0001,
+      "learning_rate": 0.02,
+      "mean_correctness": 0.48439834,
+      "mean_normalized_compute": 0.67920332,
+      "mean_utility": 0.34855768,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.73443983,
+        "Qwen2.5-Math-1.5B-Instruct": 0.06804979,
+        "Qwen2.5-Math-7B-Instruct": 0.06390041,
+        "Qwen3-0.6B": 0.13360996
+      },
+      "rows": 1205
+    },
+    {
+      "include_profile_features": false,
+      "l2": 0.001,
+      "learning_rate": 0.02,
+      "mean_correctness": 0.48439834,
+      "mean_normalized_compute": 0.68227235,
+      "mean_utility": 0.34794387,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.73941909,
+        "Qwen2.5-Math-1.5B-Instruct": 0.06804979,
+        "Qwen2.5-Math-7B-Instruct": 0.06058091,
+        "Qwen3-0.6B": 0.13195021
+      },
+      "rows": 1205
+    },
+    {
+      "include_profile_features": false,
+      "l2": 0.0001,
+      "learning_rate": 0.05,
+      "mean_correctness": 0.43427386,
+      "mean_normalized_compute": 0.55379878,
+      "mean_utility": 0.3235141,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.58921162,
+        "Qwen2.5-Math-1.5B-Instruct": 0.09626556,
+        "Qwen2.5-Math-7B-Instruct": 0.1153527,
+        "Qwen3-0.6B": 0.19917012
+      },
+      "rows": 1205
+    },
+    {
+      "include_profile_features": false,
+      "l2": 0.001,
+      "learning_rate": 0.05,
+      "mean_correctness": 0.4386722,
+      "mean_normalized_compute": 0.5641303,
+      "mean_utility": 0.32584614,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.60082988,
+        "Qwen2.5-Math-1.5B-Instruct": 0.09377593,
+        "Qwen2.5-Math-7B-Instruct": 0.11369295,
+        "Qwen3-0.6B": 0.19170124
+      },
+      "rows": 1205
+    },
+    {
+      "include_profile_features": true,
+      "l2": 0.0001,
+      "learning_rate": 0.02,
+      "mean_correctness": 0.48298755,
+      "mean_normalized_compute": 0.6760014,
+      "mean_utility": 0.34778727,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.73195021,
+        "Qwen2.5-Math-1.5B-Instruct": 0.06721992,
+        "Qwen2.5-Math-7B-Instruct": 0.06639004,
+        "Qwen3-0.6B": 0.13443983
+      },
+      "rows": 1205
+    },
+    {
+      "include_profile_features": true,
+      "l2": 0.001,
+      "learning_rate": 0.02,
+      "mean_correctness": 0.48556017,
+      "mean_normalized_compute": 0.68427914,
+      "mean_utility": 0.34870434,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.74107884,
+        "Qwen2.5-Math-1.5B-Instruct": 0.06307054,
+        "Qwen2.5-Math-7B-Instruct": 0.06141079,
+        "Qwen3-0.6B": 0.13443983
+      },
+      "rows": 1205
+    },
+    {
+      "include_profile_features": true,
+      "l2": 0.0001,
+      "learning_rate": 0.05,
+      "mean_correctness": 0.43352697,
+      "mean_normalized_compute": 0.55360974,
+      "mean_utility": 0.32280502,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.58838174,
+        "Qwen2.5-Math-1.5B-Instruct": 0.09792531,
+        "Qwen2.5-Math-7B-Instruct": 0.11784232,
+        "Qwen3-0.6B": 0.19585062
+      },
+      "rows": 1205
+    },
+    {
+      "include_profile_features": true,
+      "l2": 0.001,
+      "learning_rate": 0.05,
+      "mean_correctness": 0.44091286,
+      "mean_normalized_compute": 0.56949151,
+      "mean_utility": 0.32701456,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.60746888,
+        "Qwen2.5-Math-1.5B-Instruct": 0.09045643,
+        "Qwen2.5-Math-7B-Instruct": 0.11120332,
+        "Qwen3-0.6B": 0.19087137
+      },
+      "rows": 1205
+    }
+  ],
+  "validation": {
+    "compute_reduction_vs_fixed": 0.26885223,
+    "g7_promotion_checks": {
+      "compute_reduction_lower_95ci_at_least_0_40": false,
+      "oracle_regret_reduction_at_least_0_20": false,
+      "quality_retention_lower_95ci_at_least_0_99": false,
+      "utility_vs_content_blind_lower_95ci_above_zero": true,
+      "utility_vs_fixed_lower_95ci_above_zero": false
+    },
+    "lexical_v3": {
+      "mean_correctness": 0.53659023,
+      "mean_normalized_compute": 0.91776036,
+      "mean_utility": 0.35303816,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 1.0
+      },
+      "rows": 2006
+    },
+    "oracle": {
+      "mean_correctness": 0.60558325,
+      "mean_normalized_compute": 0.48028246,
+      "mean_utility": 0.50952676,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.49152542,
+        "Qwen2.5-Math-1.5B-Instruct": 0.10269192,
+        "Qwen2.5-Math-7B-Instruct": 0.12861416,
+        "Qwen3-0.6B": 0.27716849
+      },
+      "rows": 2006
+    },
+    "oracle_regret_reduction_vs_fixed": 0.01717929,
+    "paired_bootstrap_95ci": {
+      "compute_reduction_vs_fixed": [
+        0.24844089,
+        0.28876384
+      ],
+      "oracle_regret_reduction_vs_fixed": [
+        -0.05455298,
+        0.07904211
+      ],
+      "quality_retention_vs_fixed": [
+        0.89243248,
+        0.93224277
+      ],
+      "utility_difference_vs_content_blind": [
+        0.03697665,
+        0.06157636
+      ],
+      "utility_difference_vs_fixed": [
+        -0.00809189,
+        0.01282559
+      ]
+    },
+    "paired_utility_difference_sparse_vs_content_blind": 0.04899622,
+    "paired_utility_difference_sparse_vs_fixed": 0.00268836,
+    "quality_retention_vs_fixed": 0.91304348,
+    "share_matched_content_blind": {
+      "mean_correctness": 0.43808574,
+      "mean_normalized_compute": 0.6567772,
+      "mean_utility": 0.3067303,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.70488534,
+        "Qwen2.5-Math-1.5B-Instruct": 0.06729811,
+        "Qwen2.5-Math-7B-Instruct": 0.08574277,
+        "Qwen3-0.6B": 0.14207378
+      },
+      "rows": 2006
+    },
+    "sparse_v3": {
+      "mean_correctness": 0.48993021,
+      "mean_normalized_compute": 0.67101844,
+      "mean_utility": 0.35572652,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.70488534,
+        "Qwen2.5-Math-1.5B-Instruct": 0.06729811,
+        "Qwen2.5-Math-7B-Instruct": 0.08574277,
+        "Qwen3-0.6B": 0.14207378
+      },
+      "rows": 2006
+    },
+    "strongest_fixed": {
+      "mean_correctness": 0.53659023,
+      "mean_normalized_compute": 0.91776036,
+      "mean_utility": 0.35303816,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 1.0
+      },
+      "rows": 2006
+    }
+  }
+}

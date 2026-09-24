@@ -1,0 +1,17 @@
+{
+  "algorithm": "Ed25519",
+  "manifest": "outputs/routellect-0.5.0-release-manifest.json",
+  "manifest_sha256": "86cd4339bfe2da40f60002353d89cb39874d32315942902eda5b98c44274c6ec",
+  "private_key_in_deliverables": false,
+  "private_key_location": "work/g6-release-qa-ed25519-private.pem",
+  "production_signing": false,
+  "public_key": "outputs/routellect-0.5.0-release-public-key.pem",
+  "public_key_sha256": "1a1b294ea54601e7812992bfbbde088bb33efcaeba77691f75b95faebf74623d",
+  "publication_note": "For publication, sign the final registry digest or this manifest with Cosign keyless sign-blob and retain the Sigstore bundle.",
+  "purpose": "offline G6 QA release-manifest signature",
+  "schema": "routellect-release-signature-receipt-v1",
+  "signature": "outputs/routellect-0.5.0-release-manifest.sig",
+  "signature_verified": true,
+  "tamper_test_rejected": true,
+  "verified_at": "2026-09-16T10:46:58.702478+00:00"
+}

@@ -1,0 +1,3476 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "pkg:deb/debian/adduser@3.152",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+"
+          }
+        }
+      ],
+      "name": "adduser",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/adduser/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/adduser@3.152",
+      "type": "library",
+      "version": "3.152"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/apt@3.0.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND Expat AND GPL-2 AND GPL-2+ AND GPL-2+ and curl AND curl"
+          }
+        }
+      ],
+      "name": "apt",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/apt/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/apt@3.0.3",
+      "type": "library",
+      "version": "3.0.3"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/base-files@13.8+deb13u6",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND verbatim"
+          }
+        }
+      ],
+      "name": "base-files",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/base-files/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/base-files@13.8+deb13u6",
+      "type": "library",
+      "version": "13.8+deb13u6"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/base-passwd@3.6.7",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2 AND public-domain"
+          }
+        }
+      ],
+      "name": "base-passwd",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/base-passwd/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/base-passwd@3.6.7",
+      "type": "library",
+      "version": "3.6.7"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/bash@5.2.37-2+b9",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-4-clause-UC AND BSD-4-clause-UC and MIT-like AND GFDL-NIV-1.3 AND GPL-2+ AND GPL-3+ AND GPL-3+ with Bison exception AND Latex2e AND MIT-like AND permissive"
+          }
+        }
+      ],
+      "name": "bash",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/bash/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/bash@5.2.37-2+b9",
+      "type": "library",
+      "version": "5.2.37-2+b9"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/bsdutils@1:2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-4-clause AND BSLA AND Expat AND GPL-2 AND GPL-2+ AND GPL-3+ AND ISC AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3+ AND public-domain"
+          }
+        }
+      ],
+      "name": "bsdutils",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/bsdutils/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/bsdutils@1:2.41.5-0+deb13u1",
+      "type": "library",
+      "version": "1:2.41.5-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/ca-certificates@20250419",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND MPL-2.0"
+          }
+        }
+      ],
+      "name": "ca-certificates",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/ca-certificates/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/ca-certificates@20250419",
+      "type": "library",
+      "version": "20250419"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/coreutils@9.7-3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-4-clause-UC AND FSFULLR AND GFDL-NIV-1.3 AND GPL-3+ AND GPL-3+ and BSD-4-clause-UC AND GPL-3+ and ISC AND ISC"
+          }
+        }
+      ],
+      "name": "coreutils",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/coreutils/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/coreutils@9.7-3",
+      "type": "library",
+      "version": "9.7-3"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/dash@0.5.12-12",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause AND BSD-3-clause AND GPL-2+ AND public-domain"
+          }
+        }
+      ],
+      "name": "dash",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/dash/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/dash@0.5.12-12",
+      "type": "library",
+      "version": "0.5.12-12"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/debconf@1.5.91",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause"
+          }
+        }
+      ],
+      "name": "debconf",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/debconf/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/debconf@1.5.91",
+      "type": "library",
+      "version": "1.5.91"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/debian-archive-keyring@2025.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "debian-archive-keyring",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "unavailable"
+        }
+      ],
+      "purl": "pkg:deb/debian/debian-archive-keyring@2025.1",
+      "type": "library",
+      "version": "2025.1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/debianutils@5.23.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND SMAIL-GPL AND public-domain"
+          }
+        }
+      ],
+      "name": "debianutils",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/debianutils/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/debianutils@5.23.2",
+      "type": "library",
+      "version": "5.23.2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/diffutils@1:3.10-4",
+      "licenses": [
+        {
+          "license": {
+            "name": "FSFAP AND FSFULLR AND GFDL-NIV-1.3 AND GPL-2+ AND GPL-3+ AND GPL-3+ and FSFULLR AND GPL-3+ with autoconf exception AND GPL-3+ with texinfo exception AND LGPL-2.0+ AND LGPL-2.1+ AND LGPL-3.0+ AND LGPL-3.0+ or GPL-2+ AND X11 AND public-domain"
+          }
+        }
+      ],
+      "name": "diffutils",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/diffutils/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/diffutils@1:3.10-4",
+      "type": "library",
+      "version": "1:3.10-4"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/dpkg@1.22.22",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND public-domain-s-s-d"
+          }
+        }
+      ],
+      "name": "dpkg",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/dpkg/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/dpkg@1.22.22",
+      "type": "library",
+      "version": "1.22.22"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/findutils@4.10.0-3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND BSD-3-clause or GPL-3+ AND BSD-3-clause or LGPL-2.1+ AND BSD-3-clause or LGPL-3+ AND FSFAP AND FSFULLR AND FSFULLR or GPL or LGPL AND GFDL-NIV-1.3+ AND GFDL-NIV-1.3+ or GFDL-NIV-1.3+ AND GPL AND GPL with automake exception AND GPL-2+ AND GPL-2+ with Autoconf-data exception AND GPL-3+ AND GPL-3+ with Autoconf-data exception AND GPL-3+ with Bison-2.2 exception AND ISC AND ISC or LGPL-2.1+ AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3 AND LGPL-3+ AND X11 AND public-domain"
+          }
+        }
+      ],
+      "name": "findutils",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/findutils/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/findutils@4.10.0-3",
+      "type": "library",
+      "version": "4.10.0-3"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/gcc-14-base@14.2.0-19",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "gcc-14-base",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "unavailable"
+        }
+      ],
+      "purl": "pkg:deb/debian/gcc-14-base@14.2.0-19",
+      "type": "library",
+      "version": "14.2.0-19"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/grep@3.11-4+b1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-3+"
+          }
+        }
+      ],
+      "name": "grep",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/grep/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/grep@3.11-4+b1",
+      "type": "library",
+      "version": "3.11-4+b1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/gzip@1.13-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "FSF-manpages AND GFDL-1.3+-no-invariant AND GPL-3+"
+          }
+        }
+      ],
+      "name": "gzip",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/gzip/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/gzip@1.13-1",
+      "type": "library",
+      "version": "1.13-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/hostname@3.25",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2"
+          }
+        }
+      ],
+      "name": "hostname",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/hostname/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/hostname@3.25",
+      "type": "library",
+      "version": "3.25"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/init-system-helpers@1.69~deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND GPL-2+"
+          }
+        }
+      ],
+      "name": "init-system-helpers",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/init-system-helpers/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/init-system-helpers@1.69~deb13u1",
+      "type": "library",
+      "version": "1.69~deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libacl1@2.3.2-2+b1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND LGPL-2+"
+          }
+        }
+      ],
+      "name": "libacl1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libacl1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libacl1@2.3.2-2+b1",
+      "type": "library",
+      "version": "2.3.2-2+b1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libapt-pkg7.0@3.0.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND Expat AND GPL-2 AND GPL-2+ AND GPL-2+ and curl AND curl"
+          }
+        }
+      ],
+      "name": "libapt-pkg7.0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libapt-pkg7.0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libapt-pkg7.0@3.0.3",
+      "type": "library",
+      "version": "3.0.3"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libattr1@1:2.5.2-3",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND LGPL-2+"
+          }
+        }
+      ],
+      "name": "libattr1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libattr1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libattr1@1:2.5.2-3",
+      "type": "library",
+      "version": "1:2.5.2-3"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libaudit-common@1:4.0.2-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2 AND LGPL-2.1"
+          }
+        }
+      ],
+      "name": "libaudit-common",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libaudit-common/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libaudit-common@1:4.0.2-2",
+      "type": "library",
+      "version": "1:4.0.2-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libaudit1@1:4.0.2-2+b2",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2 AND LGPL-2.1"
+          }
+        }
+      ],
+      "name": "libaudit1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libaudit1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libaudit1@1:4.0.2-2+b2",
+      "type": "library",
+      "version": "1:4.0.2-2+b2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libblkid1@2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-4-clause AND BSLA AND Expat AND GPL-2 AND GPL-2+ AND GPL-3+ AND ISC AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libblkid1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libblkid1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libblkid1@2.41.5-0+deb13u1",
+      "type": "library",
+      "version": "2.41.5-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libbsd0@0.12.2-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-2-clause-NetBSD AND BSD-2-clause-author AND BSD-2-clause-verbatim AND BSD-3-clause AND BSD-3-clause-John-Birrell AND BSD-3-clause-Regents AND BSD-3-clause-Regents and BSD-2-clause-NetBSD AND BSD-3-clause-author AND BSD-5-clause-Peter-Wemm AND Beerware AND Expat AND ISC AND ISC-Original AND public-domain"
+          }
+        }
+      ],
+      "name": "libbsd0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libbsd0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libbsd0@0.12.2-2",
+      "type": "library",
+      "version": "0.12.2-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libbz2-1.0@1.0.8-6",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-variant AND GPL-2"
+          }
+        }
+      ],
+      "name": "libbz2-1.0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libbz2-1.0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libbz2-1.0@1.0.8-6",
+      "type": "library",
+      "version": "1.0.8-6"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libc-bin@2.41-12+deb13u3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-2-clause or GPL-2 AND BSD-3-clause-Berkeley AND BSD-3-clause-Berkeley and BSD-3-clause-WIDE AND BSD-3-clause-Berkeley and DEC AND BSD-3-clause-Berkeley and DEC and IBM and ISC AND BSD-3-clause-Berkeley and DEC and ISC AND BSD-3-clause-Berkeley and DEC and ISC and LGPL-2.1+ AND BSD-3-clause-Berkeley and DEC and LGPL-2.1+ AND BSD-3-clause-Berkeley and ISC AND BSD-3-clause-Berkeley and LGPL-2.1+ AND BSD-3-clause-Berkeley and LGPL-2.1+ and Univ-Coimbra AND BSD-3-clause-Carnegie AND BSD-3-clause-Oracle AND BSD-3-clause-WIDE AND BSD-like-Spencer AND BSL-1.0 AND CORE-MATH AND Carnegie AND Carnegie and LGPL-2.1+ AND DEC AND FSFAP AND GPL-2 AND GPL-2+ AND GPL-2+-with-link-exception AND GPL-3+ AND IBM AND IBM and ISC AND ISC AND ISC and LGPL-2.1+ AND Inner-Net AND Inner-Net and LGPL-2.1+ AND LGPL-2+ AND LGPL-2.1+ AND LGPL-2.1+ and GPL-2 AND LGPL-2.1+ and SunPro AND LGPL-2.1+-with-link-exception AND LGPL-3+ AND MIT-like-Lord AND PCRE AND SunPro AND Unicode-DFS-2016 AND Univ-Coimbra AND public-domain"
+          }
+        }
+      ],
+      "name": "libc-bin",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libc-bin/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libc-bin@2.41-12+deb13u3",
+      "type": "library",
+      "version": "2.41-12+deb13u3"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libc6@2.41-12+deb13u3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-2-clause or GPL-2 AND BSD-3-clause-Berkeley AND BSD-3-clause-Berkeley and BSD-3-clause-WIDE AND BSD-3-clause-Berkeley and DEC AND BSD-3-clause-Berkeley and DEC and IBM and ISC AND BSD-3-clause-Berkeley and DEC and ISC AND BSD-3-clause-Berkeley and DEC and ISC and LGPL-2.1+ AND BSD-3-clause-Berkeley and DEC and LGPL-2.1+ AND BSD-3-clause-Berkeley and ISC AND BSD-3-clause-Berkeley and LGPL-2.1+ AND BSD-3-clause-Berkeley and LGPL-2.1+ and Univ-Coimbra AND BSD-3-clause-Carnegie AND BSD-3-clause-Oracle AND BSD-3-clause-WIDE AND BSD-like-Spencer AND BSL-1.0 AND CORE-MATH AND Carnegie AND Carnegie and LGPL-2.1+ AND DEC AND FSFAP AND GPL-2 AND GPL-2+ AND GPL-2+-with-link-exception AND GPL-3+ AND IBM AND IBM and ISC AND ISC AND ISC and LGPL-2.1+ AND Inner-Net AND Inner-Net and LGPL-2.1+ AND LGPL-2+ AND LGPL-2.1+ AND LGPL-2.1+ and GPL-2 AND LGPL-2.1+ and SunPro AND LGPL-2.1+-with-link-exception AND LGPL-3+ AND MIT-like-Lord AND PCRE AND SunPro AND Unicode-DFS-2016 AND Univ-Coimbra AND public-domain"
+          }
+        }
+      ],
+      "name": "libc6",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libc6/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libc6@2.41-12+deb13u3",
+      "type": "library",
+      "version": "2.41-12+deb13u3"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libcap-ng0@0.8.5-4+b1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND GPL-3 AND LGPL-2.1+"
+          }
+        }
+      ],
+      "name": "libcap-ng0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libcap-ng0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libcap-ng0@0.8.5-4+b1",
+      "type": "library",
+      "version": "0.8.5-4+b1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libcap2@1:2.75-10+deb13u1+b1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND BSD-3-clause or GPL-2 AND BSD-3-clause or GPL-2+ AND GPL-2 AND GPL-2+"
+          }
+        }
+      ],
+      "name": "libcap2",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libcap2/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libcap2@1:2.75-10+deb13u1+b1",
+      "type": "library",
+      "version": "1:2.75-10+deb13u1+b1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libcrypt1@1:4.4.38-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "libcrypt1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "unavailable"
+        }
+      ],
+      "purl": "pkg:deb/debian/libcrypt1@1:4.4.38-1",
+      "type": "library",
+      "version": "1:4.4.38-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libdb5.3t64@5.3.28+dfsg2-9",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic or BSD-3-clause AND BSD-3-clause AND BSD-3-clause-fjord AND GPL AND GPL or Artistic AND GPL-3 AND MIT-old AND Ms-PL AND Sleepycat AND Sleepycat and BSD-3-clause AND TCL-like AND X11 AND zlib"
+          }
+        }
+      ],
+      "name": "libdb5.3t64",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libdb5.3t64/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libdb5.3t64@5.3.28+dfsg2-9",
+      "type": "library",
+      "version": "5.3.28+dfsg2-9"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libdebconfclient0@0.280",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-Clause AND BSD-2-clause AND GPL-2+"
+          }
+        }
+      ],
+      "name": "libdebconfclient0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libdebconfclient0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libdebconfclient0@0.280",
+      "type": "library",
+      "version": "0.280"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libffi8@3.4.8-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Expat AND GPL AND GPL-2+ AND GPL-3+ AND MPL-1.1 or GPL-2+ or LGPL-2.1+ AND X11 AND public-domain"
+          }
+        }
+      ],
+      "name": "libffi8",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libffi8/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libffi8@3.4.8-2",
+      "type": "library",
+      "version": "3.4.8-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libgcc-s1@14.2.0-19",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "libgcc-s1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "unavailable"
+        }
+      ],
+      "purl": "pkg:deb/debian/libgcc-s1@14.2.0-19",
+      "type": "library",
+      "version": "14.2.0-19"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libgdbm6t64@1.24-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "GFDL-NIV-1.3+ AND GPL-2+ AND GPL-3+"
+          }
+        }
+      ],
+      "name": "libgdbm6t64",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libgdbm6t64/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libgdbm6t64@1.24-2",
+      "type": "library",
+      "version": "1.24-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libgmp10@2:6.3.0+dfsg-3",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND GPL-2+ or LGPL-3+ AND GPL-3+ AND GPL-3+ with Bison exception AND LGPL-3+"
+          }
+        }
+      ],
+      "name": "libgmp10",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libgmp10/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libgmp10@2:6.3.0+dfsg-3",
+      "type": "library",
+      "version": "2:6.3.0+dfsg-3"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libgomp1@14.2.0-19",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "libgomp1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "unavailable"
+        }
+      ],
+      "purl": "pkg:deb/debian/libgomp1@14.2.0-19",
+      "type": "library",
+      "version": "14.2.0-19"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libhogweed6t64@3.10.1-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Expat AND GAP AND GPL-2 AND GPL-2+ AND GPL-3+ with Autoconf exception AND LGPL-2+ AND LGPL-3+ AND LGPL-3+ or GPL-2+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libhogweed6t64",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libhogweed6t64/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libhogweed6t64@3.10.1-1",
+      "type": "library",
+      "version": "3.10.1-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/liblastlog2-2@2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-4-clause AND BSLA AND Expat AND GPL-2 AND GPL-2+ AND GPL-3+ AND ISC AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3+ AND public-domain"
+          }
+        }
+      ],
+      "name": "liblastlog2-2",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/liblastlog2-2/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/liblastlog2-2@2.41.5-0+deb13u1",
+      "type": "library",
+      "version": "2.41.5-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/liblz4-1@1.10.0-4",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-2-clause or GPL-2+ AND GPL-2+"
+          }
+        }
+      ],
+      "name": "liblz4-1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/liblz4-1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/liblz4-1@1.10.0-4",
+      "type": "library",
+      "version": "1.10.0-4"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/liblzma5@5.8.1-1+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "0BSD AND FSFUL AND FSFULLR AND GPL-2+ AND GPL-3.0-or-later-WITH-Autoconf-exception-macro AND LGPL-2.1+ AND PD AND PD-debian AND noderivs AND none AND permissive-nowarranty"
+          }
+        }
+      ],
+      "name": "liblzma5",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/liblzma5/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/liblzma5@5.8.1-1+deb13u1",
+      "type": "library",
+      "version": "5.8.1-1+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libmd0@1.1.0-2+b1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-2-clause-NetBSD AND BSD-3-clause AND BSD-3-clause-Aaron-D-Gifford AND Beerware AND ISC AND public-domain-md4 AND public-domain-md5 AND public-domain-sha1"
+          }
+        }
+      ],
+      "name": "libmd0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libmd0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libmd0@1.1.0-2+b1",
+      "type": "library",
+      "version": "1.1.0-2+b1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libmount1@2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-4-clause AND BSLA AND Expat AND GPL-2 AND GPL-2+ AND GPL-3+ AND ISC AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libmount1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libmount1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libmount1@2.41.5-0+deb13u1",
+      "type": "library",
+      "version": "2.41.5-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libncursesw6@6.5+20250216-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND MIT/X11 AND X11"
+          }
+        }
+      ],
+      "name": "libncursesw6",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libncursesw6/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libncursesw6@6.5+20250216-2",
+      "type": "library",
+      "version": "6.5+20250216-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libnettle8t64@3.10.1-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Expat AND GAP AND GPL-2 AND GPL-2+ AND GPL-3+ with Autoconf exception AND LGPL-2+ AND LGPL-3+ AND LGPL-3+ or GPL-2+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libnettle8t64",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libnettle8t64/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libnettle8t64@3.10.1-1",
+      "type": "library",
+      "version": "3.10.1-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libpam-modules-bin@1.7.0-5",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause or GPL AND BSD-tcp_wrappers AND Beerware AND GPL-2 AND GPL-2+ AND GPL-3 AND GPL-3+ with Bison exception AND LGPL-2+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libpam-modules-bin",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libpam-modules-bin/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libpam-modules-bin@1.7.0-5",
+      "type": "library",
+      "version": "1.7.0-5"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libpam-modules@1.7.0-5",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause or GPL AND BSD-tcp_wrappers AND Beerware AND GPL-2 AND GPL-2+ AND GPL-3 AND GPL-3+ with Bison exception AND LGPL-2+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libpam-modules",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libpam-modules/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libpam-modules@1.7.0-5",
+      "type": "library",
+      "version": "1.7.0-5"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libpam-runtime@1.7.0-5",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause or GPL AND BSD-tcp_wrappers AND Beerware AND GPL-2 AND GPL-2+ AND GPL-3 AND GPL-3+ with Bison exception AND LGPL-2+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libpam-runtime",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libpam-runtime/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libpam-runtime@1.7.0-5",
+      "type": "library",
+      "version": "1.7.0-5"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libpam0g@1.7.0-5",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause or GPL AND BSD-tcp_wrappers AND Beerware AND GPL-2 AND GPL-2+ AND GPL-3 AND GPL-3+ with Bison exception AND LGPL-2+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libpam0g",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libpam0g/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libpam0g@1.7.0-5",
+      "type": "library",
+      "version": "1.7.0-5"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libpcre2-8-0@10.46-1~deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-3-clause-Cambridge with BINARY LIBRARY-LIKE PACKAGES exception AND X11 AND public-domain"
+          }
+        }
+      ],
+      "name": "libpcre2-8-0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libpcre2-8-0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libpcre2-8-0@10.46-1~deb13u1",
+      "type": "library",
+      "version": "10.46-1~deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libreadline8t64@8.2-6",
+      "licenses": [
+        {
+          "license": {
+            "name": "GFDL-NIV-1.3+ AND GPL-2+ AND GPL-3 AND GPL-3+ AND ISC-no-attribution"
+          }
+        }
+      ],
+      "name": "libreadline8t64",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libreadline8t64/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libreadline8t64@8.2-6",
+      "type": "library",
+      "version": "8.2-6"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libseccomp2@2.6.0-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.1"
+          }
+        }
+      ],
+      "name": "libseccomp2",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libseccomp2/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libseccomp2@2.6.0-2",
+      "type": "library",
+      "version": "2.6.0-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libselinux1@3.8.1-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2 AND public-domain"
+          }
+        }
+      ],
+      "name": "libselinux1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libselinux1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libselinux1@3.8.1-1",
+      "type": "library",
+      "version": "3.8.1-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libsemanage-common@3.8.1-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2 AND LGPL-2.1+"
+          }
+        }
+      ],
+      "name": "libsemanage-common",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libsemanage-common/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libsemanage-common@3.8.1-1",
+      "type": "library",
+      "version": "3.8.1-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libsemanage2@3.8.1-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2 AND LGPL-2.1+"
+          }
+        }
+      ],
+      "name": "libsemanage2",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libsemanage2/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libsemanage2@3.8.1-1",
+      "type": "library",
+      "version": "3.8.1-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libsepol2@3.8.1-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2 AND GPL-2+ AND LGPL-2.1+ AND Zlib"
+          }
+        }
+      ],
+      "name": "libsepol2",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libsepol2/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libsepol2@3.8.1-1",
+      "type": "library",
+      "version": "3.8.1-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libsmartcols1@2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-4-clause AND BSLA AND Expat AND GPL-2 AND GPL-2+ AND GPL-3+ AND ISC AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libsmartcols1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libsmartcols1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libsmartcols1@2.41.5-0+deb13u1",
+      "type": "library",
+      "version": "2.41.5-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libsqlite3-0@3.46.1-7+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libsqlite3-0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libsqlite3-0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libsqlite3-0@3.46.1-7+deb13u1",
+      "type": "library",
+      "version": "3.46.1-7+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libssl3t64@3.5.7-1~deb13u2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 AND Artistic AND Artistic or GPL-1+ AND GPL-1+"
+          }
+        }
+      ],
+      "name": "libssl3t64",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libssl3t64/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libssl3t64@3.5.7-1~deb13u2",
+      "type": "library",
+      "version": "3.5.7-1~deb13u2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libstdc%2B%2B6@14.2.0-19",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "libstdc++6",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "unavailable"
+        }
+      ],
+      "purl": "pkg:deb/debian/libstdc%2B%2B6@14.2.0-19",
+      "type": "library",
+      "version": "14.2.0-19"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libsystemd0@257.13-1~deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "CC0-1.0 AND Expat AND GPL-2 with Linux-syscall-note exception AND GPL-2+ AND LGPL-2.1+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libsystemd0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libsystemd0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libsystemd0@257.13-1~deb13u1",
+      "type": "library",
+      "version": "257.13-1~deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libtinfo6@6.5+20250216-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND MIT/X11 AND X11"
+          }
+        }
+      ],
+      "name": "libtinfo6",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libtinfo6/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libtinfo6@6.5+20250216-2",
+      "type": "library",
+      "version": "6.5+20250216-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libudev1@257.13-1~deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "CC0-1.0 AND Expat AND GPL-2 with Linux-syscall-note exception AND GPL-2+ AND LGPL-2.1+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libudev1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libudev1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libudev1@257.13-1~deb13u1",
+      "type": "library",
+      "version": "257.13-1~deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libuuid1@2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-4-clause AND BSLA AND Expat AND GPL-2 AND GPL-2+ AND GPL-3+ AND ISC AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3+ AND public-domain"
+          }
+        }
+      ],
+      "name": "libuuid1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libuuid1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libuuid1@2.41.5-0+deb13u1",
+      "type": "library",
+      "version": "2.41.5-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libxxhash0@0.8.3-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-2-clause or GPL-2+ AND GPL-2+"
+          }
+        }
+      ],
+      "name": "libxxhash0",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libxxhash0/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libxxhash0@0.8.3-2",
+      "type": "library",
+      "version": "0.8.3-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/libzstd1@1.5.7+dfsg-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND BSD-3-clause or GPL-2 AND Expat AND GPL-2 AND zlib"
+          }
+        }
+      ],
+      "name": "libzstd1",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/libzstd1/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/libzstd1@1.5.7+dfsg-1",
+      "type": "library",
+      "version": "1.5.7+dfsg-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/login.defs@1:4.17.4-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND GPL-1 AND GPL-2+"
+          }
+        }
+      ],
+      "name": "login.defs",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/login.defs/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/login.defs@1:4.17.4-2",
+      "type": "library",
+      "version": "1:4.17.4-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/login@1:4.16.0-2+really2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-4-clause AND BSLA AND Expat AND GPL-2 AND GPL-2+ AND GPL-3+ AND ISC AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3+ AND public-domain"
+          }
+        }
+      ],
+      "name": "login",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/login/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/login@1:4.16.0-2+really2.41.5-0+deb13u1",
+      "type": "library",
+      "version": "1:4.16.0-2+really2.41.5-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/mawk@1.3.4.20250131-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "CC-BY-3.0 AND GPL-2.0-only AND X11"
+          }
+        }
+      ],
+      "name": "mawk",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/mawk/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/mawk@1.3.4.20250131-1",
+      "type": "library",
+      "version": "1.3.4.20250131-1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/mount@2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-4-clause AND BSLA AND Expat AND GPL-2 AND GPL-2+ AND GPL-3+ AND ISC AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3+ AND public-domain"
+          }
+        }
+      ],
+      "name": "mount",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/mount/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/mount@2.41.5-0+deb13u1",
+      "type": "library",
+      "version": "2.41.5-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/ncurses-base@6.5+20250216-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND MIT/X11 AND X11"
+          }
+        }
+      ],
+      "name": "ncurses-base",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/ncurses-base/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/ncurses-base@6.5+20250216-2",
+      "type": "library",
+      "version": "6.5+20250216-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/ncurses-bin@6.5+20250216-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND MIT/X11 AND X11"
+          }
+        }
+      ],
+      "name": "ncurses-bin",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/ncurses-bin/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/ncurses-bin@6.5+20250216-2",
+      "type": "library",
+      "version": "6.5+20250216-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/netbase@6.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2"
+          }
+        }
+      ],
+      "name": "netbase",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/netbase/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/netbase@6.5",
+      "type": "library",
+      "version": "6.5"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/openssl-provider-legacy@3.5.7-1~deb13u2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 AND Artistic AND Artistic or GPL-1+ AND GPL-1+"
+          }
+        }
+      ],
+      "name": "openssl-provider-legacy",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/openssl-provider-legacy/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/openssl-provider-legacy@3.5.7-1~deb13u2",
+      "type": "library",
+      "version": "3.5.7-1~deb13u2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/openssl@3.5.7-1~deb13u2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 AND Artistic AND Artistic or GPL-1+ AND GPL-1+"
+          }
+        }
+      ],
+      "name": "openssl",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/openssl/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/openssl@3.5.7-1~deb13u2",
+      "type": "library",
+      "version": "3.5.7-1~deb13u2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/passwd@1:4.17.4-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-clause AND GPL-1 AND GPL-2+"
+          }
+        }
+      ],
+      "name": "passwd",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/passwd/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/passwd@1:4.17.4-2",
+      "type": "library",
+      "version": "1:4.17.4-2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/perl-base@5.40.1-6",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic AND Artistic or GPL-1+ AND Artistic or GPL-1+ or Artistic-dist AND Artistic-2 AND Artistic-dist AND BSD-3-clause AND BSD-3-clause-GENERIC AND BSD-3-clause-with-weird-numbering AND BSD-4-clause-POWERDOG AND BZIP AND CC0-1.0 AND DONT-CHANGE-THE-GPL AND Expat AND Expat or GPL-1+ or Artistic AND FSFAP AND GPL-1+ AND GPL-1+ or Artistic AND GPL-1+ or Artistic or Artistic-dist AND GPL-1+ or Artistic, and BSD-3-clause-GENERIC AND GPL-1+ or Artistic, and BSD-4-clause-POWERDOG AND GPL-1+ or Artistic, and Expat AND GPL-1+ or Artistic, and Unicode AND GPL-2+ AND GPL-2+ or Artistic AND GPL-3+-WITH-BISON-EXCEPTION AND LGPL-2.1 AND REGCOMP AND REGCOMP, and GPL-1+ or Artistic AND SDBM-PUBLIC-DOMAIN AND TEXT-TABS AND Unicode AND ZLIB"
+          }
+        }
+      ],
+      "name": "perl-base",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/perl-base/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/perl-base@5.40.1-6",
+      "type": "library",
+      "version": "5.40.1-6"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/readline-common@8.2-6",
+      "licenses": [
+        {
+          "license": {
+            "name": "GFDL-NIV-1.3+ AND GPL-2+ AND GPL-3 AND GPL-3+ AND ISC-no-attribution"
+          }
+        }
+      ],
+      "name": "readline-common",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/readline-common/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/readline-common@8.2-6",
+      "type": "library",
+      "version": "8.2-6"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/sed@4.9-2+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-4-clause-UC AND BSL-1 AND GFDL-NIV-1.3+ AND GPL-3+ AND GPL-3+ and ISC AND ISC AND X11 AND pcre"
+          }
+        }
+      ],
+      "name": "sed",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/sed/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/sed@4.9-2+deb13u1",
+      "type": "library",
+      "version": "4.9-2+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/sqv@1.3.0-3+b2",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-2.0-or-later"
+          }
+        }
+      ],
+      "name": "sqv",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/sqv/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/sqv@1.3.0-3+b2",
+      "type": "library",
+      "version": "1.3.0-3+b2"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/sysvinit-utils@3.14-4",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2.0 AND GPL-2.0+ AND GPL-3.0 AND LGPL-2.1+"
+          }
+        }
+      ],
+      "name": "sysvinit-utils",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/sysvinit-utils/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/sysvinit-utils@3.14-4",
+      "type": "library",
+      "version": "3.14-4"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/tar@1.35+dfsg-3.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-2+ AND GPL-3+ AND GPL-3+ with Bison exception AND LGPL-2.1+ AND LGPL-3+"
+          }
+        }
+      ],
+      "name": "tar",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/tar/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/tar@1.35+dfsg-3.1",
+      "type": "library",
+      "version": "1.35+dfsg-3.1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/tzdata@2026b-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "public-domain"
+          }
+        }
+      ],
+      "name": "tzdata",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/tzdata/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/tzdata@2026b-0+deb13u1",
+      "type": "library",
+      "version": "2026b-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/util-linux@2.41.5-0+deb13u1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-clause AND BSD-3-clause AND BSD-4-clause AND BSLA AND Expat AND GPL-2 AND GPL-2+ AND GPL-3+ AND ISC AND LGPL AND LGPL-2+ AND LGPL-2.1+ AND LGPL-3+ AND public-domain"
+          }
+        }
+      ],
+      "name": "util-linux",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/util-linux/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/util-linux@2.41.5-0+deb13u1",
+      "type": "library",
+      "version": "2.41.5-0+deb13u1"
+    },
+    {
+      "bom-ref": "pkg:deb/debian/zlib1g@1:1.3.dfsg+really1.3.1-1+b1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Zlib"
+          }
+        }
+      ],
+      "name": "zlib1g",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime-os"
+        },
+        {
+          "name": "routellect:license-metadata-source",
+          "value": "/usr/share/doc/zlib1g/copyright"
+        }
+      ],
+      "purl": "pkg:deb/debian/zlib1g@1:1.3.dfsg+really1.3.1-1+b1",
+      "type": "library",
+      "version": "1:1.3.dfsg+really1.3.1-1+b1"
+    },
+    {
+      "bom-ref": "pkg:huggingface/HuggingFaceTB/SmolLM2-360M-Instruct-GGUF@593b5a2e04c8f3e4ee880263f93e0bd2901ad47f",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "name": "HuggingFaceTB/SmolLM2-360M-Instruct-GGUF",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "bundled-assessor"
+        },
+        {
+          "name": "routellect:quantization",
+          "value": "Q8_0"
+        }
+      ],
+      "purl": "pkg:huggingface/HuggingFaceTB/SmolLM2-360M-Instruct-GGUF@593b5a2e04c8f3e4ee880263f93e0bd2901ad47f",
+      "type": "machine-learning-model",
+      "version": "593b5a2e04c8f3e4ee880263f93e0bd2901ad47f"
+    },
+    {
+      "bom-ref": "pkg:npm/%40oxc-project/types@0.149.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "@oxc-project/types",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/%40oxc-project/types@0.149.0",
+      "type": "library",
+      "version": "0.149.0"
+    },
+    {
+      "bom-ref": "pkg:npm/%40rolldown/binding-darwin-arm64@1.2.8",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "@rolldown/binding-darwin-arm64",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/%40rolldown/binding-darwin-arm64@1.2.8",
+      "type": "library",
+      "version": "1.2.8"
+    },
+    {
+      "bom-ref": "pkg:npm/%40rolldown/pluginutils@1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "@rolldown/pluginutils",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/%40rolldown/pluginutils@1.0.1",
+      "type": "library",
+      "version": "1.0.1"
+    },
+    {
+      "bom-ref": "pkg:npm/%40types/react-dom@19.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "@types/react-dom",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/%40types/react-dom@19.3.0",
+      "type": "library",
+      "version": "19.3.0"
+    },
+    {
+      "bom-ref": "pkg:npm/%40types/react@19.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "@types/react",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/%40types/react@19.3.0",
+      "type": "library",
+      "version": "19.3.0"
+    },
+    {
+      "bom-ref": "pkg:npm/%40typescript/typescript-darwin-arm64@7.0.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "name": "@typescript/typescript-darwin-arm64",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/%40typescript/typescript-darwin-arm64@7.0.2",
+      "type": "library",
+      "version": "7.0.2"
+    },
+    {
+      "bom-ref": "pkg:npm/%40vitejs/plugin-react@6.1.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "@vitejs/plugin-react",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/%40vitejs/plugin-react@6.1.1",
+      "type": "library",
+      "version": "6.1.1"
+    },
+    {
+      "bom-ref": "pkg:npm/csstype@3.2.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "csstype",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/csstype@3.2.3",
+      "type": "library",
+      "version": "3.2.3"
+    },
+    {
+      "bom-ref": "pkg:npm/detect-libc@2.1.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "name": "detect-libc",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/detect-libc@2.1.2",
+      "type": "library",
+      "version": "2.1.2"
+    },
+    {
+      "bom-ref": "pkg:npm/fdir@6.5.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "fdir",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/fdir@6.5.0",
+      "type": "library",
+      "version": "6.5.0"
+    },
+    {
+      "bom-ref": "pkg:npm/fsevents@2.3.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "fsevents",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/fsevents@2.3.3",
+      "type": "library",
+      "version": "2.3.3"
+    },
+    {
+      "bom-ref": "pkg:npm/lightningcss-darwin-arm64@1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MPL-2.0"
+          }
+        }
+      ],
+      "name": "lightningcss-darwin-arm64",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/lightningcss-darwin-arm64@1.33.0",
+      "type": "library",
+      "version": "1.33.0"
+    },
+    {
+      "bom-ref": "pkg:npm/lightningcss@1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MPL-2.0"
+          }
+        }
+      ],
+      "name": "lightningcss",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/lightningcss@1.33.0",
+      "type": "library",
+      "version": "1.33.0"
+    },
+    {
+      "bom-ref": "pkg:npm/nanoid@3.3.19",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "nanoid",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/nanoid@3.3.19",
+      "type": "library",
+      "version": "3.3.19"
+    },
+    {
+      "bom-ref": "pkg:npm/picocolors@1.1.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "ISC"
+          }
+        }
+      ],
+      "name": "picocolors",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/picocolors@1.1.1",
+      "type": "library",
+      "version": "1.1.1"
+    },
+    {
+      "bom-ref": "pkg:npm/picomatch@4.0.7",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "picomatch",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/picomatch@4.0.7",
+      "type": "library",
+      "version": "4.0.7"
+    },
+    {
+      "bom-ref": "pkg:npm/postcss@8.5.28",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "postcss",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/postcss@8.5.28",
+      "type": "library",
+      "version": "8.5.28"
+    },
+    {
+      "bom-ref": "pkg:npm/react-dom@19.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "react-dom",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/react-dom@19.3.0",
+      "type": "library",
+      "version": "19.3.0"
+    },
+    {
+      "bom-ref": "pkg:npm/react@19.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "react",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/react@19.3.0",
+      "type": "library",
+      "version": "19.3.0"
+    },
+    {
+      "bom-ref": "pkg:npm/rolldown@1.2.8",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "rolldown",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/rolldown@1.2.8",
+      "type": "library",
+      "version": "1.2.8"
+    },
+    {
+      "bom-ref": "pkg:npm/scheduler@0.28.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "scheduler",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/scheduler@0.28.0",
+      "type": "library",
+      "version": "0.28.0"
+    },
+    {
+      "bom-ref": "pkg:npm/source-map-js@1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "source-map-js",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/source-map-js@1.2.1",
+      "type": "library",
+      "version": "1.2.1"
+    },
+    {
+      "bom-ref": "pkg:npm/tinyglobby@0.2.17",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "tinyglobby",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/tinyglobby@0.2.17",
+      "type": "library",
+      "version": "0.2.17"
+    },
+    {
+      "bom-ref": "pkg:npm/typescript@7.0.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "name": "typescript",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/typescript@7.0.2",
+      "type": "library",
+      "version": "7.0.2"
+    },
+    {
+      "bom-ref": "pkg:npm/vite@8.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "vite",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/vite@8.3.0",
+      "type": "library",
+      "version": "8.3.0"
+    },
+    {
+      "bom-ref": "pkg:npm/vscode-jsonrpc@9.0.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "vscode-jsonrpc",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "frontend-build"
+        }
+      ],
+      "purl": "pkg:npm/vscode-jsonrpc@9.0.0",
+      "type": "library",
+      "version": "9.0.0"
+    },
+    {
+      "bom-ref": "pkg:oci/node@22-alpine",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "node",
+      "properties": [
+        {
+          "name": "routellect:manifest-digest",
+          "value": "sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32"
+        },
+        {
+          "name": "routellect:scope",
+          "value": "build-base"
+        }
+      ],
+      "purl": "pkg:oci/node@22-alpine",
+      "type": "container",
+      "version": "22-alpine"
+    },
+    {
+      "bom-ref": "pkg:oci/python@3.12-slim",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "name": "python",
+      "properties": [
+        {
+          "name": "routellect:manifest-digest",
+          "value": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea"
+        },
+        {
+          "name": "routellect:scope",
+          "value": "build-base"
+        }
+      ],
+      "purl": "pkg:oci/python@3.12-slim",
+      "type": "container",
+      "version": "3.12-slim"
+    },
+    {
+      "bom-ref": "pkg:pypi/Jinja2@3.1.6",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD License"
+          }
+        }
+      ],
+      "name": "Jinja2",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/Jinja2@3.1.6",
+      "type": "library",
+      "version": "3.1.6"
+    },
+    {
+      "bom-ref": "pkg:pypi/MarkupSafe@3.0.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "MarkupSafe",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/MarkupSafe@3.0.3",
+      "type": "library",
+      "version": "3.0.3"
+    },
+    {
+      "bom-ref": "pkg:pypi/PyYAML@6.0.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "PyYAML",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/PyYAML@6.0.3",
+      "type": "library",
+      "version": "6.0.3"
+    },
+    {
+      "bom-ref": "pkg:pypi/annotated-doc@0.0.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "annotated-doc",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/annotated-doc@0.0.5",
+      "type": "library",
+      "version": "0.0.5"
+    },
+    {
+      "bom-ref": "pkg:pypi/annotated-types@0.8.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "annotated-types",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/annotated-types@0.8.0",
+      "type": "library",
+      "version": "0.8.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/anyio@4.15.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "anyio",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/anyio@4.15.1",
+      "type": "library",
+      "version": "4.15.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/cffi@2.1.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT-0"
+          }
+        }
+      ],
+      "name": "cffi",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/cffi@2.1.1",
+      "type": "library",
+      "version": "2.1.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/click@8.5.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "click",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/click@8.5.0",
+      "type": "library",
+      "version": "8.5.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/cryptography@50.0.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 OR BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "cryptography",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/cryptography@50.0.1",
+      "type": "library",
+      "version": "50.0.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/diskcache@5.6.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache 2.0"
+          }
+        }
+      ],
+      "name": "diskcache",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/diskcache@5.6.3",
+      "type": "library",
+      "version": "5.6.3"
+    },
+    {
+      "bom-ref": "pkg:pypi/fastapi@0.141.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "fastapi",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/fastapi@0.141.1",
+      "type": "library",
+      "version": "0.141.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/h11@0.16.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "h11",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/h11@0.16.0",
+      "type": "library",
+      "version": "0.16.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/httptools@0.8.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "httptools",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/httptools@0.8.0",
+      "type": "library",
+      "version": "0.8.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/idna@3.19",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "idna",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/idna@3.19",
+      "type": "library",
+      "version": "3.19"
+    },
+    {
+      "bom-ref": "pkg:pypi/llama_cpp_python@0.3.16",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "llama_cpp_python",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/llama_cpp_python@0.3.16",
+      "type": "library",
+      "version": "0.3.16"
+    },
+    {
+      "bom-ref": "pkg:pypi/numpy@2.5.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+          }
+        }
+      ],
+      "name": "numpy",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/numpy@2.5.3",
+      "type": "library",
+      "version": "2.5.3"
+    },
+    {
+      "bom-ref": "pkg:pypi/pycparser@3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "pycparser",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/pycparser@3.0",
+      "type": "library",
+      "version": "3.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/pydantic@2.13.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "pydantic",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/pydantic@2.13.5",
+      "type": "library",
+      "version": "2.13.5"
+    },
+    {
+      "bom-ref": "pkg:pypi/pydantic_core@2.46.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "pydantic_core",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/pydantic_core@2.46.5",
+      "type": "library",
+      "version": "2.46.5"
+    },
+    {
+      "bom-ref": "pkg:pypi/python-dotenv@1.2.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "python-dotenv",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/python-dotenv@1.2.3",
+      "type": "library",
+      "version": "1.2.3"
+    },
+    {
+      "bom-ref": "pkg:pypi/routellect@0.5.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "name": "routellect",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/routellect@0.5.0",
+      "type": "library",
+      "version": "0.5.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/starlette@1.6.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "starlette",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/starlette@1.6.0",
+      "type": "library",
+      "version": "1.6.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/typing-inspection@0.4.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "typing-inspection",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/typing-inspection@0.4.4",
+      "type": "library",
+      "version": "0.4.4"
+    },
+    {
+      "bom-ref": "pkg:pypi/typing_extensions@4.16.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "PSF-2.0"
+          }
+        }
+      ],
+      "name": "typing_extensions",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/typing_extensions@4.16.0",
+      "type": "library",
+      "version": "4.16.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/uvicorn@0.53.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "uvicorn",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/uvicorn@0.53.0",
+      "type": "library",
+      "version": "0.53.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/uvloop@0.22.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT License"
+          }
+        }
+      ],
+      "name": "uvloop",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/uvloop@0.22.1",
+      "type": "library",
+      "version": "0.22.1"
+    },
+    {
+      "bom-ref": "pkg:pypi/watchfiles@1.2.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "name": "watchfiles",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/watchfiles@1.2.0",
+      "type": "library",
+      "version": "1.2.0"
+    },
+    {
+      "bom-ref": "pkg:pypi/websockets@17.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "name": "websockets",
+      "properties": [
+        {
+          "name": "routellect:scope",
+          "value": "runtime"
+        }
+      ],
+      "purl": "pkg:pypi/websockets@17.1",
+      "type": "library",
+      "version": "17.1"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "pkg:deb/debian/adduser@3.152",
+        "pkg:deb/debian/apt@3.0.3",
+        "pkg:deb/debian/base-files@13.8+deb13u6",
+        "pkg:deb/debian/base-passwd@3.6.7",
+        "pkg:deb/debian/bash@5.2.37-2+b9",
+        "pkg:deb/debian/bsdutils@1:2.41.5-0+deb13u1",
+        "pkg:deb/debian/ca-certificates@20250419",
+        "pkg:deb/debian/coreutils@9.7-3",
+        "pkg:deb/debian/dash@0.5.12-12",
+        "pkg:deb/debian/debconf@1.5.91",
+        "pkg:deb/debian/debian-archive-keyring@2025.1",
+        "pkg:deb/debian/debianutils@5.23.2",
+        "pkg:deb/debian/diffutils@1:3.10-4",
+        "pkg:deb/debian/dpkg@1.22.22",
+        "pkg:deb/debian/findutils@4.10.0-3",
+        "pkg:deb/debian/gcc-14-base@14.2.0-19",
+        "pkg:deb/debian/grep@3.11-4+b1",
+        "pkg:deb/debian/gzip@1.13-1",
+        "pkg:deb/debian/hostname@3.25",
+        "pkg:deb/debian/init-system-helpers@1.69~deb13u1",
+        "pkg:deb/debian/libacl1@2.3.2-2+b1",
+        "pkg:deb/debian/libapt-pkg7.0@3.0.3",
+        "pkg:deb/debian/libattr1@1:2.5.2-3",
+        "pkg:deb/debian/libaudit-common@1:4.0.2-2",
+        "pkg:deb/debian/libaudit1@1:4.0.2-2+b2",
+        "pkg:deb/debian/libblkid1@2.41.5-0+deb13u1",
+        "pkg:deb/debian/libbsd0@0.12.2-2",
+        "pkg:deb/debian/libbz2-1.0@1.0.8-6",
+        "pkg:deb/debian/libc-bin@2.41-12+deb13u3",
+        "pkg:deb/debian/libc6@2.41-12+deb13u3",
+        "pkg:deb/debian/libcap-ng0@0.8.5-4+b1",
+        "pkg:deb/debian/libcap2@1:2.75-10+deb13u1+b1",
+        "pkg:deb/debian/libcrypt1@1:4.4.38-1",
+        "pkg:deb/debian/libdb5.3t64@5.3.28+dfsg2-9",
+        "pkg:deb/debian/libdebconfclient0@0.280",
+        "pkg:deb/debian/libffi8@3.4.8-2",
+        "pkg:deb/debian/libgcc-s1@14.2.0-19",
+        "pkg:deb/debian/libgdbm6t64@1.24-2",
+        "pkg:deb/debian/libgmp10@2:6.3.0+dfsg-3",
+        "pkg:deb/debian/libgomp1@14.2.0-19",
+        "pkg:deb/debian/libhogweed6t64@3.10.1-1",
+        "pkg:deb/debian/liblastlog2-2@2.41.5-0+deb13u1",
+        "pkg:deb/debian/liblz4-1@1.10.0-4",
+        "pkg:deb/debian/liblzma5@5.8.1-1+deb13u1",
+        "pkg:deb/debian/libmd0@1.1.0-2+b1",
+        "pkg:deb/debian/libmount1@2.41.5-0+deb13u1",
+        "pkg:deb/debian/libncursesw6@6.5+20250216-2",
+        "pkg:deb/debian/libnettle8t64@3.10.1-1",
+        "pkg:deb/debian/libpam-modules-bin@1.7.0-5",
+        "pkg:deb/debian/libpam-modules@1.7.0-5",
+        "pkg:deb/debian/libpam-runtime@1.7.0-5",
+        "pkg:deb/debian/libpam0g@1.7.0-5",
+        "pkg:deb/debian/libpcre2-8-0@10.46-1~deb13u1",
+        "pkg:deb/debian/libreadline8t64@8.2-6",
+        "pkg:deb/debian/libseccomp2@2.6.0-2",
+        "pkg:deb/debian/libselinux1@3.8.1-1",
+        "pkg:deb/debian/libsemanage-common@3.8.1-1",
+        "pkg:deb/debian/libsemanage2@3.8.1-1",
+        "pkg:deb/debian/libsepol2@3.8.1-1",
+        "pkg:deb/debian/libsmartcols1@2.41.5-0+deb13u1",
+        "pkg:deb/debian/libsqlite3-0@3.46.1-7+deb13u1",
+        "pkg:deb/debian/libssl3t64@3.5.7-1~deb13u2",
+        "pkg:deb/debian/libstdc%2B%2B6@14.2.0-19",
+        "pkg:deb/debian/libsystemd0@257.13-1~deb13u1",
+        "pkg:deb/debian/libtinfo6@6.5+20250216-2",
+        "pkg:deb/debian/libudev1@257.13-1~deb13u1",
+        "pkg:deb/debian/libuuid1@2.41.5-0+deb13u1",
+        "pkg:deb/debian/libxxhash0@0.8.3-2",
+        "pkg:deb/debian/libzstd1@1.5.7+dfsg-1",
+        "pkg:deb/debian/login.defs@1:4.17.4-2",
+        "pkg:deb/debian/login@1:4.16.0-2+really2.41.5-0+deb13u1",
+        "pkg:deb/debian/mawk@1.3.4.20250131-1",
+        "pkg:deb/debian/mount@2.41.5-0+deb13u1",
+        "pkg:deb/debian/ncurses-base@6.5+20250216-2",
+        "pkg:deb/debian/ncurses-bin@6.5+20250216-2",
+        "pkg:deb/debian/netbase@6.5",
+        "pkg:deb/debian/openssl-provider-legacy@3.5.7-1~deb13u2",
+        "pkg:deb/debian/openssl@3.5.7-1~deb13u2",
+        "pkg:deb/debian/passwd@1:4.17.4-2",
+        "pkg:deb/debian/perl-base@5.40.1-6",
+        "pkg:deb/debian/readline-common@8.2-6",
+        "pkg:deb/debian/sed@4.9-2+deb13u1",
+        "pkg:deb/debian/sqv@1.3.0-3+b2",
+        "pkg:deb/debian/sysvinit-utils@3.14-4",
+        "pkg:deb/debian/tar@1.35+dfsg-3.1",
+        "pkg:deb/debian/tzdata@2026b-0+deb13u1",
+        "pkg:deb/debian/util-linux@2.41.5-0+deb13u1",
+        "pkg:deb/debian/zlib1g@1:1.3.dfsg+really1.3.1-1+b1",
+        "pkg:huggingface/HuggingFaceTB/SmolLM2-360M-Instruct-GGUF@593b5a2e04c8f3e4ee880263f93e0bd2901ad47f",
+        "pkg:npm/%40oxc-project/types@0.149.0",
+        "pkg:npm/%40rolldown/binding-darwin-arm64@1.2.8",
+        "pkg:npm/%40rolldown/pluginutils@1.0.1",
+        "pkg:npm/%40types/react-dom@19.3.0",
+        "pkg:npm/%40types/react@19.3.0",
+        "pkg:npm/%40typescript/typescript-darwin-arm64@7.0.2",
+        "pkg:npm/%40vitejs/plugin-react@6.1.1",
+        "pkg:npm/csstype@3.2.3",
+        "pkg:npm/detect-libc@2.1.2",
+        "pkg:npm/fdir@6.5.0",
+        "pkg:npm/fsevents@2.3.3",
+        "pkg:npm/lightningcss-darwin-arm64@1.33.0",
+        "pkg:npm/lightningcss@1.33.0",
+        "pkg:npm/nanoid@3.3.19",
+        "pkg:npm/picocolors@1.1.1",
+        "pkg:npm/picomatch@4.0.7",
+        "pkg:npm/postcss@8.5.28",
+        "pkg:npm/react-dom@19.3.0",
+        "pkg:npm/react@19.3.0",
+        "pkg:npm/rolldown@1.2.8",
+        "pkg:npm/scheduler@0.28.0",
+        "pkg:npm/source-map-js@1.2.1",
+        "pkg:npm/tinyglobby@0.2.17",
+        "pkg:npm/typescript@7.0.2",
+        "pkg:npm/vite@8.3.0",
+        "pkg:npm/vscode-jsonrpc@9.0.0",
+        "pkg:oci/node@22-alpine",
+        "pkg:oci/python@3.12-slim",
+        "pkg:pypi/Jinja2@3.1.6",
+        "pkg:pypi/MarkupSafe@3.0.3",
+        "pkg:pypi/PyYAML@6.0.3",
+        "pkg:pypi/annotated-doc@0.0.5",
+        "pkg:pypi/annotated-types@0.8.0",
+        "pkg:pypi/anyio@4.15.1",
+        "pkg:pypi/cffi@2.1.1",
+        "pkg:pypi/click@8.5.0",
+        "pkg:pypi/cryptography@50.0.1",
+        "pkg:pypi/diskcache@5.6.3",
+        "pkg:pypi/fastapi@0.141.1",
+        "pkg:pypi/h11@0.16.0",
+        "pkg:pypi/httptools@0.8.0",
+        "pkg:pypi/idna@3.19",
+        "pkg:pypi/llama_cpp_python@0.3.16",
+        "pkg:pypi/numpy@2.5.3",
+        "pkg:pypi/pycparser@3.0",
+        "pkg:pypi/pydantic@2.13.5",
+        "pkg:pypi/pydantic_core@2.46.5",
+        "pkg:pypi/python-dotenv@1.2.3",
+        "pkg:pypi/routellect@0.5.0",
+        "pkg:pypi/starlette@1.6.0",
+        "pkg:pypi/typing-inspection@0.4.4",
+        "pkg:pypi/typing_extensions@4.16.0",
+        "pkg:pypi/uvicorn@0.53.0",
+        "pkg:pypi/uvloop@0.22.1",
+        "pkg:pypi/watchfiles@1.2.0",
+        "pkg:pypi/websockets@17.1"
+      ],
+      "ref": "pkg:pypi/routellect@0.5.0"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "pkg:pypi/routellect@0.5.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "name": "routellect",
+      "properties": [
+        {
+          "name": "routellect:image-reference",
+          "value": "localhost/routellect:0.5.0"
+        },
+        {
+          "name": "routellect:image-digest",
+          "value": "sha256:7afa312429314eef520a6fb62da6347631e6c0655e81311ccd71cfc44151ca11"
+        }
+      ],
+      "purl": "pkg:pypi/routellect@0.5.0",
+      "type": "application",
+      "version": "0.5.0"
+    },
+    "properties": [
+      {
+        "name": "routellect:component-completeness",
+        "value": "known-components"
+      },
+      {
+        "name": "routellect:completeness-note",
+        "value": "Includes final-image Python and Debian packages, frontend build packages, base manifests, and bundled assessor; transitive source-build toolchains are represented by frontend packages and base-image references."
+      }
+    ],
+    "timestamp": "2026-09-16T10:00:04.438648+00:00",
+    "tools": {
+      "components": [
+        {
+          "name": "Routellect SBOM generator",
+          "type": "application",
+          "version": "0.5.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:b2050d9a-e0c1-45aa-86f9-5284b33acd6b",
+  "specVersion": "1.6",
+  "version": 1
+}

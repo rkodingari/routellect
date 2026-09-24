@@ -1,0 +1,77 @@
+{
+  "acceptance_checks": {
+    "all_capabilities_dropped": true,
+    "healthy": true,
+    "no_new_privileges": true,
+    "non_root_uid": true,
+    "offline_candidate_network_disabled": true,
+    "offline_candidate_p95_below_10ms": true,
+    "production_default_is_v2": true,
+    "read_only_rootfs": true,
+    "rootless": true
+  },
+  "cleanup": {
+    "container_removed": true,
+    "image_retained": true,
+    "volume_removed": true
+  },
+  "generated_at": "2026-09-22T06:39:35.732299+00:00",
+  "image": {
+    "digest": "sha256:7e6379a7f64d79f231ddbaf8e84cb520dc247d055eda97f7ea368016e9a58243",
+    "id": "a6de376d59b1402ba39ad1a8f4ac29211f1b02a6e6ed27f20609618f2e4fb7a5",
+    "reference": "localhost/routellect:g7d-candidate",
+    "size_bytes": 685198784
+  },
+  "offline_candidate": {
+    "artifact_sha256": "6f32a6242fca4137cb50e515a4012a7bbea6fc01f078a12485016350aae50499",
+    "capabilities_dropped": [
+      "all"
+    ],
+    "decision_digest_sha256": "0b36b9b7303757b65e843af22d8cfecdb83f94fd74ede1fc577ad9df4a5c803a",
+    "max_ms": 2.240622,
+    "network_mode": "none",
+    "p50_ms": 0.170711,
+    "p95_ms": 0.21867,
+    "p99_ms": 0.26113,
+    "read_only_rootfs": true,
+    "samples": 2000,
+    "security_options": [
+      "no-new-privileges"
+    ]
+  },
+  "production_api": {
+    "capabilities_dropped": [
+      "CAP_CHOWN",
+      "CAP_DAC_OVERRIDE",
+      "CAP_FOWNER",
+      "CAP_FSETID",
+      "CAP_KILL",
+      "CAP_NET_BIND_SERVICE",
+      "CAP_SETFCAP",
+      "CAP_SETGID",
+      "CAP_SETPCAP",
+      "CAP_SETUID",
+      "CAP_SYS_CHROOT"
+    ],
+    "effective_capabilities_hex": "0000000000000000",
+    "gid": 10001,
+    "health_status": "healthy",
+    "latency_p50_ms": 2.006292,
+    "latency_p95_ms": 3.716833,
+    "latency_p99_ms": 5.889125,
+    "production_default": "deterministic-v2",
+    "read_only_rootfs": true,
+    "readiness_seconds": 0.8043862080012332,
+    "ready_body": {
+      "catalog_version": "2026-09-15.g2-starter.1",
+      "status": "ok",
+      "version": "0.5.0"
+    },
+    "requests": 500,
+    "rootless": true,
+    "security_options": [
+      "no-new-privileges"
+    ],
+    "uid": 10001
+  }
+}

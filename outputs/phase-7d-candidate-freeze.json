@@ -1,0 +1,81 @@
+{
+  "candidate": {
+    "artifact_sha256": "6f32a6242fca4137cb50e515a4012a7bbea6fc01f078a12485016350aae50499",
+    "cost_weight": 0.2,
+    "dimensions": 8192,
+    "hash_seed": "routellect-g7c2-strong-v2",
+    "hidden_rows_used": 0,
+    "model_pool": [
+      "Llama-3.1-70B-Instruct",
+      "Qwen2.5-Math-1.5B-Instruct",
+      "Qwen2.5-Math-7B-Instruct",
+      "Qwen3-0.6B"
+    ],
+    "name": "deterministic-v3-candidate.1-g7c2-strength",
+    "raw_model_responses_used": 0,
+    "schema_version": "routellect-multisource-strength-v1",
+    "strong_model": "Llama-3.1-70B-Instruct",
+    "strong_threshold": 0.3
+  },
+  "confirmatory_evaluation": {
+    "authorized": false,
+    "executed": false,
+    "existing_hidden_partition_permitted": false,
+    "outcomes_may_be_acquired_only_after_g7e_approval": true,
+    "planned_dataset": "JiaqiXue/R2-Bench",
+    "planned_prompt_ids_inclusive": [
+      15001,
+      30968
+    ],
+    "planned_revision": "1b6234647a21705da4c220f339e44fbe72c69bb2"
+  },
+  "created_at": "2026-09-22T09:46:33.734216+00:00",
+  "frozen_files_sha256": {
+    "outputs/phase-7c-profiler-results.json": "16d39e34a749d9c3381afe2dbe908429efb4c8f7c45c9a9aebcf1a04b2e0c97a",
+    "outputs/phase-7c2-results.json": "a488894e85de4d208bd99670744468deca92032efaa6eb410cf4a1eb0c8e09e9",
+    "outputs/phase-7d-plan.md": "516dde8e744e5bfbf24e66a89bbb8bf4a7c959499c38f9defc941ff81ca052f1",
+    "outputs/phase-7d-podman-results.json": "ca4eac4c21c2b2c2de5d4351ea4295860aca5840559aee2f68935fc7d6876b94",
+    "outputs/phase-7d-validation-results.json": "6ab1fb30368f80deeff0ef5bf3c3ecd1f5b04bbea4c789dec5742994373080b3",
+    "scripts/freeze_g7d_candidate.py": "344107fbe0f2aede74251b36d0f8611cd8590d483fef78c6fea9d6b07f181903",
+    "scripts/run_g7d_podman_pipeline.py": "6066ac73b3f22bee771b0f82f97386491f283b1448cc2120907fafe70f0048e4",
+    "scripts/run_g7d_validation.py": "c0bfb85a6b8f0f52a703a2e06dca62d059118ddd5545932166f022130bfef38c",
+    "scripts/train_g7_sparse_policy.py": "1cbc50dd9974b745a948e7bb00cbcce76aff15f8069b528fc139eaf2dae9d0e7",
+    "scripts/train_g7c2_multisource_policy.py": "f7c48d65abd54aa26cece60484e4ab5124172653a998effe99369d32af62912c",
+    "scripts/verify_g7d_podman.py": "11d0eb78ec48545ef512ee2128de703df685484272304fc6b0b99c18def066fa",
+    "src/routellect/advisor.py": "88b790a2631bccdf350f00ed9b9d693ae0c2cc456525e74e9a6acdd9398ce37f",
+    "src/routellect/data/catalog.json": "1bee9d5c7120427e92338e2f3ea4181afa46ecd7b76036f1c55eb604970b2a29",
+    "src/routellect/data/deterministic_invariants.json": "f6db2e8d037c59bfe5d959d2250338710392c0553b970069b518de373156c5eb",
+    "src/routellect/data/g7_sparse_strength.json": "8c400afbdadec584ab2ae46a927a1688bf3f62bc29367f0fc6807b93b3a2fd44",
+    "src/routellect/data/g7c2_multisource_strength.json": "6f32a6242fca4137cb50e515a4012a7bbea6fc01f078a12485016350aae50499",
+    "src/routellect/profiler.py": "9b60d2135db867444f86bf6b14869ea613003e094b989ad318b2558cf9f38be6",
+    "src/routellect/sparse_policy.py": "c05381b7578ad33fcf7a4afad6521e9720f6d54a47d323891f8b426a4b2795da",
+    "work/g7-evidence/development.jsonl": "43ff060dd693bc95fd9311f9b543dbd11dd2a063a1a90bd654138847a2f4ec20",
+    "work/g7-evidence/manifest.json": "ae2ec7e6f20c9d35c9f877f5c265b9345380c84802bbc16c98ff727872c5c8e5",
+    "work/g7-evidence/validation.jsonl": "5813d2a164dc2f4d9fb4dfc08853ef238fc5eb66a3f5fc2a75e846131880cfe0",
+    "work/g7c2-evidence/manifest.json": "57bf18c0bacbc6afb04733d6d0abc8be3c6c5828797096f44c638c3a2edb1df8",
+    "work/g7c2-evidence/routellm-development.jsonl": "41d7a8147ff633d2f4187cbf77c939bfda4aa32d702eadf04916427c620c7d36"
+  },
+  "production": {
+    "default": "deterministic-v2+feedback-bayes-v1",
+    "learned_artifact_active": false,
+    "v3_active": false
+  },
+  "promotion_rule": {
+    "all_conditions_conjunctive": true,
+    "compute_reduction_lower_95ci_minimum": 0.4,
+    "oracle_regret_reduction_minimum": 0.2,
+    "quality_retention_lower_95ci_minimum": 0.99,
+    "threshold_relaxation_after_evaluation": false,
+    "uncached_p95_inference_ms_maximum": 10.0,
+    "utility_vs_content_blind_lower_95ci_strictly_positive": true,
+    "utility_vs_fixed_lower_95ci_strictly_positive": true,
+    "zero_hard_constraint_regressions": true
+  },
+  "schema_version": "routellect-g7d-freeze-v1",
+  "source_control": {
+    "commit": null,
+    "identity_authority": "SHA-256 file identities in this manifest",
+    "publication_blocker": "Create a signed source-control commit containing these exact file identities before any G7-E evaluation or public benchmark claim."
+  },
+  "status": "research_candidate_frozen_not_promoted"
+}

@@ -1,0 +1,3370 @@
+{
+  "claim_boundary": "Offline advisory evidence on one fixed public snapshot; not a universal best-router claim and not provider price or target-model latency evidence.",
+  "data": {
+    "candidate_parameter_billions": {
+      "Llama-3.1-70B-Instruct": 70.0,
+      "Qwen2.5-Math-1.5B-Instruct": 1.5,
+      "Qwen2.5-Math-7B-Instruct": 7.0,
+      "Qwen3-0.6B": 0.6
+    },
+    "excluded_rows": 0,
+    "length_band_counts": {
+      "128_511": 2418,
+      "512_2047": 1066,
+      "gte_2048": 355,
+      "lt_128": 1161
+    },
+    "missing_observations": 0,
+    "split_counts": {
+      "hidden_test": 988,
+      "train": 2993,
+      "validation": 1019
+    },
+    "task_family_counts": {
+      "agent": 64,
+      "code": 409,
+      "extraction": 153,
+      "general": 2375,
+      "reasoning": 1768,
+      "research": 52,
+      "summarization": 8,
+      "writing": 171
+    },
+    "total_rows": 5000,
+    "train_candidate_means": {
+      "Llama-3.1-70B-Instruct": {
+        "correctness": 0.54878049,
+        "normalized_compute": 0.90696474,
+        "sample_size": 2993
+      },
+      "Qwen2.5-Math-1.5B-Instruct": {
+        "correctness": 0.17848313,
+        "normalized_compute": 0.02130068,
+        "sample_size": 2993
+      },
+      "Qwen2.5-Math-7B-Instruct": {
+        "correctness": 0.2148012,
+        "normalized_compute": 0.09955138,
+        "sample_size": 2993
+      },
+      "Qwen3-0.6B": {
+        "correctness": 0.20043435,
+        "normalized_compute": 0.00857143,
+        "sample_size": 2993
+      }
+    }
+  },
+  "evidence_manifest": {
+    "alignment_check": "exact key and prompts_id; Unicode-NFC prompt fingerprint with whitespace and Unicode control/format characters removed",
+    "allowed_source_columns": [
+      "key",
+      "prompts_id",
+      "original_prompt",
+      "actual_token_count",
+      "correctness_score"
+    ],
+    "candidate_count": 4,
+    "created_at": "2026-09-16T09:10:16.011788+00:00",
+    "dataset_id": "JiaqiXue/R2-Bench",
+    "dataset_revision": "1b6234647a21705da4c220f339e44fbe72c69bb2",
+    "declared_license": "MIT",
+    "discarded_sensitive_payloads": [
+      "templated_prompt",
+      "golden_answer",
+      "response",
+      "judge_raw"
+    ],
+    "excluded_rows": 0,
+    "key_prompt_sha256": "bf0f9cee227fc8546b375b97b331d9ef55e49d8747e9d1e6b34aa5a79c6a6332",
+    "normalization": {
+      "formula": "parameter_billions * actual_token_count / snapshot_maximum",
+      "snapshot_maximum": 7700.0,
+      "uses_correctness_labels": false
+    },
+    "prompt_mismatch_count_by_source": {},
+    "prompt_normalization": "Unicode NFC, CRLF to LF, strip edge whitespace",
+    "row_count": 5000,
+    "schema_version": 1,
+    "selection": "first 5000 aligned rows",
+    "snapshot_file": "r2_subset.jsonl",
+    "snapshot_sha256": "5691a7fe187440106e3548a4d6f792babc168d7da5e12463743297fd661ffe7b",
+    "source_files": [
+      {
+        "model": "Qwen3-0.6B",
+        "path": "data/Qwen/Qwen3-0.6B/100_judge.csv",
+        "retained_rows": 5000,
+        "url": "https://huggingface.co/datasets/JiaqiXue/R2-Bench/resolve/1b6234647a21705da4c220f339e44fbe72c69bb2/data/Qwen/Qwen3-0.6B/100_judge.csv?download=true"
+      },
+      {
+        "model": "Qwen2.5-Math-1.5B-Instruct",
+        "path": "data/Qwen/Qwen2.5-Math-1.5B-Instruct/100_judge.csv",
+        "retained_rows": 5000,
+        "url": "https://huggingface.co/datasets/JiaqiXue/R2-Bench/resolve/1b6234647a21705da4c220f339e44fbe72c69bb2/data/Qwen/Qwen2.5-Math-1.5B-Instruct/100_judge.csv?download=true"
+      },
+      {
+        "model": "Qwen2.5-Math-7B-Instruct",
+        "path": "data/Qwen/Qwen2.5-Math-7B-Instruct/100_judge.csv",
+        "retained_rows": 5000,
+        "url": "https://huggingface.co/datasets/JiaqiXue/R2-Bench/resolve/1b6234647a21705da4c220f339e44fbe72c69bb2/data/Qwen/Qwen2.5-Math-7B-Instruct/100_judge.csv?download=true"
+      },
+      {
+        "model": "Llama-3.1-70B-Instruct",
+        "path": "data/meta-llama/Llama-3.1-70B-Instruct/100_judge.csv",
+        "retained_rows": 5000,
+        "url": "https://huggingface.co/datasets/JiaqiXue/R2-Bench/resolve/1b6234647a21705da4c220f339e44fbe72c69bb2/data/meta-llama/Llama-3.1-70B-Instruct/100_judge.csv?download=true"
+      }
+    ],
+    "source_row_count_per_candidate": 5000,
+    "token_budget": 100
+  },
+  "generated_at": "2026-09-16T09:10:37.614723+00:00",
+  "primary_confirmatory_results": {
+    "hidden_test": {
+      "pareto_front": [
+        "always_best_quality",
+        "always_cheapest",
+        "global_utility",
+        "hybrid_segment",
+        "length_segment",
+        "seeded_random",
+        "task_segment"
+      ],
+      "strategies": {
+        "always_best_quality": {
+          "mean_correctness": 0.526417,
+          "mean_correctness_95ci": [
+            0.50212551,
+            0.55
+          ],
+          "mean_normalized_compute": 0.91184211,
+          "mean_normalized_compute_95ci": [
+            0.89610784,
+            0.92676665
+          ],
+          "mean_utility": 0.34404858,
+          "mean_utility_95ci": [
+            0.32026132,
+            0.36749172
+          ],
+          "oracle_regret": 0.16183916,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.36336032,
+            "0.6": 0.46862348,
+            "0.8": 0.66396761
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 988,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.48935282,
+                "mean_normalized_compute": 0.92184475,
+                "mean_utility": 0.30498387,
+                "sample_size": 479
+              },
+              "512_2047": {
+                "mean_correctness": 0.45430108,
+                "mean_normalized_compute": 0.85215054,
+                "mean_utility": 0.28387097,
+                "sample_size": 186
+              },
+              "gte_2048": {
+                "mean_correctness": 0.6382716,
+                "mean_normalized_compute": 0.94332211,
+                "mean_utility": 0.44960718,
+                "sample_size": 81
+              },
+              "lt_128": {
+                "mean_correctness": 0.6177686,
+                "mean_normalized_compute": 0.92738542,
+                "mean_utility": 0.43229151,
+                "sample_size": 242
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.71875,
+                "mean_normalized_compute": 0.93977273,
+                "mean_utility": 0.53079545,
+                "sample_size": 16
+              },
+              "code": {
+                "mean_correctness": 0.55764706,
+                "mean_normalized_compute": 0.90695187,
+                "mean_utility": 0.37625668,
+                "sample_size": 85
+              },
+              "extraction": {
+                "mean_correctness": 0.52173913,
+                "mean_normalized_compute": 0.97549407,
+                "mean_utility": 0.32664032,
+                "sample_size": 23
+              },
+              "general": {
+                "mean_correctness": 0.58385093,
+                "mean_normalized_compute": 0.94490871,
+                "mean_utility": 0.39486919,
+                "sample_size": 483
+              },
+              "reasoning": {
+                "mean_correctness": 0.42865672,
+                "mean_normalized_compute": 0.8612483,
+                "mean_utility": 0.25640706,
+                "sample_size": 335
+              },
+              "research": {
+                "mean_correctness": 0.575,
+                "mean_normalized_compute": 0.72954545,
+                "mean_utility": 0.42909091,
+                "sample_size": 8
+              },
+              "summarization": {
+                "mean_correctness": 0.8,
+                "mean_normalized_compute": 0.68181818,
+                "mean_utility": 0.66363636,
+                "sample_size": 2
+              },
+              "writing": {
+                "mean_correctness": 0.48333333,
+                "mean_normalized_compute": 0.95075758,
+                "mean_utility": 0.29318182,
+                "sample_size": 36
+              }
+            }
+          }
+        },
+        "always_cheapest": {
+          "mean_correctness": 0.19767206,
+          "mean_correctness_95ci": [
+            0.18016194,
+            0.21497976
+          ],
+          "mean_normalized_compute": 0.00857143,
+          "mean_normalized_compute_95ci": [
+            0.00857143,
+            0.00857143
+          ],
+          "mean_utility": 0.19595778,
+          "mean_utility_95ci": [
+            0.17844766,
+            0.21326547
+          ],
+          "oracle_regret": 0.30992996,
+          "paired_utility_difference_vs_global": -0.1480908,
+          "paired_utility_difference_vs_global_95ci": [
+            -0.17540402,
+            -0.12138856
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.78340081,
+            "0.6": 0.88562753,
+            "0.8": 0.92004049
+          },
+          "recommendation_share": {
+            "Qwen3-0.6B": 1.0
+          },
+          "sample_size": 988,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.18851775,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.18680346,
+                "sample_size": 479
+              },
+              "512_2047": {
+                "mean_correctness": 0.21774194,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.21602765,
+                "sample_size": 186
+              },
+              "gte_2048": {
+                "mean_correctness": 0.28271605,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.28100176,
+                "sample_size": 81
+              },
+              "lt_128": {
+                "mean_correctness": 0.17190083,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.17018654,
+                "sample_size": 242
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.3,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.29828571,
+                "sample_size": 16
+              },
+              "code": {
+                "mean_correctness": 0.24470588,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.2429916,
+                "sample_size": 85
+              },
+              "extraction": {
+                "mean_correctness": 0.17391304,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.17219876,
+                "sample_size": 23
+              },
+              "general": {
+                "mean_correctness": 0.17888199,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.1771677,
+                "sample_size": 483
+              },
+              "reasoning": {
+                "mean_correctness": 0.19970149,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.19798721,
+                "sample_size": 335
+              },
+              "research": {
+                "mean_correctness": 0.425,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.42328571,
+                "sample_size": 8
+              },
+              "summarization": {
+                "mean_correctness": 0.3,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.29828571,
+                "sample_size": 2
+              },
+              "writing": {
+                "mean_correctness": 0.23333333,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.23161905,
+                "sample_size": 36
+              }
+            }
+          }
+        },
+        "global_utility": {
+          "mean_correctness": 0.526417,
+          "mean_correctness_95ci": [
+            0.50212551,
+            0.55
+          ],
+          "mean_normalized_compute": 0.91184211,
+          "mean_normalized_compute_95ci": [
+            0.89610784,
+            0.92676665
+          ],
+          "mean_utility": 0.34404858,
+          "mean_utility_95ci": [
+            0.32026132,
+            0.36749172
+          ],
+          "oracle_regret": 0.16183916,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.36336032,
+            "0.6": 0.46862348,
+            "0.8": 0.66396761
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 988,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.48935282,
+                "mean_normalized_compute": 0.92184475,
+                "mean_utility": 0.30498387,
+                "sample_size": 479
+              },
+              "512_2047": {
+                "mean_correctness": 0.45430108,
+                "mean_normalized_compute": 0.85215054,
+                "mean_utility": 0.28387097,
+                "sample_size": 186
+              },
+              "gte_2048": {
+                "mean_correctness": 0.6382716,
+                "mean_normalized_compute": 0.94332211,
+                "mean_utility": 0.44960718,
+                "sample_size": 81
+              },
+              "lt_128": {
+                "mean_correctness": 0.6177686,
+                "mean_normalized_compute": 0.92738542,
+                "mean_utility": 0.43229151,
+                "sample_size": 242
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.71875,
+                "mean_normalized_compute": 0.93977273,
+                "mean_utility": 0.53079545,
+                "sample_size": 16
+              },
+              "code": {
+                "mean_correctness": 0.55764706,
+                "mean_normalized_compute": 0.90695187,
+                "mean_utility": 0.37625668,
+                "sample_size": 85
+              },
+              "extraction": {
+                "mean_correctness": 0.52173913,
+                "mean_normalized_compute": 0.97549407,
+                "mean_utility": 0.32664032,
+                "sample_size": 23
+              },
+              "general": {
+                "mean_correctness": 0.58385093,
+                "mean_normalized_compute": 0.94490871,
+                "mean_utility": 0.39486919,
+                "sample_size": 483
+              },
+              "reasoning": {
+                "mean_correctness": 0.42865672,
+                "mean_normalized_compute": 0.8612483,
+                "mean_utility": 0.25640706,
+                "sample_size": 335
+              },
+              "research": {
+                "mean_correctness": 0.575,
+                "mean_normalized_compute": 0.72954545,
+                "mean_utility": 0.42909091,
+                "sample_size": 8
+              },
+              "summarization": {
+                "mean_correctness": 0.8,
+                "mean_normalized_compute": 0.68181818,
+                "mean_utility": 0.66363636,
+                "sample_size": 2
+              },
+              "writing": {
+                "mean_correctness": 0.48333333,
+                "mean_normalized_compute": 0.95075758,
+                "mean_utility": 0.29318182,
+                "sample_size": 36
+              }
+            }
+          }
+        },
+        "hybrid_segment": {
+          "mean_correctness": 0.526417,
+          "mean_correctness_95ci": [
+            0.50212551,
+            0.55
+          ],
+          "mean_normalized_compute": 0.91184211,
+          "mean_normalized_compute_95ci": [
+            0.89610784,
+            0.92676665
+          ],
+          "mean_utility": 0.34404858,
+          "mean_utility_95ci": [
+            0.32026132,
+            0.36749172
+          ],
+          "oracle_regret": 0.16183916,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.36336032,
+            "0.6": 0.46862348,
+            "0.8": 0.66396761
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 988,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.48935282,
+                "mean_normalized_compute": 0.92184475,
+                "mean_utility": 0.30498387,
+                "sample_size": 479
+              },
+              "512_2047": {
+                "mean_correctness": 0.45430108,
+                "mean_normalized_compute": 0.85215054,
+                "mean_utility": 0.28387097,
+                "sample_size": 186
+              },
+              "gte_2048": {
+                "mean_correctness": 0.6382716,
+                "mean_normalized_compute": 0.94332211,
+                "mean_utility": 0.44960718,
+                "sample_size": 81
+              },
+              "lt_128": {
+                "mean_correctness": 0.6177686,
+                "mean_normalized_compute": 0.92738542,
+                "mean_utility": 0.43229151,
+                "sample_size": 242
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.71875,
+                "mean_normalized_compute": 0.93977273,
+                "mean_utility": 0.53079545,
+                "sample_size": 16
+              },
+              "code": {
+                "mean_correctness": 0.55764706,
+                "mean_normalized_compute": 0.90695187,
+                "mean_utility": 0.37625668,
+                "sample_size": 85
+              },
+              "extraction": {
+                "mean_correctness": 0.52173913,
+                "mean_normalized_compute": 0.97549407,
+                "mean_utility": 0.32664032,
+                "sample_size": 23
+              },
+              "general": {
+                "mean_correctness": 0.58385093,
+                "mean_normalized_compute": 0.94490871,
+                "mean_utility": 0.39486919,
+                "sample_size": 483
+              },
+              "reasoning": {
+                "mean_correctness": 0.42865672,
+                "mean_normalized_compute": 0.8612483,
+                "mean_utility": 0.25640706,
+                "sample_size": 335
+              },
+              "research": {
+                "mean_correctness": 0.575,
+                "mean_normalized_compute": 0.72954545,
+                "mean_utility": 0.42909091,
+                "sample_size": 8
+              },
+              "summarization": {
+                "mean_correctness": 0.8,
+                "mean_normalized_compute": 0.68181818,
+                "mean_utility": 0.66363636,
+                "sample_size": 2
+              },
+              "writing": {
+                "mean_correctness": 0.48333333,
+                "mean_normalized_compute": 0.95075758,
+                "mean_utility": 0.29318182,
+                "sample_size": 36
+              }
+            }
+          }
+        },
+        "length_segment": {
+          "mean_correctness": 0.526417,
+          "mean_correctness_95ci": [
+            0.50212551,
+            0.55
+          ],
+          "mean_normalized_compute": 0.91184211,
+          "mean_normalized_compute_95ci": [
+            0.89610784,
+            0.92676665
+          ],
+          "mean_utility": 0.34404858,
+          "mean_utility_95ci": [
+            0.32026132,
+            0.36749172
+          ],
+          "oracle_regret": 0.16183916,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.36336032,
+            "0.6": 0.46862348,
+            "0.8": 0.66396761
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 988,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.48935282,
+                "mean_normalized_compute": 0.92184475,
+                "mean_utility": 0.30498387,
+                "sample_size": 479
+              },
+              "512_2047": {
+                "mean_correctness": 0.45430108,
+                "mean_normalized_compute": 0.85215054,
+                "mean_utility": 0.28387097,
+                "sample_size": 186
+              },
+              "gte_2048": {
+                "mean_correctness": 0.6382716,
+                "mean_normalized_compute": 0.94332211,
+                "mean_utility": 0.44960718,
+                "sample_size": 81
+              },
+              "lt_128": {
+                "mean_correctness": 0.6177686,
+                "mean_normalized_compute": 0.92738542,
+                "mean_utility": 0.43229151,
+                "sample_size": 242
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.71875,
+                "mean_normalized_compute": 0.93977273,
+                "mean_utility": 0.53079545,
+                "sample_size": 16
+              },
+              "code": {
+                "mean_correctness": 0.55764706,
+                "mean_normalized_compute": 0.90695187,
+                "mean_utility": 0.37625668,
+                "sample_size": 85
+              },
+              "extraction": {
+                "mean_correctness": 0.52173913,
+                "mean_normalized_compute": 0.97549407,
+                "mean_utility": 0.32664032,
+                "sample_size": 23
+              },
+              "general": {
+                "mean_correctness": 0.58385093,
+                "mean_normalized_compute": 0.94490871,
+                "mean_utility": 0.39486919,
+                "sample_size": 483
+              },
+              "reasoning": {
+                "mean_correctness": 0.42865672,
+                "mean_normalized_compute": 0.8612483,
+                "mean_utility": 0.25640706,
+                "sample_size": 335
+              },
+              "research": {
+                "mean_correctness": 0.575,
+                "mean_normalized_compute": 0.72954545,
+                "mean_utility": 0.42909091,
+                "sample_size": 8
+              },
+              "summarization": {
+                "mean_correctness": 0.8,
+                "mean_normalized_compute": 0.68181818,
+                "mean_utility": 0.66363636,
+                "sample_size": 2
+              },
+              "writing": {
+                "mean_correctness": 0.48333333,
+                "mean_normalized_compute": 0.95075758,
+                "mean_utility": 0.29318182,
+                "sample_size": 36
+              }
+            }
+          }
+        },
+        "oracle": {
+          "mean_correctness": 0.60263158,
+          "mean_correctness_95ci": [
+            0.5812753,
+            0.62368421
+          ],
+          "mean_normalized_compute": 0.48371918,
+          "mean_normalized_compute_95ci": [
+            0.45425745,
+            0.51333377
+          ],
+          "mean_utility": 0.50588774,
+          "mean_utility_95ci": [
+            0.48676526,
+            0.52544158
+          ],
+          "oracle_regret": 0.0,
+          "paired_utility_difference_vs_global": 0.16183916,
+          "paired_utility_difference_vs_global_95ci": [
+            0.1460296,
+            0.17831303
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.28137652,
+            "0.6": 0.39676113,
+            "0.8": 0.60728745
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.50708502,
+            "Qwen2.5-Math-1.5B-Instruct": 0.11234818,
+            "Qwen2.5-Math-7B-Instruct": 0.10526316,
+            "Qwen3-0.6B": 0.27530364
+          },
+          "sample_size": 988,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.55156576,
+                "mean_normalized_compute": 0.48264783,
+                "mean_utility": 0.4550362,
+                "sample_size": 479
+              },
+              "512_2047": {
+                "mean_correctness": 0.57473118,
+                "mean_normalized_compute": 0.37025206,
+                "mean_utility": 0.50068077,
+                "sample_size": 186
+              },
+              "gte_2048": {
+                "mean_correctness": 0.72098765,
+                "mean_normalized_compute": 0.56580728,
+                "mean_utility": 0.6078262,
+                "sample_size": 81
+              },
+              "lt_128": {
+                "mean_correctness": 0.68553719,
+                "mean_normalized_compute": 0.54557422,
+                "mean_utility": 0.57642235,
+                "sample_size": 242
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.7,
+                "mean_normalized_compute": 0.52223214,
+                "mean_utility": 0.59555357,
+                "sample_size": 16
+              },
+              "code": {
+                "mean_correctness": 0.62470588,
+                "mean_normalized_compute": 0.54595264,
+                "mean_utility": 0.51551536,
+                "sample_size": 85
+              },
+              "extraction": {
+                "mean_correctness": 0.55217391,
+                "mean_normalized_compute": 0.46276115,
+                "mean_utility": 0.45962168,
+                "sample_size": 23
+              },
+              "general": {
+                "mean_correctness": 0.64223602,
+                "mean_normalized_compute": 0.54793337,
+                "mean_utility": 0.53264935,
+                "sample_size": 483
+              },
+              "reasoning": {
+                "mean_correctness": 0.54059701,
+                "mean_normalized_compute": 0.37371196,
+                "mean_utility": 0.46585462,
+                "sample_size": 335
+              },
+              "research": {
+                "mean_correctness": 0.6875,
+                "mean_normalized_compute": 0.33603896,
+                "mean_utility": 0.62029221,
+                "sample_size": 8
+              },
+              "summarization": {
+                "mean_correctness": 0.8,
+                "mean_normalized_compute": 0.68181818,
+                "mean_utility": 0.66363636,
+                "sample_size": 2
+              },
+              "writing": {
+                "mean_correctness": 0.55555556,
+                "mean_normalized_compute": 0.51700216,
+                "mean_utility": 0.45215512,
+                "sample_size": 36
+              }
+            }
+          }
+        },
+        "seeded_random": {
+          "mean_correctness": 0.27135628,
+          "mean_correctness_95ci": [
+            0.25151822,
+            0.29139676
+          ],
+          "mean_normalized_compute": 0.25107379,
+          "mean_normalized_compute_95ci": [
+            0.22723158,
+            0.2764755
+          ],
+          "mean_utility": 0.22114152,
+          "mean_utility_95ci": [
+            0.20295961,
+            0.23908712
+          ],
+          "oracle_regret": 0.28474623,
+          "paired_utility_difference_vs_global": -0.12290707,
+          "paired_utility_difference_vs_global_95ci": [
+            -0.14599773,
+            -0.10017656
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.70242915,
+            "0.6": 0.81072874,
+            "0.8": 0.87651822
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.23481781,
+            "Qwen2.5-Math-1.5B-Instruct": 0.24696356,
+            "Qwen2.5-Math-7B-Instruct": 0.2611336,
+            "Qwen3-0.6B": 0.25708502
+          },
+          "sample_size": 988,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.26471816,
+                "mean_normalized_compute": 0.24949299,
+                "mean_utility": 0.21481956,
+                "sample_size": 479
+              },
+              "512_2047": {
+                "mean_correctness": 0.20698925,
+                "mean_normalized_compute": 0.21923754,
+                "mean_utility": 0.16314174,
+                "sample_size": 186
+              },
+              "gte_2048": {
+                "mean_correctness": 0.30123457,
+                "mean_normalized_compute": 0.2981722,
+                "mean_utility": 0.24160013,
+                "sample_size": 81
+              },
+              "lt_128": {
+                "mean_correctness": 0.32396694,
+                "mean_normalized_compute": 0.26290759,
+                "mean_utility": 0.27138542,
+                "sample_size": 242
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.26875,
+                "mean_normalized_compute": 0.10392857,
+                "mean_utility": 0.24796429,
+                "sample_size": 16
+              },
+              "code": {
+                "mean_correctness": 0.23294118,
+                "mean_normalized_compute": 0.21057448,
+                "mean_utility": 0.19082628,
+                "sample_size": 85
+              },
+              "extraction": {
+                "mean_correctness": 0.12608696,
+                "mean_normalized_compute": 0.21482778,
+                "mean_utility": 0.0831214,
+                "sample_size": 23
+              },
+              "general": {
+                "mean_correctness": 0.32815735,
+                "mean_normalized_compute": 0.2689121,
+                "mean_utility": 0.27437493,
+                "sample_size": 483
+              },
+              "reasoning": {
+                "mean_correctness": 0.21462687,
+                "mean_normalized_compute": 0.25309983,
+                "mean_utility": 0.1640069,
+                "sample_size": 335
+              },
+              "research": {
+                "mean_correctness": 0.15,
+                "mean_normalized_compute": 0.17160714,
+                "mean_utility": 0.11567857,
+                "sample_size": 8
+              },
+              "summarization": {
+                "mean_correctness": 0.35,
+                "mean_normalized_compute": 0.1,
+                "mean_utility": 0.33,
+                "sample_size": 2
+              },
+              "writing": {
+                "mean_correctness": 0.24444444,
+                "mean_normalized_compute": 0.20312049,
+                "mean_utility": 0.20382035,
+                "sample_size": 36
+              }
+            }
+          }
+        },
+        "task_segment": {
+          "mean_correctness": 0.526417,
+          "mean_correctness_95ci": [
+            0.50212551,
+            0.55
+          ],
+          "mean_normalized_compute": 0.91184211,
+          "mean_normalized_compute_95ci": [
+            0.89610784,
+            0.92676665
+          ],
+          "mean_utility": 0.34404858,
+          "mean_utility_95ci": [
+            0.32026132,
+            0.36749172
+          ],
+          "oracle_regret": 0.16183916,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.36336032,
+            "0.6": 0.46862348,
+            "0.8": 0.66396761
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 988,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.48935282,
+                "mean_normalized_compute": 0.92184475,
+                "mean_utility": 0.30498387,
+                "sample_size": 479
+              },
+              "512_2047": {
+                "mean_correctness": 0.45430108,
+                "mean_normalized_compute": 0.85215054,
+                "mean_utility": 0.28387097,
+                "sample_size": 186
+              },
+              "gte_2048": {
+                "mean_correctness": 0.6382716,
+                "mean_normalized_compute": 0.94332211,
+                "mean_utility": 0.44960718,
+                "sample_size": 81
+              },
+              "lt_128": {
+                "mean_correctness": 0.6177686,
+                "mean_normalized_compute": 0.92738542,
+                "mean_utility": 0.43229151,
+                "sample_size": 242
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.71875,
+                "mean_normalized_compute": 0.93977273,
+                "mean_utility": 0.53079545,
+                "sample_size": 16
+              },
+              "code": {
+                "mean_correctness": 0.55764706,
+                "mean_normalized_compute": 0.90695187,
+                "mean_utility": 0.37625668,
+                "sample_size": 85
+              },
+              "extraction": {
+                "mean_correctness": 0.52173913,
+                "mean_normalized_compute": 0.97549407,
+                "mean_utility": 0.32664032,
+                "sample_size": 23
+              },
+              "general": {
+                "mean_correctness": 0.58385093,
+                "mean_normalized_compute": 0.94490871,
+                "mean_utility": 0.39486919,
+                "sample_size": 483
+              },
+              "reasoning": {
+                "mean_correctness": 0.42865672,
+                "mean_normalized_compute": 0.8612483,
+                "mean_utility": 0.25640706,
+                "sample_size": 335
+              },
+              "research": {
+                "mean_correctness": 0.575,
+                "mean_normalized_compute": 0.72954545,
+                "mean_utility": 0.42909091,
+                "sample_size": 8
+              },
+              "summarization": {
+                "mean_correctness": 0.8,
+                "mean_normalized_compute": 0.68181818,
+                "mean_utility": 0.66363636,
+                "sample_size": 2
+              },
+              "writing": {
+                "mean_correctness": 0.48333333,
+                "mean_normalized_compute": 0.95075758,
+                "mean_utility": 0.29318182,
+                "sample_size": 36
+              }
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "pareto_front": [
+        "always_best_quality",
+        "always_cheapest",
+        "global_utility",
+        "hybrid_segment",
+        "length_segment",
+        "seeded_random",
+        "task_segment"
+      ],
+      "strategies": {
+        "always_best_quality": {
+          "mean_correctness": 0.56692836,
+          "mean_correctness_95ci": [
+            0.54425908,
+            0.58900883
+          ],
+          "mean_normalized_compute": 0.90793113,
+          "mean_normalized_compute_95ci": [
+            0.89254171,
+            0.92298153
+          ],
+          "mean_utility": 0.38534214,
+          "mean_utility_95ci": [
+            0.36277634,
+            0.40755643
+          ],
+          "oracle_regret": 0.14522702,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.31992149,
+            "0.6": 0.41511286,
+            "0.8": 0.61825319
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 1019,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.55233266,
+                "mean_normalized_compute": 0.93245436,
+                "mean_utility": 0.36584178,
+                "sample_size": 493
+              },
+              "512_2047": {
+                "mean_correctness": 0.43179724,
+                "mean_normalized_compute": 0.83016339,
+                "mean_utility": 0.26576456,
+                "sample_size": 217
+              },
+              "gte_2048": {
+                "mean_correctness": 0.7173913,
+                "mean_normalized_compute": 0.94993412,
+                "mean_utility": 0.52740448,
+                "sample_size": 69
+              },
+              "lt_128": {
+                "mean_correctness": 0.67583333,
+                "mean_normalized_compute": 0.91579545,
+                "mean_utility": 0.49267424,
+                "sample_size": 240
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.57333333,
+                "mean_normalized_compute": 0.98424242,
+                "mean_utility": 0.37648485,
+                "sample_size": 15
+              },
+              "code": {
+                "mean_correctness": 0.54202899,
+                "mean_normalized_compute": 0.8944664,
+                "mean_utility": 0.3631357,
+                "sample_size": 69
+              },
+              "extraction": {
+                "mean_correctness": 0.53870968,
+                "mean_normalized_compute": 0.97214076,
+                "mean_utility": 0.34428152,
+                "sample_size": 31
+              },
+              "general": {
+                "mean_correctness": 0.61750503,
+                "mean_normalized_compute": 0.94335102,
+                "mean_utility": 0.42883483,
+                "sample_size": 497
+              },
+              "reasoning": {
+                "mean_correctness": 0.48121547,
+                "mean_normalized_compute": 0.84786539,
+                "mean_utility": 0.31164239,
+                "sample_size": 362
+              },
+              "research": {
+                "mean_correctness": 0.86666667,
+                "mean_normalized_compute": 0.97979798,
+                "mean_utility": 0.67070707,
+                "sample_size": 9
+              },
+              "summarization": {
+                "mean_correctness": 0.675,
+                "mean_normalized_compute": 1.0,
+                "mean_utility": 0.475,
+                "sample_size": 4
+              },
+              "writing": {
+                "mean_correctness": 0.73125,
+                "mean_normalized_compute": 0.93664773,
+                "mean_utility": 0.54392045,
+                "sample_size": 32
+              }
+            }
+          }
+        },
+        "always_cheapest": {
+          "mean_correctness": 0.20206084,
+          "mean_correctness_95ci": [
+            0.1844946,
+            0.22119725
+          ],
+          "mean_normalized_compute": 0.00857143,
+          "mean_normalized_compute_95ci": [
+            0.00857143,
+            0.00857143
+          ],
+          "mean_utility": 0.20034656,
+          "mean_utility_95ci": [
+            0.18278032,
+            0.21948297
+          ],
+          "oracle_regret": 0.3302226,
+          "paired_utility_difference_vs_global": -0.18499558,
+          "paired_utility_difference_vs_global_95ci": [
+            -0.21114242,
+            -0.16003885
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.78508342,
+            "0.6": 0.88714426,
+            "0.8": 0.92247301
+          },
+          "recommendation_share": {
+            "Qwen3-0.6B": 1.0
+          },
+          "sample_size": 1019,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.2040568,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.20234251,
+                "sample_size": 493
+              },
+              "512_2047": {
+                "mean_correctness": 0.1875576,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.18584332,
+                "sample_size": 217
+              },
+              "gte_2048": {
+                "mean_correctness": 0.32463768,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.3229234,
+                "sample_size": 69
+              },
+              "lt_128": {
+                "mean_correctness": 0.17583333,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.17411905,
+                "sample_size": 240
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.34,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.33828571,
+                "sample_size": 15
+              },
+              "code": {
+                "mean_correctness": 0.32173913,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.32002484,
+                "sample_size": 69
+              },
+              "extraction": {
+                "mean_correctness": 0.15483871,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.15312442,
+                "sample_size": 31
+              },
+              "general": {
+                "mean_correctness": 0.18088531,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.17917103,
+                "sample_size": 497
+              },
+              "reasoning": {
+                "mean_correctness": 0.18563536,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.18392107,
+                "sample_size": 362
+              },
+              "research": {
+                "mean_correctness": 0.46666667,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.46495238,
+                "sample_size": 9
+              },
+              "summarization": {
+                "mean_correctness": 0.45,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.44828571,
+                "sample_size": 4
+              },
+              "writing": {
+                "mean_correctness": 0.334375,
+                "mean_normalized_compute": 0.00857143,
+                "mean_utility": 0.33266071,
+                "sample_size": 32
+              }
+            }
+          }
+        },
+        "global_utility": {
+          "mean_correctness": 0.56692836,
+          "mean_correctness_95ci": [
+            0.54425908,
+            0.58900883
+          ],
+          "mean_normalized_compute": 0.90793113,
+          "mean_normalized_compute_95ci": [
+            0.89254171,
+            0.92298153
+          ],
+          "mean_utility": 0.38534214,
+          "mean_utility_95ci": [
+            0.36277634,
+            0.40755643
+          ],
+          "oracle_regret": 0.14522702,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.31992149,
+            "0.6": 0.41511286,
+            "0.8": 0.61825319
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 1019,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.55233266,
+                "mean_normalized_compute": 0.93245436,
+                "mean_utility": 0.36584178,
+                "sample_size": 493
+              },
+              "512_2047": {
+                "mean_correctness": 0.43179724,
+                "mean_normalized_compute": 0.83016339,
+                "mean_utility": 0.26576456,
+                "sample_size": 217
+              },
+              "gte_2048": {
+                "mean_correctness": 0.7173913,
+                "mean_normalized_compute": 0.94993412,
+                "mean_utility": 0.52740448,
+                "sample_size": 69
+              },
+              "lt_128": {
+                "mean_correctness": 0.67583333,
+                "mean_normalized_compute": 0.91579545,
+                "mean_utility": 0.49267424,
+                "sample_size": 240
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.57333333,
+                "mean_normalized_compute": 0.98424242,
+                "mean_utility": 0.37648485,
+                "sample_size": 15
+              },
+              "code": {
+                "mean_correctness": 0.54202899,
+                "mean_normalized_compute": 0.8944664,
+                "mean_utility": 0.3631357,
+                "sample_size": 69
+              },
+              "extraction": {
+                "mean_correctness": 0.53870968,
+                "mean_normalized_compute": 0.97214076,
+                "mean_utility": 0.34428152,
+                "sample_size": 31
+              },
+              "general": {
+                "mean_correctness": 0.61750503,
+                "mean_normalized_compute": 0.94335102,
+                "mean_utility": 0.42883483,
+                "sample_size": 497
+              },
+              "reasoning": {
+                "mean_correctness": 0.48121547,
+                "mean_normalized_compute": 0.84786539,
+                "mean_utility": 0.31164239,
+                "sample_size": 362
+              },
+              "research": {
+                "mean_correctness": 0.86666667,
+                "mean_normalized_compute": 0.97979798,
+                "mean_utility": 0.67070707,
+                "sample_size": 9
+              },
+              "summarization": {
+                "mean_correctness": 0.675,
+                "mean_normalized_compute": 1.0,
+                "mean_utility": 0.475,
+                "sample_size": 4
+              },
+              "writing": {
+                "mean_correctness": 0.73125,
+                "mean_normalized_compute": 0.93664773,
+                "mean_utility": 0.54392045,
+                "sample_size": 32
+              }
+            }
+          }
+        },
+        "hybrid_segment": {
+          "mean_correctness": 0.56692836,
+          "mean_correctness_95ci": [
+            0.54425908,
+            0.58900883
+          ],
+          "mean_normalized_compute": 0.90793113,
+          "mean_normalized_compute_95ci": [
+            0.89254171,
+            0.92298153
+          ],
+          "mean_utility": 0.38534214,
+          "mean_utility_95ci": [
+            0.36277634,
+            0.40755643
+          ],
+          "oracle_regret": 0.14522702,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.31992149,
+            "0.6": 0.41511286,
+            "0.8": 0.61825319
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 1019,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.55233266,
+                "mean_normalized_compute": 0.93245436,
+                "mean_utility": 0.36584178,
+                "sample_size": 493
+              },
+              "512_2047": {
+                "mean_correctness": 0.43179724,
+                "mean_normalized_compute": 0.83016339,
+                "mean_utility": 0.26576456,
+                "sample_size": 217
+              },
+              "gte_2048": {
+                "mean_correctness": 0.7173913,
+                "mean_normalized_compute": 0.94993412,
+                "mean_utility": 0.52740448,
+                "sample_size": 69
+              },
+              "lt_128": {
+                "mean_correctness": 0.67583333,
+                "mean_normalized_compute": 0.91579545,
+                "mean_utility": 0.49267424,
+                "sample_size": 240
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.57333333,
+                "mean_normalized_compute": 0.98424242,
+                "mean_utility": 0.37648485,
+                "sample_size": 15
+              },
+              "code": {
+                "mean_correctness": 0.54202899,
+                "mean_normalized_compute": 0.8944664,
+                "mean_utility": 0.3631357,
+                "sample_size": 69
+              },
+              "extraction": {
+                "mean_correctness": 0.53870968,
+                "mean_normalized_compute": 0.97214076,
+                "mean_utility": 0.34428152,
+                "sample_size": 31
+              },
+              "general": {
+                "mean_correctness": 0.61750503,
+                "mean_normalized_compute": 0.94335102,
+                "mean_utility": 0.42883483,
+                "sample_size": 497
+              },
+              "reasoning": {
+                "mean_correctness": 0.48121547,
+                "mean_normalized_compute": 0.84786539,
+                "mean_utility": 0.31164239,
+                "sample_size": 362
+              },
+              "research": {
+                "mean_correctness": 0.86666667,
+                "mean_normalized_compute": 0.97979798,
+                "mean_utility": 0.67070707,
+                "sample_size": 9
+              },
+              "summarization": {
+                "mean_correctness": 0.675,
+                "mean_normalized_compute": 1.0,
+                "mean_utility": 0.475,
+                "sample_size": 4
+              },
+              "writing": {
+                "mean_correctness": 0.73125,
+                "mean_normalized_compute": 0.93664773,
+                "mean_utility": 0.54392045,
+                "sample_size": 32
+              }
+            }
+          }
+        },
+        "length_segment": {
+          "mean_correctness": 0.56692836,
+          "mean_correctness_95ci": [
+            0.54425908,
+            0.58900883
+          ],
+          "mean_normalized_compute": 0.90793113,
+          "mean_normalized_compute_95ci": [
+            0.89254171,
+            0.92298153
+          ],
+          "mean_utility": 0.38534214,
+          "mean_utility_95ci": [
+            0.36277634,
+            0.40755643
+          ],
+          "oracle_regret": 0.14522702,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.31992149,
+            "0.6": 0.41511286,
+            "0.8": 0.61825319
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 1019,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.55233266,
+                "mean_normalized_compute": 0.93245436,
+                "mean_utility": 0.36584178,
+                "sample_size": 493
+              },
+              "512_2047": {
+                "mean_correctness": 0.43179724,
+                "mean_normalized_compute": 0.83016339,
+                "mean_utility": 0.26576456,
+                "sample_size": 217
+              },
+              "gte_2048": {
+                "mean_correctness": 0.7173913,
+                "mean_normalized_compute": 0.94993412,
+                "mean_utility": 0.52740448,
+                "sample_size": 69
+              },
+              "lt_128": {
+                "mean_correctness": 0.67583333,
+                "mean_normalized_compute": 0.91579545,
+                "mean_utility": 0.49267424,
+                "sample_size": 240
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.57333333,
+                "mean_normalized_compute": 0.98424242,
+                "mean_utility": 0.37648485,
+                "sample_size": 15
+              },
+              "code": {
+                "mean_correctness": 0.54202899,
+                "mean_normalized_compute": 0.8944664,
+                "mean_utility": 0.3631357,
+                "sample_size": 69
+              },
+              "extraction": {
+                "mean_correctness": 0.53870968,
+                "mean_normalized_compute": 0.97214076,
+                "mean_utility": 0.34428152,
+                "sample_size": 31
+              },
+              "general": {
+                "mean_correctness": 0.61750503,
+                "mean_normalized_compute": 0.94335102,
+                "mean_utility": 0.42883483,
+                "sample_size": 497
+              },
+              "reasoning": {
+                "mean_correctness": 0.48121547,
+                "mean_normalized_compute": 0.84786539,
+                "mean_utility": 0.31164239,
+                "sample_size": 362
+              },
+              "research": {
+                "mean_correctness": 0.86666667,
+                "mean_normalized_compute": 0.97979798,
+                "mean_utility": 0.67070707,
+                "sample_size": 9
+              },
+              "summarization": {
+                "mean_correctness": 0.675,
+                "mean_normalized_compute": 1.0,
+                "mean_utility": 0.475,
+                "sample_size": 4
+              },
+              "writing": {
+                "mean_correctness": 0.73125,
+                "mean_normalized_compute": 0.93664773,
+                "mean_utility": 0.54392045,
+                "sample_size": 32
+              }
+            }
+          }
+        },
+        "oracle": {
+          "mean_correctness": 0.63287537,
+          "mean_correctness_95ci": [
+            0.61256133,
+            0.65407262
+          ],
+          "mean_normalized_compute": 0.51153104,
+          "mean_normalized_compute_95ci": [
+            0.48252616,
+            0.5405307
+          ],
+          "mean_utility": 0.53056916,
+          "mean_utility_95ci": [
+            0.51177248,
+            0.54971097
+          ],
+          "oracle_regret": 0.0,
+          "paired_utility_difference_vs_global": 0.14522702,
+          "paired_utility_difference_vs_global_95ci": [
+            0.12976776,
+            0.16092352
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.25024534,
+            "0.6": 0.36015702,
+            "0.8": 0.56624141
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.53287537,
+            "Qwen2.5-Math-1.5B-Instruct": 0.09421001,
+            "Qwen2.5-Math-7B-Instruct": 0.13052012,
+            "Qwen3-0.6B": 0.2423945
+          },
+          "sample_size": 1019,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.60730223,
+                "mean_normalized_compute": 0.54182556,
+                "mean_utility": 0.49893712,
+                "sample_size": 493
+              },
+              "512_2047": {
+                "mean_correctness": 0.56682028,
+                "mean_normalized_compute": 0.3535041,
+                "mean_utility": 0.49611946,
+                "sample_size": 217
+              },
+              "gte_2048": {
+                "mean_correctness": 0.76231884,
+                "mean_normalized_compute": 0.56586486,
+                "mean_utility": 0.64914587,
+                "sample_size": 69
+              },
+              "lt_128": {
+                "mean_correctness": 0.70791667,
+                "mean_normalized_compute": 0.57656277,
+                "mean_utility": 0.59260411,
+                "sample_size": 240
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.66666667,
+                "mean_normalized_compute": 0.587671,
+                "mean_utility": 0.54913247,
+                "sample_size": 15
+              },
+              "code": {
+                "mean_correctness": 0.63913043,
+                "mean_normalized_compute": 0.47914926,
+                "mean_utility": 0.54330058,
+                "sample_size": 69
+              },
+              "extraction": {
+                "mean_correctness": 0.59032258,
+                "mean_normalized_compute": 0.63942187,
+                "mean_utility": 0.46243821,
+                "sample_size": 31
+              },
+              "general": {
+                "mean_correctness": 0.65191147,
+                "mean_normalized_compute": 0.56843006,
+                "mean_utility": 0.53822546,
+                "sample_size": 497
+              },
+              "reasoning": {
+                "mean_correctness": 0.59226519,
+                "mean_normalized_compute": 0.41157817,
+                "mean_utility": 0.50994956,
+                "sample_size": 362
+              },
+              "research": {
+                "mean_correctness": 0.85555556,
+                "mean_normalized_compute": 0.76453102,
+                "mean_utility": 0.70264935,
+                "sample_size": 9
+              },
+              "summarization": {
+                "mean_correctness": 0.75,
+                "mean_normalized_compute": 0.75418831,
+                "mean_utility": 0.59916234,
+                "sample_size": 4
+              },
+              "writing": {
+                "mean_correctness": 0.73125,
+                "mean_normalized_compute": 0.5672849,
+                "mean_utility": 0.61779302,
+                "sample_size": 32
+              }
+            }
+          }
+        },
+        "seeded_random": {
+          "mean_correctness": 0.29322866,
+          "mean_correctness_95ci": [
+            0.27419038,
+            0.31422964
+          ],
+          "mean_normalized_compute": 0.25043638,
+          "mean_normalized_compute_95ci": [
+            0.22642016,
+            0.2753573
+          ],
+          "mean_utility": 0.24314138,
+          "mean_utility_95ci": [
+            0.22570935,
+            0.26200553
+          ],
+          "oracle_regret": 0.28742778,
+          "paired_utility_difference_vs_global": -0.14220076,
+          "paired_utility_difference_vs_global_95ci": [
+            -0.16337833,
+            -0.11918127
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.68007851,
+            "0.6": 0.78017664,
+            "0.8": 0.86751717
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.23650638,
+            "Qwen2.5-Math-1.5B-Instruct": 0.26692836,
+            "Qwen2.5-Math-7B-Instruct": 0.24435721,
+            "Qwen3-0.6B": 0.25220805
+          },
+          "sample_size": 1019,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.28133874,
+                "mean_normalized_compute": 0.2492948,
+                "mean_utility": 0.23147978,
+                "sample_size": 493
+              },
+              "512_2047": {
+                "mean_correctness": 0.26359447,
+                "mean_normalized_compute": 0.25719911,
+                "mean_utility": 0.21215465,
+                "sample_size": 217
+              },
+              "gte_2048": {
+                "mean_correctness": 0.26956522,
+                "mean_normalized_compute": 0.28891963,
+                "mean_utility": 0.21178129,
+                "sample_size": 69
+              },
+              "lt_128": {
+                "mean_correctness": 0.35125,
+                "mean_normalized_compute": 0.23560281,
+                "mean_utility": 0.30412944,
+                "sample_size": 240
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.42666667,
+                "mean_normalized_compute": 0.4245368,
+                "mean_utility": 0.34175931,
+                "sample_size": 15
+              },
+              "code": {
+                "mean_correctness": 0.29565217,
+                "mean_normalized_compute": 0.17742612,
+                "mean_utility": 0.26016695,
+                "sample_size": 69
+              },
+              "extraction": {
+                "mean_correctness": 0.13225806,
+                "mean_normalized_compute": 0.19230415,
+                "mean_utility": 0.09379724,
+                "sample_size": 31
+              },
+              "general": {
+                "mean_correctness": 0.31649899,
+                "mean_normalized_compute": 0.2399919,
+                "mean_utility": 0.26850061,
+                "sample_size": 497
+              },
+              "reasoning": {
+                "mean_correctness": 0.25911602,
+                "mean_normalized_compute": 0.28493704,
+                "mean_utility": 0.20212861,
+                "sample_size": 362
+              },
+              "research": {
+                "mean_correctness": 0.54444444,
+                "mean_normalized_compute": 0.45217893,
+                "mean_utility": 0.45400866,
+                "sample_size": 9
+              },
+              "summarization": {
+                "mean_correctness": 0.1,
+                "mean_normalized_compute": 0.07714286,
+                "mean_utility": 0.08457143,
+                "sample_size": 4
+              },
+              "writing": {
+                "mean_correctness": 0.359375,
+                "mean_normalized_compute": 0.11941964,
+                "mean_utility": 0.33549107,
+                "sample_size": 32
+              }
+            }
+          }
+        },
+        "task_segment": {
+          "mean_correctness": 0.56692836,
+          "mean_correctness_95ci": [
+            0.54425908,
+            0.58900883
+          ],
+          "mean_normalized_compute": 0.90793113,
+          "mean_normalized_compute_95ci": [
+            0.89254171,
+            0.92298153
+          ],
+          "mean_utility": 0.38534214,
+          "mean_utility_95ci": [
+            0.36277634,
+            0.40755643
+          ],
+          "oracle_regret": 0.14522702,
+          "paired_utility_difference_vs_global": 0.0,
+          "paired_utility_difference_vs_global_95ci": [
+            0.0,
+            0.0
+          ],
+          "quality_floor_violation_rate": {
+            "0.4": 0.31992149,
+            "0.6": 0.41511286,
+            "0.8": 0.61825319
+          },
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "sample_size": 1019,
+          "slices": {
+            "length_band": {
+              "128_511": {
+                "mean_correctness": 0.55233266,
+                "mean_normalized_compute": 0.93245436,
+                "mean_utility": 0.36584178,
+                "sample_size": 493
+              },
+              "512_2047": {
+                "mean_correctness": 0.43179724,
+                "mean_normalized_compute": 0.83016339,
+                "mean_utility": 0.26576456,
+                "sample_size": 217
+              },
+              "gte_2048": {
+                "mean_correctness": 0.7173913,
+                "mean_normalized_compute": 0.94993412,
+                "mean_utility": 0.52740448,
+                "sample_size": 69
+              },
+              "lt_128": {
+                "mean_correctness": 0.67583333,
+                "mean_normalized_compute": 0.91579545,
+                "mean_utility": 0.49267424,
+                "sample_size": 240
+              }
+            },
+            "task_family": {
+              "agent": {
+                "mean_correctness": 0.57333333,
+                "mean_normalized_compute": 0.98424242,
+                "mean_utility": 0.37648485,
+                "sample_size": 15
+              },
+              "code": {
+                "mean_correctness": 0.54202899,
+                "mean_normalized_compute": 0.8944664,
+                "mean_utility": 0.3631357,
+                "sample_size": 69
+              },
+              "extraction": {
+                "mean_correctness": 0.53870968,
+                "mean_normalized_compute": 0.97214076,
+                "mean_utility": 0.34428152,
+                "sample_size": 31
+              },
+              "general": {
+                "mean_correctness": 0.61750503,
+                "mean_normalized_compute": 0.94335102,
+                "mean_utility": 0.42883483,
+                "sample_size": 497
+              },
+              "reasoning": {
+                "mean_correctness": 0.48121547,
+                "mean_normalized_compute": 0.84786539,
+                "mean_utility": 0.31164239,
+                "sample_size": 362
+              },
+              "research": {
+                "mean_correctness": 0.86666667,
+                "mean_normalized_compute": 0.97979798,
+                "mean_utility": 0.67070707,
+                "sample_size": 9
+              },
+              "summarization": {
+                "mean_correctness": 0.675,
+                "mean_normalized_compute": 1.0,
+                "mean_utility": 0.475,
+                "sample_size": 4
+              },
+              "writing": {
+                "mean_correctness": 0.73125,
+                "mean_normalized_compute": 0.93664773,
+                "mean_utility": 0.54392045,
+                "sample_size": 32
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "promotion": {
+    "checks": {
+      "no_task_or_length_slice_regression_gt_0_02": true,
+      "routing_p95_below_25ms": true,
+      "utility_not_below_global": true,
+      "zero_target_model_calls": true
+    },
+    "eligible_for_separate_offline_policy_review": true,
+    "production_changed": false,
+    "regressions": [],
+    "validation_utility_difference_vs_global": 0.0
+  },
+  "protocol": {
+    "bootstrap_repetitions": 2000,
+    "hidden_test_runs": 1,
+    "lambdas": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.4
+    ],
+    "name": "Routellect G5 preregistered R2-Bench evaluation",
+    "primary_lambda": 0.2,
+    "seed": 42,
+    "shrinkage_strength": 20,
+    "split_salt": "routellect-g5-v1|",
+    "target_model_calls": 0
+  },
+  "routing_overhead": {
+    "max_ms": 0.002584,
+    "p50_ms": 0.000167,
+    "p95_ms": 0.00025,
+    "samples": 10000
+  },
+  "runtime": {
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.12.14"
+  },
+  "sensitivity_point_estimates": {
+    "0.00": {
+      "hidden_test": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "seeded_random",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.526417,
+            "oracle_regret": 0.08309717,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.19767206,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.19767206,
+            "oracle_regret": 0.41184211,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78340081,
+              "0.6": 0.88562753,
+              "0.8": 0.92004049
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 988
+          },
+          "global_utility": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.526417,
+            "oracle_regret": 0.08309717,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.526417,
+            "oracle_regret": 0.08309717,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "length_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.526417,
+            "oracle_regret": 0.08309717,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "oracle": {
+            "mean_correctness": 0.60951417,
+            "mean_normalized_compute": 0.54956057,
+            "mean_utility": 0.60951417,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.26417004,
+              "0.6": 0.39068826,
+              "0.8": 0.60425101
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.57591093,
+              "Qwen2.5-Math-1.5B-Instruct": 0.09716599,
+              "Qwen2.5-Math-7B-Instruct": 0.07995951,
+              "Qwen3-0.6B": 0.24696356
+            },
+            "sample_size": 988
+          },
+          "seeded_random": {
+            "mean_correctness": 0.27135628,
+            "mean_normalized_compute": 0.25107379,
+            "mean_utility": 0.27135628,
+            "oracle_regret": 0.33815789,
+            "quality_floor_violation_rate": {
+              "0.4": 0.70242915,
+              "0.6": 0.81072874,
+              "0.8": 0.87651822
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23481781,
+              "Qwen2.5-Math-1.5B-Instruct": 0.24696356,
+              "Qwen2.5-Math-7B-Instruct": 0.2611336,
+              "Qwen3-0.6B": 0.25708502
+            },
+            "sample_size": 988
+          },
+          "task_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.526417,
+            "oracle_regret": 0.08309717,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          }
+        }
+      },
+      "validation": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "seeded_random",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.56692836,
+            "oracle_regret": 0.07320903,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.20206084,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.20206084,
+            "oracle_regret": 0.43807655,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78508342,
+              "0.6": 0.88714426,
+              "0.8": 0.92247301
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 1019
+          },
+          "global_utility": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.56692836,
+            "oracle_regret": 0.07320903,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.56692836,
+            "oracle_regret": 0.07320903,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "length_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.56692836,
+            "oracle_regret": 0.07320903,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "oracle": {
+            "mean_correctness": 0.64013739,
+            "mean_normalized_compute": 0.58004129,
+            "mean_utility": 0.64013739,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.23846909,
+              "0.6": 0.34936212,
+              "0.8": 0.55839058
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.60353288,
+              "Qwen2.5-Math-1.5B-Instruct": 0.08047105,
+              "Qwen2.5-Math-7B-Instruct": 0.1030422,
+              "Qwen3-0.6B": 0.21295388
+            },
+            "sample_size": 1019
+          },
+          "seeded_random": {
+            "mean_correctness": 0.29322866,
+            "mean_normalized_compute": 0.25043638,
+            "mean_utility": 0.29322866,
+            "oracle_regret": 0.34690873,
+            "quality_floor_violation_rate": {
+              "0.4": 0.68007851,
+              "0.6": 0.78017664,
+              "0.8": 0.86751717
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23650638,
+              "Qwen2.5-Math-1.5B-Instruct": 0.26692836,
+              "Qwen2.5-Math-7B-Instruct": 0.24435721,
+              "Qwen3-0.6B": 0.25220805
+            },
+            "sample_size": 1019
+          },
+          "task_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.56692836,
+            "oracle_regret": 0.07320903,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          }
+        }
+      }
+    },
+    "0.05": {
+      "hidden_test": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "seeded_random",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.4808249,
+            "oracle_regret": 0.10121126,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.19767206,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.19724349,
+            "oracle_regret": 0.38479267,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78340081,
+              "0.6": 0.88562753,
+              "0.8": 0.92004049
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 988
+          },
+          "global_utility": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.4808249,
+            "oracle_regret": 0.10121126,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.4808249,
+            "oracle_regret": 0.10121126,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "length_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.4808249,
+            "oracle_regret": 0.10121126,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "oracle": {
+            "mean_correctness": 0.60951417,
+            "mean_normalized_compute": 0.54956018,
+            "mean_utility": 0.58203616,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.26417004,
+              "0.6": 0.39068826,
+              "0.8": 0.60425101
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.57591093,
+              "Qwen2.5-Math-1.5B-Instruct": 0.09716599,
+              "Qwen2.5-Math-7B-Instruct": 0.08097166,
+              "Qwen3-0.6B": 0.24595142
+            },
+            "sample_size": 988
+          },
+          "seeded_random": {
+            "mean_correctness": 0.27135628,
+            "mean_normalized_compute": 0.25107379,
+            "mean_utility": 0.25880259,
+            "oracle_regret": 0.32323358,
+            "quality_floor_violation_rate": {
+              "0.4": 0.70242915,
+              "0.6": 0.81072874,
+              "0.8": 0.87651822
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23481781,
+              "Qwen2.5-Math-1.5B-Instruct": 0.24696356,
+              "Qwen2.5-Math-7B-Instruct": 0.2611336,
+              "Qwen3-0.6B": 0.25708502
+            },
+            "sample_size": 988
+          },
+          "task_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.4808249,
+            "oracle_regret": 0.10121126,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          }
+        }
+      },
+      "validation": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "seeded_random",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.5215318,
+            "oracle_regret": 0.0896062,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.20206084,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.20163227,
+            "oracle_regret": 0.40950573,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78508342,
+              "0.6": 0.88714426,
+              "0.8": 0.92247301
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 1019
+          },
+          "global_utility": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.5215318,
+            "oracle_regret": 0.0896062,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.5215318,
+            "oracle_regret": 0.0896062,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "length_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.5215318,
+            "oracle_regret": 0.0896062,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "oracle": {
+            "mean_correctness": 0.64013739,
+            "mean_normalized_compute": 0.57998776,
+            "mean_utility": 0.611138,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.23846909,
+              "0.6": 0.34936212,
+              "0.8": 0.55839058
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.60549558,
+              "Qwen2.5-Math-1.5B-Instruct": 0.08047105,
+              "Qwen2.5-Math-7B-Instruct": 0.10107949,
+              "Qwen3-0.6B": 0.21295388
+            },
+            "sample_size": 1019
+          },
+          "seeded_random": {
+            "mean_correctness": 0.29322866,
+            "mean_normalized_compute": 0.25043638,
+            "mean_utility": 0.28070684,
+            "oracle_regret": 0.33043117,
+            "quality_floor_violation_rate": {
+              "0.4": 0.68007851,
+              "0.6": 0.78017664,
+              "0.8": 0.86751717
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23650638,
+              "Qwen2.5-Math-1.5B-Instruct": 0.26692836,
+              "Qwen2.5-Math-7B-Instruct": 0.24435721,
+              "Qwen3-0.6B": 0.25220805
+            },
+            "sample_size": 1019
+          },
+          "task_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.5215318,
+            "oracle_regret": 0.0896062,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          }
+        }
+      }
+    },
+    "0.10": {
+      "hidden_test": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "seeded_random",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.43523279,
+            "oracle_regret": 0.11932536,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.19767206,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.19681492,
+            "oracle_regret": 0.35774323,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78340081,
+              "0.6": 0.88562753,
+              "0.8": 0.92004049
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 988
+          },
+          "global_utility": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.43523279,
+            "oracle_regret": 0.11932536,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.43523279,
+            "oracle_regret": 0.11932536,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "length_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.43523279,
+            "oracle_regret": 0.11932536,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "oracle": {
+            "mean_correctness": 0.60951417,
+            "mean_normalized_compute": 0.54956018,
+            "mean_utility": 0.55455815,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.26417004,
+              "0.6": 0.39068826,
+              "0.8": 0.60425101
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.57591093,
+              "Qwen2.5-Math-1.5B-Instruct": 0.09716599,
+              "Qwen2.5-Math-7B-Instruct": 0.08097166,
+              "Qwen3-0.6B": 0.24595142
+            },
+            "sample_size": 988
+          },
+          "seeded_random": {
+            "mean_correctness": 0.27135628,
+            "mean_normalized_compute": 0.25107379,
+            "mean_utility": 0.2462489,
+            "oracle_regret": 0.30830926,
+            "quality_floor_violation_rate": {
+              "0.4": 0.70242915,
+              "0.6": 0.81072874,
+              "0.8": 0.87651822
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23481781,
+              "Qwen2.5-Math-1.5B-Instruct": 0.24696356,
+              "Qwen2.5-Math-7B-Instruct": 0.2611336,
+              "Qwen3-0.6B": 0.25708502
+            },
+            "sample_size": 988
+          },
+          "task_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.43523279,
+            "oracle_regret": 0.11932536,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          }
+        }
+      },
+      "validation": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "seeded_random",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.47613525,
+            "oracle_regret": 0.10600336,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.20206084,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.2012037,
+            "oracle_regret": 0.38093491,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78508342,
+              "0.6": 0.88714426,
+              "0.8": 0.92247301
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 1019
+          },
+          "global_utility": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.47613525,
+            "oracle_regret": 0.10600336,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.47613525,
+            "oracle_regret": 0.10600336,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "length_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.47613525,
+            "oracle_regret": 0.10600336,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "oracle": {
+            "mean_correctness": 0.64013739,
+            "mean_normalized_compute": 0.57998776,
+            "mean_utility": 0.58213861,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.23846909,
+              "0.6": 0.34936212,
+              "0.8": 0.55839058
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.60549558,
+              "Qwen2.5-Math-1.5B-Instruct": 0.08047105,
+              "Qwen2.5-Math-7B-Instruct": 0.10107949,
+              "Qwen3-0.6B": 0.21295388
+            },
+            "sample_size": 1019
+          },
+          "seeded_random": {
+            "mean_correctness": 0.29322866,
+            "mean_normalized_compute": 0.25043638,
+            "mean_utility": 0.26818502,
+            "oracle_regret": 0.3139536,
+            "quality_floor_violation_rate": {
+              "0.4": 0.68007851,
+              "0.6": 0.78017664,
+              "0.8": 0.86751717
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23650638,
+              "Qwen2.5-Math-1.5B-Instruct": 0.26692836,
+              "Qwen2.5-Math-7B-Instruct": 0.24435721,
+              "Qwen3-0.6B": 0.25220805
+            },
+            "sample_size": 1019
+          },
+          "task_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.47613525,
+            "oracle_regret": 0.10600336,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          }
+        }
+      }
+    },
+    "0.20": {
+      "hidden_test": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "seeded_random",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.34404858,
+            "oracle_regret": 0.16183916,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.19767206,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.19595778,
+            "oracle_regret": 0.30992996,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78340081,
+              "0.6": 0.88562753,
+              "0.8": 0.92004049
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 988
+          },
+          "global_utility": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.34404858,
+            "oracle_regret": 0.16183916,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.34404858,
+            "oracle_regret": 0.16183916,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "length_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.34404858,
+            "oracle_regret": 0.16183916,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "oracle": {
+            "mean_correctness": 0.60263158,
+            "mean_normalized_compute": 0.48371918,
+            "mean_utility": 0.50588774,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.28137652,
+              "0.6": 0.39676113,
+              "0.8": 0.60728745
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.50708502,
+              "Qwen2.5-Math-1.5B-Instruct": 0.11234818,
+              "Qwen2.5-Math-7B-Instruct": 0.10526316,
+              "Qwen3-0.6B": 0.27530364
+            },
+            "sample_size": 988
+          },
+          "seeded_random": {
+            "mean_correctness": 0.27135628,
+            "mean_normalized_compute": 0.25107379,
+            "mean_utility": 0.22114152,
+            "oracle_regret": 0.28474623,
+            "quality_floor_violation_rate": {
+              "0.4": 0.70242915,
+              "0.6": 0.81072874,
+              "0.8": 0.87651822
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23481781,
+              "Qwen2.5-Math-1.5B-Instruct": 0.24696356,
+              "Qwen2.5-Math-7B-Instruct": 0.2611336,
+              "Qwen3-0.6B": 0.25708502
+            },
+            "sample_size": 988
+          },
+          "task_segment": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.34404858,
+            "oracle_regret": 0.16183916,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          }
+        }
+      },
+      "validation": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "seeded_random",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.38534214,
+            "oracle_regret": 0.14522702,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.20206084,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.20034656,
+            "oracle_regret": 0.3302226,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78508342,
+              "0.6": 0.88714426,
+              "0.8": 0.92247301
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 1019
+          },
+          "global_utility": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.38534214,
+            "oracle_regret": 0.14522702,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.38534214,
+            "oracle_regret": 0.14522702,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "length_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.38534214,
+            "oracle_regret": 0.14522702,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "oracle": {
+            "mean_correctness": 0.63287537,
+            "mean_normalized_compute": 0.51153104,
+            "mean_utility": 0.53056916,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.25024534,
+              "0.6": 0.36015702,
+              "0.8": 0.56624141
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.53287537,
+              "Qwen2.5-Math-1.5B-Instruct": 0.09421001,
+              "Qwen2.5-Math-7B-Instruct": 0.13052012,
+              "Qwen3-0.6B": 0.2423945
+            },
+            "sample_size": 1019
+          },
+          "seeded_random": {
+            "mean_correctness": 0.29322866,
+            "mean_normalized_compute": 0.25043638,
+            "mean_utility": 0.24314138,
+            "oracle_regret": 0.28742778,
+            "quality_floor_violation_rate": {
+              "0.4": 0.68007851,
+              "0.6": 0.78017664,
+              "0.8": 0.86751717
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23650638,
+              "Qwen2.5-Math-1.5B-Instruct": 0.26692836,
+              "Qwen2.5-Math-7B-Instruct": 0.24435721,
+              "Qwen3-0.6B": 0.25220805
+            },
+            "sample_size": 1019
+          },
+          "task_segment": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.38534214,
+            "oracle_regret": 0.14522702,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          }
+        }
+      }
+    },
+    "0.40": {
+      "hidden_test": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.526417,
+            "mean_normalized_compute": 0.91184211,
+            "mean_utility": 0.16168016,
+            "oracle_regret": 0.27521552,
+            "quality_floor_violation_rate": {
+              "0.4": 0.36336032,
+              "0.6": 0.46862348,
+              "0.8": 0.66396761
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 988
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.19767206,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.19424349,
+            "oracle_regret": 0.24265219,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78340081,
+              "0.6": 0.88562753,
+              "0.8": 0.92004049
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 988
+          },
+          "global_utility": {
+            "mean_correctness": 0.19767206,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.19424349,
+            "oracle_regret": 0.24265219,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78340081,
+              "0.6": 0.88562753,
+              "0.8": 0.92004049
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 988
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.31902834,
+            "mean_normalized_compute": 0.23463826,
+            "mean_utility": 0.22517304,
+            "oracle_regret": 0.21172265,
+            "quality_floor_violation_rate": {
+              "0.4": 0.6417004,
+              "0.6": 0.75708502,
+              "0.8": 0.83603239
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.21862348,
+              "Qwen2.5-Math-7B-Instruct": 0.31174089,
+              "Qwen3-0.6B": 0.46963563
+            },
+            "sample_size": 988
+          },
+          "length_segment": {
+            "mean_correctness": 0.31983806,
+            "mean_normalized_compute": 0.27781968,
+            "mean_utility": 0.20871018,
+            "oracle_regret": 0.2281855,
+            "quality_floor_violation_rate": {
+              "0.4": 0.6417004,
+              "0.6": 0.73987854,
+              "0.8": 0.83805668
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.24493927,
+              "Qwen2.5-Math-7B-Instruct": 0.48481781,
+              "Qwen3-0.6B": 0.27024291
+            },
+            "sample_size": 988
+          },
+          "oracle": {
+            "mean_correctness": 0.54888664,
+            "mean_normalized_compute": 0.27997739,
+            "mean_utility": 0.43689568,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.35728745,
+              "0.6": 0.5111336,
+              "0.8": 0.64473684
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.29554656,
+              "Qwen2.5-Math-1.5B-Instruct": 0.16093117,
+              "Qwen2.5-Math-7B-Instruct": 0.14777328,
+              "Qwen3-0.6B": 0.39574899
+            },
+            "sample_size": 988
+          },
+          "seeded_random": {
+            "mean_correctness": 0.27135628,
+            "mean_normalized_compute": 0.25107379,
+            "mean_utility": 0.17092676,
+            "oracle_regret": 0.26596893,
+            "quality_floor_violation_rate": {
+              "0.4": 0.70242915,
+              "0.6": 0.81072874,
+              "0.8": 0.87651822
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23481781,
+              "Qwen2.5-Math-1.5B-Instruct": 0.24696356,
+              "Qwen2.5-Math-7B-Instruct": 0.2611336,
+              "Qwen3-0.6B": 0.25708502
+            },
+            "sample_size": 988
+          },
+          "task_segment": {
+            "mean_correctness": 0.24716599,
+            "mean_normalized_compute": 0.05318221,
+            "mean_utility": 0.22589311,
+            "oracle_regret": 0.21100258,
+            "quality_floor_violation_rate": {
+              "0.4": 0.7257085,
+              "0.6": 0.86032389,
+              "0.8": 0.91396761
+            },
+            "recommendation_share": {
+              "Qwen2.5-Math-7B-Instruct": 0.4888664,
+              "Qwen3-0.6B": 0.5111336
+            },
+            "sample_size": 988
+          }
+        }
+      },
+      "validation": {
+        "pareto_front": [
+          "always_best_quality",
+          "always_cheapest",
+          "global_utility",
+          "hybrid_segment",
+          "length_segment",
+          "task_segment"
+        ],
+        "strategies": {
+          "always_best_quality": {
+            "mean_correctness": 0.56692836,
+            "mean_normalized_compute": 0.90793113,
+            "mean_utility": 0.20375591,
+            "oracle_regret": 0.24904905,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31992149,
+              "0.6": 0.41511286,
+              "0.8": 0.61825319
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 1.0
+            },
+            "sample_size": 1019
+          },
+          "always_cheapest": {
+            "mean_correctness": 0.20206084,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.19863227,
+            "oracle_regret": 0.25417269,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78508342,
+              "0.6": 0.88714426,
+              "0.8": 0.92247301
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 1019
+          },
+          "global_utility": {
+            "mean_correctness": 0.20206084,
+            "mean_normalized_compute": 0.00857143,
+            "mean_utility": 0.19863227,
+            "oracle_regret": 0.25417269,
+            "quality_floor_violation_rate": {
+              "0.4": 0.78508342,
+              "0.6": 0.88714426,
+              "0.8": 0.92247301
+            },
+            "recommendation_share": {
+              "Qwen3-0.6B": 1.0
+            },
+            "sample_size": 1019
+          },
+          "hybrid_segment": {
+            "mean_correctness": 0.33424926,
+            "mean_normalized_compute": 0.2335669,
+            "mean_utility": 0.2408225,
+            "oracle_regret": 0.21198246,
+            "quality_floor_violation_rate": {
+              "0.4": 0.63395486,
+              "0.6": 0.72620216,
+              "0.8": 0.82237488
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.21786065,
+              "Qwen2.5-Math-7B-Instruct": 0.31010795,
+              "Qwen3-0.6B": 0.4720314
+            },
+            "sample_size": 1019
+          },
+          "length_segment": {
+            "mean_correctness": 0.33631011,
+            "mean_normalized_compute": 0.26645782,
+            "mean_utility": 0.22972698,
+            "oracle_regret": 0.22307799,
+            "quality_floor_violation_rate": {
+              "0.4": 0.63199215,
+              "0.6": 0.72031403,
+              "0.8": 0.82630029
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23552502,
+              "Qwen2.5-Math-7B-Instruct": 0.48380765,
+              "Qwen3-0.6B": 0.28066732
+            },
+            "sample_size": 1019
+          },
+          "oracle": {
+            "mean_correctness": 0.58213935,
+            "mean_normalized_compute": 0.32333597,
+            "mean_utility": 0.45280497,
+            "oracle_regret": 0.0,
+            "quality_floor_violation_rate": {
+              "0.4": 0.31795878,
+              "0.6": 0.46810599,
+              "0.8": 0.60549558
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.33562316,
+              "Qwen2.5-Math-1.5B-Instruct": 0.1265947,
+              "Qwen2.5-Math-7B-Instruct": 0.18253189,
+              "Qwen3-0.6B": 0.35525025
+            },
+            "sample_size": 1019
+          },
+          "seeded_random": {
+            "mean_correctness": 0.29322866,
+            "mean_normalized_compute": 0.25043638,
+            "mean_utility": 0.1930541,
+            "oracle_regret": 0.25975086,
+            "quality_floor_violation_rate": {
+              "0.4": 0.68007851,
+              "0.6": 0.78017664,
+              "0.8": 0.86751717
+            },
+            "recommendation_share": {
+              "Llama-3.1-70B-Instruct": 0.23650638,
+              "Qwen2.5-Math-1.5B-Instruct": 0.26692836,
+              "Qwen2.5-Math-7B-Instruct": 0.24435721,
+              "Qwen3-0.6B": 0.25220805
+            },
+            "sample_size": 1019
+          },
+          "task_segment": {
+            "mean_correctness": 0.25436703,
+            "mean_normalized_compute": 0.05305979,
+            "mean_utility": 0.23314311,
+            "oracle_regret": 0.21966185,
+            "quality_floor_violation_rate": {
+              "0.4": 0.7252208,
+              "0.6": 0.84592738,
+              "0.8": 0.90382728
+            },
+            "recommendation_share": {
+              "Qwen2.5-Math-7B-Instruct": 0.48773307,
+              "Qwen3-0.6B": 0.51226693
+            },
+            "sample_size": 1019
+          }
+        }
+      }
+    }
+  }
+}

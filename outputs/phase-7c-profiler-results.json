@@ -1,0 +1,89 @@
+{
+  "acceptance_checks": {
+    "all_task_recall_at_least_0_70": true,
+    "byte_stable_repeated_decisions": true,
+    "capability_recall_at_least_0_98": true,
+    "eligibility_stability_at_least_0_95": true,
+    "privacy_recall_equals_1": true,
+    "recommendation_p95_below_10ms": true,
+    "task_macro_f1_at_least_0_80": true,
+    "zero_raw_prompt_persistence": true,
+    "zero_target_model_calls": true
+  },
+  "claim_boundary": "Project-owned synthetic invariants establish software behavior, not real-world routing accuracy or universal privacy detection.",
+  "profiler": {
+    "capability_positive_cases": 6,
+    "capability_precision": 1.0,
+    "capability_recall": 1.0,
+    "eligibility_stability": 1.0,
+    "paraphrase_pairs": 10,
+    "privacy_benign_cases": 6,
+    "privacy_false_positives": 0,
+    "privacy_recall": 1.0,
+    "privacy_sensitive_cases": 8,
+    "task_cases": 336,
+    "task_macro_f1": 1.0,
+    "task_per_family": {
+      "agent": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 48
+      },
+      "code": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 48
+      },
+      "extraction": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 48
+      },
+      "reasoning": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 48
+      },
+      "research": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 48
+      },
+      "summarization": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 48
+      },
+      "writing": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 48
+      }
+    }
+  },
+  "protocol": {
+    "artifact_sha256": "f6db2e8d037c59bfe5d959d2250338710392c0553b970069b518de373156c5eb",
+    "artifact_version": "g7-c-invariants-v1",
+    "created_at": "2026-09-21T11:59:39.619134+00:00",
+    "hidden_test_runs": 0,
+    "name": "Routellect G7-C synthetic invariant and runtime audit",
+    "raw_prompts_persisted": 0,
+    "target_model_calls": 0
+  },
+  "runtime": {
+    "byte_stable_repeated_decisions": true,
+    "max_ms": 0.571833,
+    "mean_ms": 0.2785573705,
+    "p50_ms": 0.2775,
+    "p95_ms": 0.31325,
+    "p99_ms": 0.357041,
+    "recommendations": 2000
+  }
+}

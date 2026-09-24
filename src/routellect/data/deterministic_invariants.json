@@ -1,0 +1,126 @@
+{
+  "version": "g7-c-invariants-v1",
+  "review_status": "project-owned synthetic fixtures; no real credentials or personal data",
+  "task_wrappers": [
+    "{prompt}",
+    "Please {prompt}",
+    "For a professional audience, {prompt}",
+    "Be concise and {prompt}",
+    "Using the supplied context, {prompt}",
+    "Without adding unsupported facts, {prompt}",
+    "Carefully {prompt}",
+    "The requested result is this: {prompt}"
+  ],
+  "task_templates": {
+    "code": [
+      "debug this Python function and add unit tests",
+      "refactor the TypeScript source code for readability",
+      "review this SQL query for correctness",
+      "implement a Rust algorithm from this specification",
+      "find the defect in this JavaScript repository",
+      "perform a code review of this API handler"
+    ],
+    "reasoning": [
+      "prove the theorem step by step",
+      "derive the equation from the stated assumptions",
+      "solve this logic puzzle and justify the answer",
+      "calculate the probability with a mathematical argument",
+      "optimize this constraint satisfaction problem",
+      "show that the proposed invariant always holds"
+    ],
+    "research": [
+      "research the question and cite primary sources",
+      "prepare a literature review with a bibliography",
+      "compare evidence from the current research",
+      "conduct a systematic review of the findings",
+      "produce a market analysis supported by cited sources",
+      "identify the latest evidence and cite sources"
+    ],
+    "writing": [
+      "draft a tactful email in a warm tone",
+      "rewrite this article for a general audience",
+      "compose a short creative story",
+      "write a persuasive cover letter",
+      "proofread this essay and improve its tone",
+      "draft an engaging product announcement"
+    ],
+    "summarization": [
+      "summarize the document into five key points",
+      "create a concise executive brief of the report",
+      "condense the discussion without losing decisions",
+      "provide a TLDR of the supplied passage",
+      "write a synopsis of the meeting transcript",
+      "produce a one-paragraph summary of the article"
+    ],
+    "extraction": [
+      "extract the named entities into structured data",
+      "classify each record by sentiment",
+      "parse these fields and return JSON",
+      "create a table of dates, owners, and decisions",
+      "map the input to the supplied JSON schema",
+      "extract the requested fields from each entry"
+    ],
+    "agent": [
+      "use tools to complete the multi-step action",
+      "browse the web and compare the available options",
+      "operate the browser to finish this workflow",
+      "use computer use to complete the form",
+      "build an autonomous agent with function calls",
+      "search the web and execute the requested workflow"
+    ]
+  },
+  "substring_traps": [
+    "Explain why capital letters start a sentence.",
+    "Provide a rapid analysis of the paragraph.",
+    "Improve the description of this room.",
+    "What is the landscape around the capital city?",
+    "Discuss the browser history of early navigation.",
+    "Explain the function of a municipal council."
+  ],
+  "negated_capabilities": [
+    {"prompt": "Do not browse; answer only from the supplied context.", "absent": "tools"},
+    {"prompt": "Without tools, explain the supplied paragraph.", "absent": "tools"},
+    {"prompt": "Do not return JSON; use plain prose.", "absent": "structured_output"},
+    {"prompt": "Avoid using Python and explain the idea conceptually.", "absent": "code"},
+    {"prompt": "Do not analyze the image; use the written caption.", "absent": "vision"},
+    {"prompt": "Skip audio transcription and summarize the provided text.", "absent": "audio"}
+  ],
+  "positive_capabilities": [
+    {"prompt": "Analyze this screenshot and explain the chart.", "present": ["vision"]},
+    {"prompt": "Transcribe this voice recording.", "present": ["audio"]},
+    {"prompt": "Search the web using the browser.", "present": ["tools"]},
+    {"prompt": "Return JSON that follows this schema.", "present": ["structured_output"]},
+    {"prompt": "Debug this Python code.", "present": ["code"]},
+    {"prompt": "Prove the theorem step by step.", "present": ["reasoning"]}
+  ],
+  "privacy_cases": [
+    {"prompt": "Use synthetic key sk-ABCDEFGHIJKL123456 safely", "flag": "api_key_like"},
+    {"prompt": "Token token_abcdefghijklmnop1234 is synthetic", "flag": "api_key_like"},
+    {"prompt": "-----BEGIN PRIVATE KEY----- synthetic only", "flag": "private_key"},
+    {"prompt": "Contact synthetic.person@example.com", "flag": "email"},
+    {"prompt": "Synthetic AWS key AKIAABCDEFGHIJKLMNOP", "flag": "aws_access_key"},
+    {"prompt": "Synthetic GitHub token ghp_ABCDEFGHIJKLMNOPQRSTUVWXYZ123456", "flag": "github_token"},
+    {"prompt": "Authorization: Bearer abcdefghijklmnopqrstuvwxyz123456", "flag": "bearer_token"},
+    {"prompt": "Synthetic SSN 123-45-6789", "flag": "us_ssn_like"}
+  ],
+  "benign_privacy_lookalikes": [
+    "The token count is twelve.",
+    "A key opens a lock.",
+    "The example domain has no address here.",
+    "Reference number 12-345-6789 is not an SSN.",
+    "AKIA is a four-letter string.",
+    "Use bearer authentication conceptually."
+  ],
+  "paraphrase_pairs": [
+    ["Debug this Python function.", "Find and fix the defect in this Python function."],
+    ["Summarize this report.", "Condense this report into a summary."],
+    ["Extract the entities into JSON.", "Return JSON containing the extracted entities."],
+    ["Draft a warm email.", "Compose an email with a warm tone."],
+    ["Prove this theorem.", "Show that this theorem holds."],
+    ["Research this topic and cite primary sources.", "Prepare research supported by primary sources."],
+    ["Browse the web to complete the workflow.", "Use the browser for this workflow."],
+    ["Do not browse; use the context.", "Without browser tools, rely on the context."],
+    ["Analyze this screenshot.", "Review the supplied image."],
+    ["Transcribe the voice recording.", "Create a transcript from this audio."]
+  ]
+}

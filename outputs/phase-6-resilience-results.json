@@ -1,0 +1,95 @@
+{
+  "abuse_controls": {
+    "duplicate_feedback_status": 409,
+    "first_feedback_status": 201,
+    "health_after_rate_limit": 200,
+    "malformed_json_status": 422,
+    "oversized_body_status": 413,
+    "rate_limit_attempts_after_prior_load": 422,
+    "rate_limit_status": 429,
+    "retry_after_present": true,
+    "security_headers_on_413": true,
+    "security_headers_on_422": true
+  },
+  "cleanup": {
+    "container_removed": true,
+    "image_retained": true,
+    "volume_removed": true
+  },
+  "generated_at": "2026-09-16T10:03:20.180719+00:00",
+  "image": {
+    "digest": "sha256:7afa312429314eef520a6fb62da6347631e6c0655e81311ccd71cfc44151ca11",
+    "id": "32d70dbcb70d78d962c22b6fd3111ea286b6941fb054676ea6f9f02357682ca6",
+    "reference": "localhost/routellect:0.5.0",
+    "size_bytes": 683668416
+  },
+  "load": {
+    "failures": 0,
+    "latency_mean_ms": 22.68299377485164,
+    "latency_p50_ms": 12.97100000010687,
+    "latency_p95_ms": 54.91329199867323,
+    "latency_p99_ms": 243.73845800073468,
+    "requests": 200,
+    "throughput_requests_per_second": 427.66211170313994,
+    "workers": 12
+  },
+  "privacy": {
+    "canary_sha256": "b48af7e3dbf468db997a749d9863ac0472f1349c5fb001d06b2adaec63d2f2f3",
+    "provider_credentials_supplied": false,
+    "raw_prompt_present_in_sqlite_files": false,
+    "target_model_calls": 0
+  },
+  "recovery": {
+    "archive_sha256": "3ab6a8541e513988d1f75f1cf60aec841548cbd7105f875a8f89c19639ef58da",
+    "backup_format": "routellect-backup-v1",
+    "restored_archive_sha256_matches": true,
+    "restored_files": 1
+  },
+  "runtime": {
+    "capabilities_dropped": [
+      "CAP_CHOWN",
+      "CAP_DAC_OVERRIDE",
+      "CAP_FOWNER",
+      "CAP_FSETID",
+      "CAP_KILL",
+      "CAP_NET_BIND_SERVICE",
+      "CAP_SETFCAP",
+      "CAP_SETGID",
+      "CAP_SETPCAP",
+      "CAP_SETUID",
+      "CAP_SYS_CHROOT"
+    ],
+    "gid": 10001,
+    "health_status": "healthy",
+    "podman_stats": {
+      "avg_cpu": "14.66%",
+      "block_io": "0B / 6.185MB",
+      "cpu_percent": "14.66%",
+      "cpu_time": "2.670176s",
+      "id": "82b61d9860b8",
+      "mem_percent": "1.51%",
+      "mem_usage": "61.43MB / 4.077GB",
+      "name": "routellect-g6-qa",
+      "net_io": "1.5kB / 698B",
+      "pids": "6"
+    },
+    "read_only_rootfs": true,
+    "readiness_seconds": 0.6623749579994183,
+    "ready_body": {
+      "catalog_version": "2026-09-15.g2-starter.1",
+      "status": "ok",
+      "version": "0.5.0"
+    },
+    "rootless": true,
+    "security_options": [
+      "no-new-privileges"
+    ],
+    "uid": 10001
+  },
+  "soak": {
+    "duration_seconds": 15.017555792001076,
+    "failures": 0,
+    "latency_p95_ms": 7.903582998551428,
+    "requests": 137
+  }
+}
