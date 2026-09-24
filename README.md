@@ -156,12 +156,12 @@ archive before moving it outside the trusted host.
 
 ## Current phase
 
-G7-C, the bounded G7-C2 research milestone, and G7-D validation/candidate freeze are approved.
-Version 0.5.0 and deterministic-v2 remain the production defaults. The frozen experimental router
-retains 98.1% visible quality at only 9.5% compute reduction; 10,000-resample intervals still fail
-the quality, compute, fixed-baseline utility, and regret promotion requirements. The artifact is
-deterministic, offline, and verified inside hardened rootless Podman, but remains inactive. Existing
-hidden G7 evidence has not been opened, G7-E is not authorized, and current evidence is not a
-universal or production-ready claim.
-See the [G7-D verification report](outputs/phase-7d-verification-report.md) and
-[candidate-freeze gate](outputs/phase-7d-gate-review.md) for the complete evidence and limitations.
+G7-C, the bounded G7-C2 research milestone, and G7-D validation/candidate freeze are approved. G7-E
+has executed once and is awaiting sponsor review. On 15,634 overlap-screened untouched prompts, the
+frozen candidate improves utility over fixed and content-blind controls, but retains only 97.59% of
+fixed quality, saves 9.69% normalized compute, closes 3.02% of Oracle regret, and materially
+underperforms on reasoning. The frozen conjunctive rule therefore rejects production promotion.
+Version 0.5.0 and deterministic-v2 remain the production defaults; v3 remains inactive and the open
+evaluation range is prohibited for tuning. See the
+[G7-E verification report](outputs/phase-7e-verification-report.md) and
+[decision gate](outputs/phase-7e-gate-review.md) for full evidence and limitations.

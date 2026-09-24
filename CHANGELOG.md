@@ -48,6 +48,9 @@ the first release is approved.
   effective capabilities, read-only filesystems, non-root execution, and v2 retained as default.
 - Sponsor approval of G7-D as a validation-and-candidate-freeze milestone, with G7-E, outcome
   acquisition, production activation, and existing-hidden-partition access still unauthorized.
+- One-time G7-E evaluation on 15,634 overlap-screened, previously unused R2-Bench prompts, with
+  outcome-blind recommendation commitment, 10,000 paired resamples, prompt-free public evidence,
+  and automatic non-promotion after quality, compute, regret, and reasoning-slice gate failures.
 
 ### Security
 

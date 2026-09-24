@@ -1,0 +1,500 @@
+{
+  "candidate": {
+    "paired_bootstrap_95ci": {
+      "compute_reduction_vs_fixed": [
+        0.09215044,
+        0.10165518
+      ],
+      "oracle_regret_reduction_vs_fixed": [
+        0.01336821,
+        0.04621629
+      ],
+      "quality_retention_vs_fixed": [
+        0.97098221,
+        0.98077519
+      ],
+      "utility_difference_vs_content_blind": [
+        0.01889011,
+        0.02544453
+      ],
+      "utility_difference_vs_fixed": [
+        0.00205565,
+        0.00724785
+      ]
+    },
+    "point_metrics": {
+      "compute_reduction_vs_fixed": 0.09693968,
+      "oracle_regret_reduction_vs_fixed": 0.03019254,
+      "quality_retention_vs_fixed": 0.97591017,
+      "utility_difference_vs_content_blind": 0.02214719,
+      "utility_difference_vs_fixed": 0.00468257
+    },
+    "slices": {
+      "difficulty:high": {
+        "candidate": {
+          "mean_correctness": 0.73831776,
+          "mean_normalized_compute": 0.94791844,
+          "mean_utility": 0.54873407,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 107
+        },
+        "fixed": {
+          "mean_correctness": 0.73831776,
+          "mean_normalized_compute": 0.94791844,
+          "mean_utility": 0.54873407,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 107
+        },
+        "major_slice": true,
+        "quality_retention_95ci": [
+          1.0,
+          1.0
+        ],
+        "quality_retention_vs_fixed": 1.0,
+        "rows": 107
+      },
+      "difficulty:low": {
+        "candidate": {
+          "mean_correctness": 0.51381314,
+          "mean_normalized_compute": 0.81290103,
+          "mean_utility": 0.35123293,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.87786365,
+            "Qwen2.5-Math-1.5B-Instruct": 0.01835495,
+            "Qwen2.5-Math-7B-Instruct": 0.01228264,
+            "Qwen3-0.6B": 0.09149876
+          },
+          "rows": 14492
+        },
+        "fixed": {
+          "mean_correctness": 0.52764146,
+          "mean_normalized_compute": 0.90743169,
+          "mean_utility": 0.34615512,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 14492
+        },
+        "major_slice": true,
+        "quality_retention_95ci": [
+          0.96848407,
+          0.97923446
+        ],
+        "quality_retention_vs_fixed": 0.97379221,
+        "rows": 14492
+      },
+      "difficulty:medium": {
+        "candidate": {
+          "mean_correctness": 0.62801932,
+          "mean_normalized_compute": 0.89606675,
+          "mean_utility": 0.44880597,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.9884058,
+            "Qwen2.5-Math-1.5B-Instruct": 0.00193237,
+            "Qwen2.5-Math-7B-Instruct": 0.00096618,
+            "Qwen3-0.6B": 0.00869565
+          },
+          "rows": 1035
+        },
+        "fixed": {
+          "mean_correctness": 0.62937198,
+          "mean_normalized_compute": 0.90099253,
+          "mean_utility": 0.44917347,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 1035
+        },
+        "major_slice": true,
+        "quality_retention_95ci": [
+          0.99261652,
+          1.00237706
+        ],
+        "quality_retention_vs_fixed": 0.99785078,
+        "rows": 1035
+      },
+      "task:agent": {
+        "candidate": {
+          "mean_correctness": 0.69016393,
+          "mean_normalized_compute": 0.8876304,
+          "mean_utility": 0.51263785,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 61
+        },
+        "fixed": {
+          "mean_correctness": 0.69016393,
+          "mean_normalized_compute": 0.8876304,
+          "mean_utility": 0.51263785,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 61
+        },
+        "major_slice": false,
+        "quality_retention_95ci": null,
+        "quality_retention_vs_fixed": 1.0,
+        "rows": 61
+      },
+      "task:code": {
+        "candidate": {
+          "mean_correctness": 0.5298419,
+          "mean_normalized_compute": 0.95383451,
+          "mean_utility": 0.339075,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.97826087,
+            "Qwen2.5-Math-1.5B-Instruct": 0.00395257,
+            "Qwen2.5-Math-7B-Instruct": 0.00790514,
+            "Qwen3-0.6B": 0.00988142
+          },
+          "rows": 506
+        },
+        "fixed": {
+          "mean_correctness": 0.53517787,
+          "mean_normalized_compute": 0.9702659,
+          "mean_utility": 0.34112469,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 506
+        },
+        "major_slice": true,
+        "quality_retention_95ci": [
+          0.97529538,
+          1.00341297
+        ],
+        "quality_retention_vs_fixed": 0.99002954,
+        "rows": 506
+      },
+      "task:extraction": {
+        "candidate": {
+          "mean_correctness": 0.6744186,
+          "mean_normalized_compute": 0.93319239,
+          "mean_utility": 0.48778013,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 86
+        },
+        "fixed": {
+          "mean_correctness": 0.6744186,
+          "mean_normalized_compute": 0.93319239,
+          "mean_utility": 0.48778013,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 86
+        },
+        "major_slice": false,
+        "quality_retention_95ci": null,
+        "quality_retention_vs_fixed": 1.0,
+        "rows": 86
+      },
+      "task:general": {
+        "candidate": {
+          "mean_correctness": 0.58866793,
+          "mean_normalized_compute": 0.93908782,
+          "mean_utility": 0.40085037,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.98680237,
+            "Qwen2.5-Math-1.5B-Instruct": 0.00492115,
+            "Qwen2.5-Math-7B-Instruct": 0.00738172,
+            "Qwen3-0.6B": 0.00089475
+          },
+          "rows": 8941
+        },
+        "fixed": {
+          "mean_correctness": 0.59159826,
+          "mean_normalized_compute": 0.95088103,
+          "mean_utility": 0.40142205,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 8941
+        },
+        "major_slice": true,
+        "quality_retention_95ci": [
+          0.99325557,
+          0.99673505
+        ],
+        "quality_retention_vs_fixed": 0.99504677,
+        "rows": 8941
+      },
+      "task:reasoning": {
+        "candidate": {
+          "mean_correctness": 0.40772786,
+          "mean_normalized_compute": 0.59241134,
+          "mean_utility": 0.28924559,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.69550749,
+            "Qwen2.5-Math-1.5B-Instruct": 0.04067295,
+            "Qwen2.5-Math-7B-Instruct": 0.0201516,
+            "Qwen3-0.6B": 0.24366796
+          },
+          "rows": 5409
+        },
+        "fixed": {
+          "mean_correctness": 0.4393973,
+          "mean_normalized_compute": 0.82458193,
+          "mean_utility": 0.27448092,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 5409
+        },
+        "major_slice": true,
+        "quality_retention_95ci": [
+          0.91139983,
+          0.94444682
+        ],
+        "quality_retention_vs_fixed": 0.92792527,
+        "rows": 5409
+      },
+      "task:research": {
+        "candidate": {
+          "mean_correctness": 0.6745614,
+          "mean_normalized_compute": 0.92089314,
+          "mean_utility": 0.49038278,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 114
+        },
+        "fixed": {
+          "mean_correctness": 0.6745614,
+          "mean_normalized_compute": 0.92089314,
+          "mean_utility": 0.49038278,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 114
+        },
+        "major_slice": true,
+        "quality_retention_95ci": [
+          1.0,
+          1.0
+        ],
+        "quality_retention_vs_fixed": 1.0,
+        "rows": 114
+      },
+      "task:summarization": {
+        "candidate": {
+          "mean_correctness": 0.62820513,
+          "mean_normalized_compute": 0.93892774,
+          "mean_utility": 0.44041958,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 39
+        },
+        "fixed": {
+          "mean_correctness": 0.62820513,
+          "mean_normalized_compute": 0.93892774,
+          "mean_utility": 0.44041958,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 39
+        },
+        "major_slice": false,
+        "quality_retention_95ci": null,
+        "quality_retention_vs_fixed": 1.0,
+        "rows": 39
+      },
+      "task:writing": {
+        "candidate": {
+          "mean_correctness": 0.49560669,
+          "mean_normalized_compute": 0.94150791,
+          "mean_utility": 0.30730511,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 0.9874477,
+            "Qwen2.5-Math-1.5B-Instruct": 0.0041841,
+            "Qwen3-0.6B": 0.0083682
+          },
+          "rows": 478
+        },
+        "fixed": {
+          "mean_correctness": 0.49895397,
+          "mean_normalized_compute": 0.95294789,
+          "mean_utility": 0.3083644,
+          "recommendation_share": {
+            "Llama-3.1-70B-Instruct": 1.0
+          },
+          "rows": 478
+        },
+        "major_slice": true,
+        "quality_retention_95ci": [
+          0.98267717,
+          1.0
+        ],
+        "quality_retention_vs_fixed": 0.9932914,
+        "rows": 478
+      }
+    },
+    "strong_tier_calibration": {
+      "brier_score": 0.22521146,
+      "expected_calibration_error_10_bin": 0.02458455
+    }
+  },
+  "claim_boundary": "Untouched exact-pool historical evidence at one R2-Bench revision and token budget. It does not establish current-provider, latency, price, or broad source-generalization performance.",
+  "controls": {
+    "candidate": {
+      "mean_correctness": 0.52291032,
+      "mean_normalized_compute": 0.81933082,
+      "mean_utility": 0.35904416,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.88601765,
+        "Qwen2.5-Math-1.5B-Instruct": 0.01714213,
+        "Qwen2.5-Math-7B-Instruct": 0.01144941,
+        "Qwen3-0.6B": 0.08539081
+      },
+      "rows": 15634
+    },
+    "content_blind": {
+      "mean_correctness": 0.49810541,
+      "mean_normalized_compute": 0.80604222,
+      "mean_utility": 0.33689697,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.88601765,
+        "Qwen2.5-Math-1.5B-Instruct": 0.01714213,
+        "Qwen2.5-Math-7B-Instruct": 0.01144941,
+        "Qwen3-0.6B": 0.08539081
+      },
+      "rows": 15634
+    },
+    "fixed": {
+      "mean_correctness": 0.53581809,
+      "mean_normalized_compute": 0.9072825,
+      "mean_utility": 0.35436159,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 1.0
+      },
+      "rows": 15634
+    },
+    "g7c": {
+      "mean_correctness": 0.48692593,
+      "mean_normalized_compute": 0.66554077,
+      "mean_utility": 0.35381778,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.71133427,
+        "Qwen2.5-Math-1.5B-Instruct": 0.0637073,
+        "Qwen2.5-Math-7B-Instruct": 0.08519893,
+        "Qwen3-0.6B": 0.1397595
+      },
+      "rows": 15634
+    },
+    "lower_tier": {
+      "mean_correctness": 0.26089293,
+      "mean_normalized_compute": 0.03843539,
+      "mean_utility": 0.25320585,
+      "recommendation_share": {
+        "Qwen2.5-Math-1.5B-Instruct": 0.18031214,
+        "Qwen2.5-Math-7B-Instruct": 0.30197007,
+        "Qwen3-0.6B": 0.51771779
+      },
+      "rows": 15634
+    },
+    "oracle": {
+      "mean_correctness": 0.60373545,
+      "mean_normalized_compute": 0.47141798,
+      "mean_utility": 0.50945185,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 0.48842267,
+        "Qwen2.5-Math-1.5B-Instruct": 0.10963285,
+        "Qwen2.5-Math-7B-Instruct": 0.12434438,
+        "Qwen3-0.6B": 0.2776001
+      },
+      "rows": 15634
+    }
+  },
+  "empirical_best_single_quality_model": "Llama-3.1-70B-Instruct",
+  "empirical_best_single_utility_model": "Llama-3.1-70B-Instruct",
+  "fixed_model_diagnostics": {
+    "Llama-3.1-70B-Instruct": {
+      "mean_correctness": 0.53581809,
+      "mean_normalized_compute": 0.9072825,
+      "mean_utility": 0.35436159,
+      "recommendation_share": {
+        "Llama-3.1-70B-Instruct": 1.0
+      },
+      "rows": 15634
+    },
+    "Qwen2.5-Math-1.5B-Instruct": {
+      "mean_correctness": 0.17668543,
+      "mean_normalized_compute": 0.02131493,
+      "mean_utility": 0.17242244,
+      "recommendation_share": {
+        "Qwen2.5-Math-1.5B-Instruct": 1.0
+      },
+      "rows": 15634
+    },
+    "Qwen2.5-Math-7B-Instruct": {
+      "mean_correctness": 0.21203787,
+      "mean_normalized_compute": 0.09961163,
+      "mean_utility": 0.19211554,
+      "recommendation_share": {
+        "Qwen2.5-Math-7B-Instruct": 1.0
+      },
+      "rows": 15634
+    },
+    "Qwen3-0.6B": {
+      "mean_correctness": 0.20322374,
+      "mean_normalized_compute": 0.00857128,
+      "mean_utility": 0.20150949,
+      "recommendation_share": {
+        "Qwen3-0.6B": 1.0
+      },
+      "rows": 15634
+    }
+  },
+  "inherited_checks": {
+    "g7d_freeze_checks": true,
+    "g7d_podman_checks": true
+  },
+  "inputs": {
+    "candidate_artifact_sha256": "6f32a6242fca4137cb50e515a4012a7bbea6fc01f078a12485016350aae50499",
+    "outcomes_sha256": "cb694fc093746365820505186d932139ce7ae6081512a991fcc96ad5989257db",
+    "recommendations_sha256": "20938716e9ef0c9ce5501af4cae6db582f2b42139f4a8dc68dc494c0f27528b3",
+    "rows": 15634,
+    "source_commit": "d9078239687a86a4b3c2a9ae0babb0db3bad11c5"
+  },
+  "major_slice_checks": {
+    "difficulty:high": true,
+    "difficulty:low": true,
+    "difficulty:medium": true,
+    "task:code": true,
+    "task:general": true,
+    "task:reasoning": false,
+    "task:research": true,
+    "task:writing": true
+  },
+  "production_activated": false,
+  "promotion_checks": {
+    "all_g7d_freeze_and_podman_checks_remain_valid": true,
+    "all_major_slices_quality_lower_at_least_0_95": false,
+    "compute_reduction_lower_at_least_0_40": false,
+    "one_outcome_evaluation_run": true,
+    "oracle_regret_reduction_at_least_0_20": false,
+    "quality_retention_lower_at_least_0_99": false,
+    "utility_vs_content_blind_lower_above_zero": true,
+    "utility_vs_fixed_lower_above_zero": true
+  },
+  "promotion_recommended": false,
+  "protocol": {
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 2718281,
+    "candidate_retrained": false,
+    "confirmatory": true,
+    "created_at": "2026-09-24T05:26:40.484699+00:00",
+    "evaluation_runs": 1,
+    "existing_hidden_partition_runs": 0,
+    "name": "Routellect G7-E one-time untouched exact-pool evaluation",
+    "target_model_calls": 0,
+    "threshold_reselected": false
+  }
+}

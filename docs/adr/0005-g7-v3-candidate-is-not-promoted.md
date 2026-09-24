@@ -31,6 +31,12 @@ compute, fixed-baseline utility, and regret promotion criteria on visible eviden
 hidden partition remains prohibited; any future confirmatory run must use the separately
 preregistered untouched range and a new sponsor gate.
 
+G7-E then evaluated the exact frozen candidate once on 15,634 overlap-screened, previously unused
+R2-Bench prompts. Utility improved over fixed and content-blind controls, but quality retention,
+compute reduction, Oracle-regret reduction, and the reasoning slice failed their frozen gates.
+Promotion is rejected. The evaluation range is now open and must never be used for tuning or a
+second confirmatory claim.
+
 ## Consequences
 
 The product gains a safer experimental deterministic implementation without silently changing user

@@ -1,0 +1,47 @@
+{
+  "candidate_artifact_sha256": "6f32a6242fca4137cb50e515a4012a7bbea6fc01f078a12485016350aae50499",
+  "dataset_id": "JiaqiXue/R2-Bench",
+  "dataset_revision": "1b6234647a21705da4c220f339e44fbe72c69bb2",
+  "declared_license": "MIT",
+  "eligible_prompt_snapshot": {
+    "rows": 15634,
+    "sha256": "7074270b7d925e29e629cc05c38671742e988dfc98aeb2c1663b5b735b5a1273"
+  },
+  "evaluation": {
+    "evaluation_runs": 1,
+    "existing_hidden_partition_runs": 0,
+    "promotion_recommended": false,
+    "receipt_sha256": "fe191984e9ec06b8fc6c35317a81d54e1bf8dc4a090d9006a2004515ea4ea51e",
+    "result_sha256": "63d2c8447cb657ac95908850b60ae8ec6f0f4f34f0936f9fcdc8836f62fe66cf"
+  },
+  "exclusions": {
+    "development_exact_overlap": 63,
+    "development_fuzzy_overlap": 223,
+    "evaluation_exact_duplicate": 48,
+    "rows": 334,
+    "sha256": "284445fb1b1a7fe75488e3e56d94deb6910cf0dce06a11aaa1c5143dc0915a03"
+  },
+  "minimization": {
+    "golden_answers_persisted": false,
+    "judge_rationales_persisted": false,
+    "prompts_in_public_outputs": false,
+    "raw_responses_persisted": false,
+    "target_model_calls": 0
+  },
+  "outcomes": {
+    "manifest_sha256": "4200daccf8f87a9b3e803bd80cad8c9927062c6111682fff7b1bbfa7309df8e6",
+    "rows": 15634,
+    "sha256": "cb694fc093746365820505186d932139ce7ae6081512a991fcc96ad5989257db"
+  },
+  "prompt_ids_inclusive": [15001, 30968],
+  "prompt_manifest_sha256": "323c3e5e2524c3ac43703302154e1e8977dbc463f9ec6203ea98cb27cd4cb619",
+  "recommendations": {
+    "committed_before_outcomes": true,
+    "manifest_sha256": "b6ada672051dd805c6e63c7ded5d1bc037ea9bdacc1bd7af5a03717240643fd7",
+    "rows": 15634,
+    "sha256": "20938716e9ef0c9ce5501af4cae6db582f2b42139f4a8dc68dc494c0f27528b3"
+  },
+  "schema_version": "routellect-g7e-public-evidence-v1",
+  "source_commit": "d9078239687a86a4b3c2a9ae0babb0db3bad11c5",
+  "transport_tls_verification": false
+}

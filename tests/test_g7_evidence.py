@@ -26,6 +26,7 @@ ACQUIRE_C2 = _load_script("acquire_g7c2_routellm")
 BASELINES = _load_script("run_g7_baselines")
 G7E_COMMON = _load_script("g7e_common")
 G7E_PROMPTS = _load_script("acquire_g7e_prompts")
+G7E_EVALUATION = _load_script("run_g7e_evaluation")
 
 
 def _sha256(path: Path) -> str:
@@ -141,3 +142,26 @@ def test_g7e_overlap_screen_is_deterministic_and_prompt_free() -> None:
     }
     assert diagnostics["eligible_rows"] == 1
     assert all("original_prompt" not in row for row in excluded)
+
+
+def test_g7e_result_is_one_time_prompt_free_and_not_promoted() -> None:
+    path = Path("outputs/phase-7e-results.json")
+    result = json.loads(path.read_text())
+    assert result["protocol"]["evaluation_runs"] == 1
+    assert result["protocol"]["existing_hidden_partition_runs"] == 0
+    assert result["inputs"]["candidate_artifact_sha256"] == (
+        G7E_COMMON.FROZEN_ARTIFACT_SHA256
+    )
+    assert result["promotion_recommended"] is False
+    assert result["promotion_checks"]["utility_vs_fixed_lower_above_zero"] is True
+    assert result["promotion_checks"]["quality_retention_lower_at_least_0_99"] is False
+    assert result["major_slice_checks"]["task:reasoning"] is False
+    assert "original_prompt" not in path.read_text()
+
+
+def test_g7e_run_once_refuses_an_existing_receipt(tmp_path: Path) -> None:
+    evidence = tmp_path / "evidence"
+    evidence.mkdir()
+    (evidence / "evaluation-run-receipt.json").write_text("{}\n")
+    with pytest.raises(RuntimeError, match="rerun is forbidden"):
+        G7E_EVALUATION.run_once(evidence, tmp_path / "result.json")
