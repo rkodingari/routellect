@@ -1,0 +1,60 @@
+{
+  "cleanup": {
+    "container_removed": true,
+    "image_retained": true,
+    "volume_removed": true
+  },
+  "generated_at": "2026-09-24T13:26:54.929369+00:00",
+  "image": {
+    "digest": "sha256:e6aeee4591d3c19e064f723d02619fb9944557f5efe4b7608e16dbef58141dbb",
+    "id": "8b8878c98debdb37c5073de4fe601eaed7947cc362b9be60e7181f2eee50b017",
+    "reference": "localhost/routellect:g8c-unified-docker",
+    "size_bytes": 683692989
+  },
+  "runtime": {
+    "advisory": {
+      "mean_ms": 1.6805727199925968,
+      "p50_ms": 1.3224710000940831,
+      "p95_ms": 2.32152200010205,
+      "requests": 100
+    },
+    "contents": {
+      "multisource_artifact": false,
+      "sparse_artifact": false,
+      "sparse_module": false
+    },
+    "network_access": "none",
+    "ready_body": {
+      "catalog_version": "2026-09-15.g2-starter.1",
+      "status": "ok",
+      "version": "0.5.0"
+    },
+    "startup_seconds": 1.7808232079987647,
+    "target_provider_calls": 0
+  },
+  "schema": "routellect-g8c-podman-verification-v1",
+  "security": {
+    "capabilities_dropped": [
+      "CAP_CHOWN",
+      "CAP_DAC_OVERRIDE",
+      "CAP_FOWNER",
+      "CAP_FSETID",
+      "CAP_KILL",
+      "CAP_NET_BIND_SERVICE",
+      "CAP_SETFCAP",
+      "CAP_SETGID",
+      "CAP_SETPCAP",
+      "CAP_SETUID",
+      "CAP_SYS_CHROOT"
+    ],
+    "gid": 10001,
+    "health_status": "healthy",
+    "network_mode": "none",
+    "read_only_rootfs": true,
+    "rootless": true,
+    "security_options": [
+      "no-new-privileges"
+    ],
+    "uid": 10001
+  }
+}

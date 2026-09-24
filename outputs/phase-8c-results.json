@@ -1,0 +1,55 @@
+{
+  "schema": "routellect-phase-8c-results-v1",
+  "phase": "G8-C",
+  "status": "verified_with_documented_dependency_findings",
+  "source_commit": "f225e00489942df854023ce28b5f11431de6bacd",
+  "image": {
+    "reference": "localhost/routellect:g8c-unified-docker",
+    "id": "8b8878c98debdb37c5073de4fe601eaed7947cc362b9be60e7181f2eee50b017",
+    "digest": "sha256:e6aeee4591d3c19e064f723d02619fb9944557f5efe4b7608e16dbef58141dbb",
+    "size_bytes": 683692989,
+    "build_format": "docker",
+    "healthcheck_preserved": true
+  },
+  "security": {
+    "rootless": true,
+    "uid": 10001,
+    "gid": 10001,
+    "network_mode": "none",
+    "read_only_rootfs": true,
+    "no_new_privileges": true,
+    "capabilities_dropped": "all"
+  },
+  "runtime": {
+    "readiness": "ok",
+    "advisory_only": true,
+    "advisor_version": "deterministic-unified-v1+feedback-bayes-v1",
+    "requests": 100,
+    "mean_ms": 1.6805727199925968,
+    "p50_ms": 1.3224710000940831,
+    "p95_ms": 2.32152200010205,
+    "startup_seconds": 1.7808232079987647,
+    "target_provider_calls": 0,
+    "sparse_module_present": false,
+    "sparse_artifact_present": false,
+    "multisource_artifact_present": false
+  },
+  "software_supply_chain": {
+    "cyclonedx_components": 145,
+    "component_inventory_matches_prior_g8c_sbom": true,
+    "unknown_license_metadata_entries": 8,
+    "vulnerability_scan": {
+      "node_vulnerabilities": 0,
+      "python_vulnerabilities": 1,
+      "finding": "CVE-2025-69872",
+      "severity": "MEDIUM",
+      "package": "diskcache==5.6.3",
+      "reachability_note": "No Routellect cache path uses diskcache; the optional local assessor stack is off by default. This is documented, not waived."
+    }
+  },
+  "release_boundary": {
+    "release_tag_created": false,
+    "publication_performed": false,
+    "next_gate": "Sponsor decision on G8-C and whether to remediate or formally accept the documented dependency findings before release."
+  }
+}

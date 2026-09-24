@@ -74,6 +74,9 @@ the first release is approved.
 
 - Sponsor approval of G8-B as the completed single-policy implementation, with G8-C container and
   release verification authorized but release publication still gated.
+- G8-C container verification completed with fresh rootless Podman evidence, Docker-format
+  healthcheck preservation, no-network advisory-only runtime checks, fresh SBOM/license inventory,
+  and explicit residual dependency findings; release publication remains gated.
 
 ### Security
 

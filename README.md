@@ -155,10 +155,13 @@ Routellect has one `deterministic-unified-v1` policy, retaining the supported ha
 ranking while adding isolated boundary, negation, privacy, Unicode, and token-estimation hardening.
 The selector, alternate runtime, sparse module, and packaged strength artifacts are removed. The
 open G7-E range remains prohibited for tuning, and no new quality claim is made. G8-B is approved;
-G8-C container verification is in progress, while release publication remains gated. See the
+G8-C container verification is complete with documented residual dependency findings, while release
+publication remains gated. See the
 [G7-E verification report](outputs/phase-7e-verification-report.md) and
 [decision gate](outputs/phase-7e-gate-review.md) for full evidence and limitations, and the
 [G8 consolidation plan](outputs/phase-8-single-policy-consolidation-plan.md) for the approved
 single-policy boundary. Current implementation evidence is in the
 [G8-B verification report](outputs/phase-8b-verification-report.md) and
-[G8-B gate review](outputs/phase-8b-gate-review.md).
+[G8-B gate review](outputs/phase-8b-gate-review.md). G8-C evidence is in the
+[verification report](outputs/phase-8c-verification-report.md) and
+[gate review](outputs/phase-8c-gate-review.md).

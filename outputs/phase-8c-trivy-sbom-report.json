@@ -1,0 +1,950 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.74.0"
+  },
+  "ReportID": "01a0d38d-a632-7bc7-9d8a-1fb52281aa83",
+  "CreatedAt": "2026-09-24T13:14:30.83478657Z",
+  "ArtifactName": "/workspace/outputs/routellect-g8c-unified.cdx.json",
+  "ArtifactType": "cyclonedx",
+  "Metadata": {
+    "OS": {
+      "Family": "none",
+      "Name": ""
+    }
+  },
+  "Results": [
+    {
+      "Target": "Node.js",
+      "Class": "lang-pkgs",
+      "Type": "node-pkg",
+      "Packages": [
+        {
+          "ID": "@oxc-project/types@0.149.0",
+          "Name": "@oxc-project/types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40oxc-project/types@0.149.0",
+            "UID": "7947a944e3355280",
+            "BOMRef": "pkg:npm/%40oxc-project/types@0.149.0"
+          },
+          "Version": "0.149.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "@rolldown/binding-darwin-arm64@1.2.8",
+          "Name": "@rolldown/binding-darwin-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-darwin-arm64@1.2.8",
+            "UID": "45ed6125a39afad5",
+            "BOMRef": "pkg:npm/%40rolldown/binding-darwin-arm64@1.2.8"
+          },
+          "Version": "1.2.8",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "@rolldown/pluginutils@1.0.1",
+          "Name": "@rolldown/pluginutils",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/pluginutils@1.0.1",
+            "UID": "d0b3e049e62947a1",
+            "BOMRef": "pkg:npm/%40rolldown/pluginutils@1.0.1"
+          },
+          "Version": "1.0.1",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "@types/react@19.3.0",
+          "Name": "@types/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react@19.3.0",
+            "UID": "17d2b74cae8bb229",
+            "BOMRef": "pkg:npm/%40types/react@19.3.0"
+          },
+          "Version": "19.3.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "@types/react-dom@19.3.0",
+          "Name": "@types/react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react-dom@19.3.0",
+            "UID": "7c9c85c501b840ba",
+            "BOMRef": "pkg:npm/%40types/react-dom@19.3.0"
+          },
+          "Version": "19.3.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "@typescript/typescript-darwin-arm64@7.0.2",
+          "Name": "@typescript/typescript-darwin-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40typescript/typescript-darwin-arm64@7.0.2",
+            "UID": "44a5aff0df3cedf",
+            "BOMRef": "pkg:npm/%40typescript/typescript-darwin-arm64@7.0.2"
+          },
+          "Version": "7.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ]
+        },
+        {
+          "ID": "@vitejs/plugin-react@6.1.1",
+          "Name": "@vitejs/plugin-react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40vitejs/plugin-react@6.1.1",
+            "UID": "f2a3c05a7b0d5ad4",
+            "BOMRef": "pkg:npm/%40vitejs/plugin-react@6.1.1"
+          },
+          "Version": "6.1.1",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "csstype@3.2.3",
+          "Name": "csstype",
+          "Identifier": {
+            "PURL": "pkg:npm/csstype@3.2.3",
+            "UID": "c6565dfb89d75324",
+            "BOMRef": "pkg:npm/csstype@3.2.3"
+          },
+          "Version": "3.2.3",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "detect-libc@2.1.2",
+          "Name": "detect-libc",
+          "Identifier": {
+            "PURL": "pkg:npm/detect-libc@2.1.2",
+            "UID": "1c85482caf301805",
+            "BOMRef": "pkg:npm/detect-libc@2.1.2"
+          },
+          "Version": "2.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ]
+        },
+        {
+          "ID": "fdir@6.5.0",
+          "Name": "fdir",
+          "Identifier": {
+            "PURL": "pkg:npm/fdir@6.5.0",
+            "UID": "f5dd5d8f32745c04",
+            "BOMRef": "pkg:npm/fdir@6.5.0"
+          },
+          "Version": "6.5.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "fsevents@2.3.3",
+          "Name": "fsevents",
+          "Identifier": {
+            "PURL": "pkg:npm/fsevents@2.3.3",
+            "UID": "38b175c9adaff895",
+            "BOMRef": "pkg:npm/fsevents@2.3.3"
+          },
+          "Version": "2.3.3",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "lightningcss@1.33.0",
+          "Name": "lightningcss",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss@1.33.0",
+            "UID": "bc55e71f311a2f8f",
+            "BOMRef": "pkg:npm/lightningcss@1.33.0"
+          },
+          "Version": "1.33.0",
+          "Licenses": [
+            "MPL-2.0"
+          ]
+        },
+        {
+          "ID": "lightningcss-darwin-arm64@1.33.0",
+          "Name": "lightningcss-darwin-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-darwin-arm64@1.33.0",
+            "UID": "d7fe58c9b29fd605",
+            "BOMRef": "pkg:npm/lightningcss-darwin-arm64@1.33.0"
+          },
+          "Version": "1.33.0",
+          "Licenses": [
+            "MPL-2.0"
+          ]
+        },
+        {
+          "ID": "nanoid@3.3.19",
+          "Name": "nanoid",
+          "Identifier": {
+            "PURL": "pkg:npm/nanoid@3.3.19",
+            "UID": "60e6b4d762f440b5",
+            "BOMRef": "pkg:npm/nanoid@3.3.19"
+          },
+          "Version": "3.3.19",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "picocolors@1.1.1",
+          "Name": "picocolors",
+          "Identifier": {
+            "PURL": "pkg:npm/picocolors@1.1.1",
+            "UID": "4921360b2c8c02b7",
+            "BOMRef": "pkg:npm/picocolors@1.1.1"
+          },
+          "Version": "1.1.1",
+          "Licenses": [
+            "ISC"
+          ]
+        },
+        {
+          "ID": "picomatch@4.0.7",
+          "Name": "picomatch",
+          "Identifier": {
+            "PURL": "pkg:npm/picomatch@4.0.7",
+            "UID": "5f03da4926ab29d3",
+            "BOMRef": "pkg:npm/picomatch@4.0.7"
+          },
+          "Version": "4.0.7",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "postcss@8.5.28",
+          "Name": "postcss",
+          "Identifier": {
+            "PURL": "pkg:npm/postcss@8.5.28",
+            "UID": "ae7de81e9b802576",
+            "BOMRef": "pkg:npm/postcss@8.5.28"
+          },
+          "Version": "8.5.28",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "react@19.3.0",
+          "Name": "react",
+          "Identifier": {
+            "PURL": "pkg:npm/react@19.3.0",
+            "UID": "4500ce4c70071997",
+            "BOMRef": "pkg:npm/react@19.3.0"
+          },
+          "Version": "19.3.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "react-dom@19.3.0",
+          "Name": "react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-dom@19.3.0",
+            "UID": "fcc8a66de4293b26",
+            "BOMRef": "pkg:npm/react-dom@19.3.0"
+          },
+          "Version": "19.3.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "rolldown@1.2.8",
+          "Name": "rolldown",
+          "Identifier": {
+            "PURL": "pkg:npm/rolldown@1.2.8",
+            "UID": "ad48c005a8786727",
+            "BOMRef": "pkg:npm/rolldown@1.2.8"
+          },
+          "Version": "1.2.8",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "scheduler@0.28.0",
+          "Name": "scheduler",
+          "Identifier": {
+            "PURL": "pkg:npm/scheduler@0.28.0",
+            "UID": "edba4e0e8c932f2b",
+            "BOMRef": "pkg:npm/scheduler@0.28.0"
+          },
+          "Version": "0.28.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "source-map-js@1.2.1",
+          "Name": "source-map-js",
+          "Identifier": {
+            "PURL": "pkg:npm/source-map-js@1.2.1",
+            "UID": "686cd2a8c536bc3f",
+            "BOMRef": "pkg:npm/source-map-js@1.2.1"
+          },
+          "Version": "1.2.1",
+          "Licenses": [
+            "BSD-3-Clause"
+          ]
+        },
+        {
+          "ID": "tinyglobby@0.2.17",
+          "Name": "tinyglobby",
+          "Identifier": {
+            "PURL": "pkg:npm/tinyglobby@0.2.17",
+            "UID": "5685ffa16a057d73",
+            "BOMRef": "pkg:npm/tinyglobby@0.2.17"
+          },
+          "Version": "0.2.17",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "typescript@7.0.2",
+          "Name": "typescript",
+          "Identifier": {
+            "PURL": "pkg:npm/typescript@7.0.2",
+            "UID": "d80512dbb13378f6",
+            "BOMRef": "pkg:npm/typescript@7.0.2"
+          },
+          "Version": "7.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ]
+        },
+        {
+          "ID": "vite@8.3.0",
+          "Name": "vite",
+          "Identifier": {
+            "PURL": "pkg:npm/vite@8.3.0",
+            "UID": "6837387504575953",
+            "BOMRef": "pkg:npm/vite@8.3.0"
+          },
+          "Version": "8.3.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "vscode-jsonrpc@9.0.0",
+          "Name": "vscode-jsonrpc",
+          "Identifier": {
+            "PURL": "pkg:npm/vscode-jsonrpc@9.0.0",
+            "UID": "a90e9e8ed04ce3b",
+            "BOMRef": "pkg:npm/vscode-jsonrpc@9.0.0"
+          },
+          "Version": "9.0.0",
+          "Licenses": [
+            "MIT"
+          ]
+        }
+      ]
+    },
+    {
+      "Target": "Python",
+      "Class": "lang-pkgs",
+      "Type": "python-pkg",
+      "Packages": [
+        {
+          "ID": "Jinja2@3.1.6",
+          "Name": "Jinja2",
+          "Identifier": {
+            "PURL": "pkg:pypi/jinja2@3.1.6",
+            "UID": "a28b6acfd8c2e087",
+            "BOMRef": "pkg:pypi/Jinja2@3.1.6"
+          },
+          "Version": "3.1.6",
+          "Licenses": [
+            "BSD License"
+          ]
+        },
+        {
+          "ID": "MarkupSafe@3.0.3",
+          "Name": "MarkupSafe",
+          "Identifier": {
+            "PURL": "pkg:pypi/markupsafe@3.0.3",
+            "UID": "72e6092af53cdc80",
+            "BOMRef": "pkg:pypi/MarkupSafe@3.0.3"
+          },
+          "Version": "3.0.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ]
+        },
+        {
+          "ID": "PyYAML@6.0.3",
+          "Name": "PyYAML",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyyaml@6.0.3",
+            "UID": "50a9ddf51b7d1908",
+            "BOMRef": "pkg:pypi/PyYAML@6.0.3"
+          },
+          "Version": "6.0.3",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "annotated-doc@0.0.5",
+          "Name": "annotated-doc",
+          "Identifier": {
+            "PURL": "pkg:pypi/annotated-doc@0.0.5",
+            "UID": "16260131a14471e3",
+            "BOMRef": "pkg:pypi/annotated-doc@0.0.5"
+          },
+          "Version": "0.0.5",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "annotated-types@0.8.0",
+          "Name": "annotated-types",
+          "Identifier": {
+            "PURL": "pkg:pypi/annotated-types@0.8.0",
+            "UID": "72a7d25cb8dbe29a",
+            "BOMRef": "pkg:pypi/annotated-types@0.8.0"
+          },
+          "Version": "0.8.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "anyio@4.15.1",
+          "Name": "anyio",
+          "Identifier": {
+            "PURL": "pkg:pypi/anyio@4.15.1",
+            "UID": "34af15ad43ac5f3b",
+            "BOMRef": "pkg:pypi/anyio@4.15.1"
+          },
+          "Version": "4.15.1",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "cffi@2.1.1",
+          "Name": "cffi",
+          "Identifier": {
+            "PURL": "pkg:pypi/cffi@2.1.1",
+            "UID": "11be15e8baaafa46",
+            "BOMRef": "pkg:pypi/cffi@2.1.1"
+          },
+          "Version": "2.1.1",
+          "Licenses": [
+            "MIT-0"
+          ]
+        },
+        {
+          "ID": "click@8.5.0",
+          "Name": "click",
+          "Identifier": {
+            "PURL": "pkg:pypi/click@8.5.0",
+            "UID": "fcac03f89f4ac3ba",
+            "BOMRef": "pkg:pypi/click@8.5.0"
+          },
+          "Version": "8.5.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ]
+        },
+        {
+          "ID": "cryptography@50.0.1",
+          "Name": "cryptography",
+          "Identifier": {
+            "PURL": "pkg:pypi/cryptography@50.0.1",
+            "UID": "c511635731553a04",
+            "BOMRef": "pkg:pypi/cryptography@50.0.1"
+          },
+          "Version": "50.0.1",
+          "Licenses": [
+            "Apache-2.0 OR BSD-3-Clause"
+          ]
+        },
+        {
+          "ID": "diskcache@5.6.3",
+          "Name": "diskcache",
+          "Identifier": {
+            "PURL": "pkg:pypi/diskcache@5.6.3",
+            "UID": "5a33f86e5a3a6906",
+            "BOMRef": "pkg:pypi/diskcache@5.6.3"
+          },
+          "Version": "5.6.3",
+          "Licenses": [
+            "Apache 2.0"
+          ]
+        },
+        {
+          "ID": "fastapi@0.141.1",
+          "Name": "fastapi",
+          "Identifier": {
+            "PURL": "pkg:pypi/fastapi@0.141.1",
+            "UID": "3b73aba61187f5c9",
+            "BOMRef": "pkg:pypi/fastapi@0.141.1"
+          },
+          "Version": "0.141.1",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "h11@0.16.0",
+          "Name": "h11",
+          "Identifier": {
+            "PURL": "pkg:pypi/h11@0.16.0",
+            "UID": "24a2b32fa169819",
+            "BOMRef": "pkg:pypi/h11@0.16.0"
+          },
+          "Version": "0.16.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "httptools@0.8.0",
+          "Name": "httptools",
+          "Identifier": {
+            "PURL": "pkg:pypi/httptools@0.8.0",
+            "UID": "d84cc4942800baed",
+            "BOMRef": "pkg:pypi/httptools@0.8.0"
+          },
+          "Version": "0.8.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "idna@3.19",
+          "Name": "idna",
+          "Identifier": {
+            "PURL": "pkg:pypi/idna@3.19",
+            "UID": "c222c445b862f43f",
+            "BOMRef": "pkg:pypi/idna@3.19"
+          },
+          "Version": "3.19",
+          "Licenses": [
+            "BSD-3-Clause"
+          ]
+        },
+        {
+          "ID": "llama_cpp_python@0.3.16",
+          "Name": "llama_cpp_python",
+          "Identifier": {
+            "PURL": "pkg:pypi/llama-cpp-python@0.3.16",
+            "UID": "ce449dca6beb2eb7",
+            "BOMRef": "pkg:pypi/llama_cpp_python@0.3.16"
+          },
+          "Version": "0.3.16",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "numpy@2.5.3",
+          "Name": "numpy",
+          "Identifier": {
+            "PURL": "pkg:pypi/numpy@2.5.3",
+            "UID": "83771bc35d6d5afa",
+            "BOMRef": "pkg:pypi/numpy@2.5.3"
+          },
+          "Version": "2.5.3",
+          "Licenses": [
+            "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+          ]
+        },
+        {
+          "ID": "pycparser@3.0",
+          "Name": "pycparser",
+          "Identifier": {
+            "PURL": "pkg:pypi/pycparser@3.0",
+            "UID": "56f84186f2a2bba0",
+            "BOMRef": "pkg:pypi/pycparser@3.0"
+          },
+          "Version": "3.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ]
+        },
+        {
+          "ID": "pydantic@2.13.5",
+          "Name": "pydantic",
+          "Identifier": {
+            "PURL": "pkg:pypi/pydantic@2.13.5",
+            "UID": "1ccc317d778f364c",
+            "BOMRef": "pkg:pypi/pydantic@2.13.5"
+          },
+          "Version": "2.13.5",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "pydantic_core@2.46.5",
+          "Name": "pydantic_core",
+          "Identifier": {
+            "PURL": "pkg:pypi/pydantic-core@2.46.5",
+            "UID": "a178b4d8902589aa",
+            "BOMRef": "pkg:pypi/pydantic_core@2.46.5"
+          },
+          "Version": "2.46.5",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "python-dotenv@1.2.3",
+          "Name": "python-dotenv",
+          "Identifier": {
+            "PURL": "pkg:pypi/python-dotenv@1.2.3",
+            "UID": "954e1bd5dd833ac7",
+            "BOMRef": "pkg:pypi/python-dotenv@1.2.3"
+          },
+          "Version": "1.2.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ]
+        },
+        {
+          "ID": "routellect@0.5.0",
+          "Name": "routellect",
+          "Identifier": {
+            "PURL": "pkg:pypi/routellect@0.5.0",
+            "UID": "e70392fcc9f227c1",
+            "BOMRef": "pkg:pypi/routellect@0.5.0"
+          },
+          "Version": "0.5.0",
+          "Licenses": [
+            "Apache-2.0"
+          ]
+        },
+        {
+          "ID": "routellect@0.5.0",
+          "Name": "routellect",
+          "Identifier": {
+            "PURL": "pkg:pypi/routellect@0.5.0",
+            "UID": "3ed9a6cfc4aff91b",
+            "BOMRef": "pkg:pypi/routellect@0.5.0"
+          },
+          "Version": "0.5.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "adduser@3.152",
+            "apt@3.0.3",
+            "base-files@13.8+deb13u6",
+            "base-passwd@3.6.7",
+            "bash@5.2.37-2+b9",
+            "bsdutils@1:2.41.5-0+deb13u1",
+            "ca-certificates@20250419",
+            "coreutils@9.7-3",
+            "dash@0.5.12-12",
+            "debconf@1.5.91",
+            "debian-archive-keyring@2025.1",
+            "debianutils@5.23.2",
+            "diffutils@1:3.10-4",
+            "dpkg@1.22.22",
+            "findutils@4.10.0-3",
+            "gcc-14-base@14.2.0-19",
+            "grep@3.11-4+b1",
+            "gzip@1.13-1",
+            "hostname@3.25",
+            "init-system-helpers@1.69~deb13u1",
+            "libacl1@2.3.2-2+b1",
+            "libapt-pkg7.0@3.0.3",
+            "libattr1@1:2.5.2-3",
+            "libaudit-common@1:4.0.2-2",
+            "libaudit1@1:4.0.2-2+b2",
+            "libblkid1@2.41.5-0+deb13u1",
+            "libbsd0@0.12.2-2",
+            "libbz2-1.0@1.0.8-6",
+            "libc-bin@2.41-12+deb13u3",
+            "libc6@2.41-12+deb13u3",
+            "libcap-ng0@0.8.5-4+b1",
+            "libcap2@1:2.75-10+deb13u1+b1",
+            "libcrypt1@1:4.4.38-1",
+            "libdb5.3t64@5.3.28+dfsg2-9",
+            "libdebconfclient0@0.280",
+            "libffi8@3.4.8-2",
+            "libgcc-s1@14.2.0-19",
+            "libgdbm6t64@1.24-2",
+            "libgmp10@2:6.3.0+dfsg-3",
+            "libgomp1@14.2.0-19",
+            "libhogweed6t64@3.10.1-1",
+            "liblastlog2-2@2.41.5-0+deb13u1",
+            "liblz4-1@1.10.0-4",
+            "liblzma5@5.8.1-1+deb13u1",
+            "libmd0@1.1.0-2+b1",
+            "libmount1@2.41.5-0+deb13u1",
+            "libncursesw6@6.5+20250216-2",
+            "libnettle8t64@3.10.1-1",
+            "libpam-modules-bin@1.7.0-5",
+            "libpam-modules@1.7.0-5",
+            "libpam-runtime@1.7.0-5",
+            "libpam0g@1.7.0-5",
+            "libpcre2-8-0@10.46-1~deb13u1",
+            "libreadline8t64@8.2-6",
+            "libseccomp2@2.6.0-2",
+            "libselinux1@3.8.1-1",
+            "libsemanage-common@3.8.1-1",
+            "libsemanage2@3.8.1-1",
+            "libsepol2@3.8.1-1",
+            "libsmartcols1@2.41.5-0+deb13u1",
+            "libsqlite3-0@3.46.1-7+deb13u1",
+            "libssl3t64@3.5.7-1~deb13u2",
+            "libstdc++6@14.2.0-19",
+            "libsystemd0@257.13-1~deb13u1",
+            "libtinfo6@6.5+20250216-2",
+            "libudev1@257.13-1~deb13u1",
+            "libuuid1@2.41.5-0+deb13u1",
+            "libxxhash0@0.8.3-2",
+            "libzstd1@1.5.7+dfsg-1",
+            "login.defs@1:4.17.4-2",
+            "login@1:4.16.0-2+really2.41.5-0+deb13u1",
+            "mawk@1.3.4.20250131-1",
+            "mount@2.41.5-0+deb13u1",
+            "ncurses-base@6.5+20250216-2",
+            "ncurses-bin@6.5+20250216-2",
+            "netbase@6.5",
+            "openssl-provider-legacy@3.5.7-1~deb13u2",
+            "openssl@3.5.7-1~deb13u2",
+            "passwd@1:4.17.4-2",
+            "perl-base@5.40.1-6",
+            "readline-common@8.2-6",
+            "sed@4.9-2+deb13u1",
+            "sqv@1.3.0-3+b2",
+            "sysvinit-utils@3.14-4",
+            "tar@1.35+dfsg-3.1",
+            "tzdata@2026b-0+deb13u1",
+            "util-linux@2.41.5-0+deb13u1",
+            "zlib1g@1:1.3.dfsg+really1.3.1-1+b1",
+            "@oxc-project/types@0.149.0",
+            "@rolldown/binding-darwin-arm64@1.2.8",
+            "@rolldown/pluginutils@1.0.1",
+            "@types/react-dom@19.3.0",
+            "@types/react@19.3.0",
+            "@typescript/typescript-darwin-arm64@7.0.2",
+            "@vitejs/plugin-react@6.1.1",
+            "csstype@3.2.3",
+            "detect-libc@2.1.2",
+            "fdir@6.5.0",
+            "fsevents@2.3.3",
+            "lightningcss-darwin-arm64@1.33.0",
+            "lightningcss@1.33.0",
+            "nanoid@3.3.19",
+            "picocolors@1.1.1",
+            "picomatch@4.0.7",
+            "postcss@8.5.28",
+            "react-dom@19.3.0",
+            "react@19.3.0",
+            "rolldown@1.2.8",
+            "scheduler@0.28.0",
+            "source-map-js@1.2.1",
+            "tinyglobby@0.2.17",
+            "typescript@7.0.2",
+            "vite@8.3.0",
+            "vscode-jsonrpc@9.0.0",
+            "Jinja2@3.1.6",
+            "MarkupSafe@3.0.3",
+            "PyYAML@6.0.3",
+            "annotated-doc@0.0.5",
+            "annotated-types@0.8.0",
+            "anyio@4.15.1",
+            "cffi@2.1.1",
+            "click@8.5.0",
+            "cryptography@50.0.1",
+            "diskcache@5.6.3",
+            "fastapi@0.141.1",
+            "h11@0.16.0",
+            "httptools@0.8.0",
+            "idna@3.19",
+            "llama_cpp_python@0.3.16",
+            "numpy@2.5.3",
+            "pycparser@3.0",
+            "pydantic@2.13.5",
+            "pydantic_core@2.46.5",
+            "python-dotenv@1.2.3",
+            "routellect@0.5.0",
+            "starlette@1.6.0",
+            "typing-inspection@0.4.4",
+            "typing_extensions@4.16.0",
+            "uvicorn@0.53.0",
+            "uvloop@0.22.1",
+            "watchfiles@1.2.0",
+            "websockets@17.1"
+          ]
+        },
+        {
+          "ID": "starlette@1.6.0",
+          "Name": "starlette",
+          "Identifier": {
+            "PURL": "pkg:pypi/starlette@1.6.0",
+            "UID": "3e286230b5829883",
+            "BOMRef": "pkg:pypi/starlette@1.6.0"
+          },
+          "Version": "1.6.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ]
+        },
+        {
+          "ID": "typing-inspection@0.4.4",
+          "Name": "typing-inspection",
+          "Identifier": {
+            "PURL": "pkg:pypi/typing-inspection@0.4.4",
+            "UID": "2dc3921b581dd531",
+            "BOMRef": "pkg:pypi/typing-inspection@0.4.4"
+          },
+          "Version": "0.4.4",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "typing_extensions@4.16.0",
+          "Name": "typing_extensions",
+          "Identifier": {
+            "PURL": "pkg:pypi/typing-extensions@4.16.0",
+            "UID": "bf25a178c06da632",
+            "BOMRef": "pkg:pypi/typing_extensions@4.16.0"
+          },
+          "Version": "4.16.0",
+          "Licenses": [
+            "PSF-2.0"
+          ]
+        },
+        {
+          "ID": "uvicorn@0.53.0",
+          "Name": "uvicorn",
+          "Identifier": {
+            "PURL": "pkg:pypi/uvicorn@0.53.0",
+            "UID": "a7d8d093da57e79a",
+            "BOMRef": "pkg:pypi/uvicorn@0.53.0"
+          },
+          "Version": "0.53.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ]
+        },
+        {
+          "ID": "uvloop@0.22.1",
+          "Name": "uvloop",
+          "Identifier": {
+            "PURL": "pkg:pypi/uvloop@0.22.1",
+            "UID": "a8cc3a12a415c15f",
+            "BOMRef": "pkg:pypi/uvloop@0.22.1"
+          },
+          "Version": "0.22.1",
+          "Licenses": [
+            "MIT License"
+          ]
+        },
+        {
+          "ID": "watchfiles@1.2.0",
+          "Name": "watchfiles",
+          "Identifier": {
+            "PURL": "pkg:pypi/watchfiles@1.2.0",
+            "UID": "e76f5588220fb447",
+            "BOMRef": "pkg:pypi/watchfiles@1.2.0"
+          },
+          "Version": "1.2.0",
+          "Licenses": [
+            "MIT"
+          ]
+        },
+        {
+          "ID": "websockets@17.1",
+          "Name": "websockets",
+          "Identifier": {
+            "PURL": "pkg:pypi/websockets@17.1",
+            "UID": "8693774b5f06a08e",
+            "BOMRef": "pkg:pypi/websockets@17.1"
+          },
+          "Version": "17.1",
+          "Licenses": [
+            "BSD-3-Clause"
+          ]
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2025-69872",
+          "VendorIDs": [
+            "GHSA-w8v5-vhqr-4h9v"
+          ],
+          "PkgID": "diskcache@5.6.3",
+          "PkgName": "diskcache",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/diskcache@5.6.3",
+            "UID": "5a33f86e5a3a6906",
+            "BOMRef": "pkg:pypi/diskcache@5.6.3"
+          },
+          "InstalledVersion": "5.6.3",
+          "Status": "affected",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-69872",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:7f8cc8bf8bef68556123e755210906a90237f3e0b0658f1771e1d3b08c5db76b",
+          "Title": "python-diskcache: python-diskcache: Arbitrary code execution via insecure pickle deserialization",
+          "Description": "DiskCache (python-diskcache) through 5.6.3 uses Python pickle for serialization by default. An attacker with write access to the cache directory can achieve arbitrary code execution when a victim application reads from the cache.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-94",
+            "CWE-502"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V40Vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "V40Score": 5.2
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L",
+              "V3Score": 7.6
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2026:36350",
+            "https://access.redhat.com/errata/RHSA-2026:3713",
+            "https://access.redhat.com/security/cve/CVE-2025-69872",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2439059",
+            "https://github.com/EthanKim88/ethan-cve-disclosures/blob/main/CVE-2025-69872-DiskCache-Pickle-Deserialization.md",
+            "https://github.com/grantjenks/python-diskcache",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-69872",
+            "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-69872.json",
+            "https://www.cve.org/CVERecord?id=CVE-2025-69872"
+          ],
+          "PublishedDate": "2026-02-11T19:15:50.36Z",
+          "LastModifiedDate": "2026-07-15T02:17:52.33Z"
+        }
+      ]
+    }
+  ]
+}
