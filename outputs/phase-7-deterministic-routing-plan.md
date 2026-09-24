@@ -1,7 +1,7 @@
 # Routellect Phase 7 Deterministic Routing Intelligence Plan
 
 Date: 2026-09-21
-Status: G7-A through G7-D approved; G7-E executed once and awaiting sponsor decision
+Status: G7-A through G7-E approved; G7-E production promotion rejected
 Target: Routellect 0.6.0 candidate
 
 ## 1. Objective

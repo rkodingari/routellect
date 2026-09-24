@@ -1,7 +1,7 @@
 # Routellect Phase 7-E One-Time Confirmatory Evaluation Plan
 
 Date: 2026-09-24
-Status: Executed once; promotion rejected; awaiting G7-E sponsor decision
+Status: Approved as complete; promotion rejected
 Production promotion: **Not authorized**
 Existing hidden partition: **Prohibited**
 
@@ -102,6 +102,6 @@ reinterpreted after outcomes are available.
 
 ## Stop condition
 
-The one-time result, verification report, and gate report are complete. Work is stopped at the G7-E
-sponsor gate. G7-F, production promotion, public release claims, and v3 activation remain
-unauthorized; the frozen promotion rule rejected this candidate.
+The one-time result, verification report, and gate report are complete. The sponsor approved G7-E
+as complete on 2026-09-24 and accepted the frozen rule's non-promotion result. G7-F, production
+promotion, public release claims, v3 activation, and a second G7-E run remain unauthorized.

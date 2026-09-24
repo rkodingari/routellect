@@ -1,7 +1,7 @@
 # ADR 0005: Keep deterministic-v3 explicit and reject sparse-router promotion
 
-Date: 2026-09-21  
-Status: Accepted; reaffirmed by G7-D candidate freeze on 2026-09-22
+Date: 2026-09-21
+Status: Accepted; reaffirmed by G7-E sponsor approval on 2026-09-24
 
 ## Context
 
@@ -35,7 +35,8 @@ G7-E then evaluated the exact frozen candidate once on 15,634 overlap-screened, 
 R2-Bench prompts. Utility improved over fixed and content-blind controls, but quality retention,
 compute reduction, Oracle-regret reduction, and the reasoning slice failed their frozen gates.
 Promotion is rejected. The evaluation range is now open and must never be used for tuning or a
-second confirmatory claim.
+second confirmatory claim. The sponsor approved G7-E as complete on 2026-09-24, accepting the
+non-promotion decision without authorizing v3 activation, a rerun, or another phase.
 
 ## Consequences
 

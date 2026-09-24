@@ -156,12 +156,13 @@ archive before moving it outside the trusted host.
 
 ## Current phase
 
-G7-C, the bounded G7-C2 research milestone, and G7-D validation/candidate freeze are approved. G7-E
-has executed once and is awaiting sponsor review. On 15,634 overlap-screened untouched prompts, the
+G7-C, the bounded G7-C2 research milestone, G7-D validation/candidate freeze, and the completed G7-E
+evaluation are approved. On 15,634 overlap-screened untouched prompts, the
 frozen candidate improves utility over fixed and content-blind controls, but retains only 97.59% of
 fixed quality, saves 9.69% normalized compute, closes 3.02% of Oracle regret, and materially
 underperforms on reasoning. The frozen conjunctive rule therefore rejects production promotion.
 Version 0.5.0 and deterministic-v2 remain the production defaults; v3 remains inactive and the open
-evaluation range is prohibited for tuning. See the
+evaluation range is prohibited for tuning. Sponsor approval accepts this non-promotion outcome; it
+does not authorize another evaluation or a new phase. See the
 [G7-E verification report](outputs/phase-7e-verification-report.md) and
 [decision gate](outputs/phase-7e-gate-review.md) for full evidence and limitations.

@@ -1,7 +1,7 @@
 # Routellect Phase 7-E Gate Review
 
-Date: 2026-09-24  
-Status: **Awaiting sponsor decision**
+Date: 2026-09-24
+Status: **Approved as complete; production promotion rejected**
 
 ## Gate recommendation
 
@@ -41,9 +41,10 @@ Failed:
 
 Promotion is rejected because every condition was conjunctive.
 
-## Decision requested
+## Sponsor decision
 
-Approve G7-E as complete with the candidate rejected for production. Approval must not authorize:
+On 2026-09-24, the sponsor responded `Approve G7-E`. This accepts G7-E as complete with the
+candidate rejected for production. The approval does not authorize:
 
 - threshold or feature tuning on the now-open evaluation range;
 - a second G7-E run;

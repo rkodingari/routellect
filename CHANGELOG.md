@@ -51,6 +51,8 @@ the first release is approved.
 - One-time G7-E evaluation on 15,634 overlap-screened, previously unused R2-Bench prompts, with
   outcome-blind recommendation commitment, 10,000 paired resamples, prompt-free public evidence,
   and automatic non-promotion after quality, compute, regret, and reasoning-slice gate failures.
+- Sponsor approval of G7-E as a completed one-time evaluation with the non-promotion decision
+  accepted, deterministic-v2 retained, v3 inactive, and no second evaluation authorized.
 
 ### Security
 
