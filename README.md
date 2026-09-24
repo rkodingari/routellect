@@ -84,17 +84,10 @@ routellect advise --objective balanced --privacy no_training \
   "Review this Python concurrency design and identify race conditions"
 ```
 
-The stronger G7 deterministic policy is available only as an explicit, non-production candidate:
-
-```sh
-routellect advise --policy-version v3 --json \
-  "Review this Python concurrency design and identify race conditions"
-```
-
-The default remains v2. The candidate adds boundary-aware weighted rules, negation handling,
-expanded synthetic privacy guards, conservative context sizing, frozen absolute cost/latency
-transforms, and catalog-order-independent tie-breaking. Its learned sparse routing experiment is
-not active because it did not pass the frozen quality/cost promotion criteria.
+Routellect exposes one deterministic policy across the web, API, and CLI. It combines the supported
+hard constraints and ranking behavior with boundary-aware matching, negation handling, expanded
+synthetic privacy guards, Unicode normalization, and conservative context sizing. Historical G7
+research candidates are retained only as evidence and are not selectable runtime policies.
 
 Use a stable local feedback profile to receive personalized advice after the safety gate clears:
 
@@ -156,16 +149,16 @@ archive before moving it outside the trusted host.
 
 ## Current phase
 
-G7-C, the bounded G7-C2 research milestone, G7-D validation/candidate freeze, and the completed G7-E
-evaluation are approved. On 15,634 overlap-screened untouched prompts, the
-frozen candidate improves utility over fixed and content-blind controls, but retains only 97.59% of
-fixed quality, saves 9.69% normalized compute, closes 3.02% of Oracle regret, and materially
-underperforms on reasoning. The frozen conjunctive rule therefore rejects production promotion.
-Version 0.5.0 and deterministic-v2 remain the production defaults; v3 remains inactive and the open
-evaluation range is prohibited for tuning. Sponsor approval accepts this non-promotion outcome.
-G8-A subsequently approved the architecture for consolidating the product to one deterministic
-policy; implementation is gated at G8-B and has not changed runtime behavior. See the
+G7-E rejected the complete v3 research candidate after its untouched evaluation failed quality,
+compute, regret, and reasoning-slice gates. G8-B now implements the approved simplification:
+Routellect has one `deterministic-unified-v1` policy, retaining the supported hard constraints and
+ranking while adding isolated boundary, negation, privacy, Unicode, and token-estimation hardening.
+The selector, alternate runtime, sparse module, and packaged strength artifacts are removed. The
+open G7-E range remains prohibited for tuning, and no new quality claim is made. G8-B awaits sponsor
+review; the Podman rebuild and release verification remain gated at G8-C. See the
 [G7-E verification report](outputs/phase-7e-verification-report.md) and
 [decision gate](outputs/phase-7e-gate-review.md) for full evidence and limitations, and the
 [G8 consolidation plan](outputs/phase-8-single-policy-consolidation-plan.md) for the approved
-single-policy boundary.
+single-policy boundary. Current implementation evidence is in the
+[G8-B verification report](outputs/phase-8b-verification-report.md) and
+[G8-B gate review](outputs/phase-8b-gate-review.md).

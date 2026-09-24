@@ -106,9 +106,10 @@ def test_g7e_protocol_uses_new_range_and_frozen_candidate() -> None:
     assert G7E_COMMON.START_PROMPT_ID == 15_001
     assert G7E_COMMON.END_PROMPT_ID == 30_968
     assert G7E_COMMON.EXPECTED_ROWS == 15_968
-    assert _sha256(
-        Path("src/routellect/data/g7c2_multisource_strength.json")
-    ) == G7E_COMMON.FROZEN_ARTIFACT_SHA256
+    freeze = json.loads(Path("outputs/phase-7d-candidate-freeze.json").read_text())
+    assert freeze["candidate"]["artifact_sha256"] == G7E_COMMON.FROZEN_ARTIFACT_SHA256
+    assert not Path("src/routellect/data/g7c2_multisource_strength.json").exists()
+    assert not Path("src/routellect/data/g7_sparse_strength.json").exists()
     assert G7E_COMMON.canonical_prompt("ＡＰＩ\r\n  Review") == "api review"
 
 

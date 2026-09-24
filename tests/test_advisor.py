@@ -33,9 +33,12 @@ def test_same_frozen_input_is_stable_except_receipt_fields() -> None:
     request = request_for("Debug this Python function", objective=Objective.BALANCED)
     first = advisor.recommend(request)
     second = advisor.recommend(request)
-    assert [item.configuration.configuration_id for item in first.recommendations] == [
-        item.configuration.configuration_id for item in second.recommendations
-    ]
+    first_payload = first.model_dump(mode="json")
+    second_payload = second.model_dump(mode="json")
+    for payload in (first_payload, second_payload):
+        payload.pop("recommendation_id")
+        payload.pop("created_at")
+    assert first_payload == second_payload
 
 
 def test_local_only_never_returns_hosted_model() -> None:
@@ -43,6 +46,21 @@ def test_local_only_never_returns_hosted_model() -> None:
         request_for("Explain this algorithm", privacy=Privacy.LOCAL_ONLY)
     )
     assert all(item.configuration.deployment == "local" for item in response.recommendations)
+
+
+def test_detected_sensitive_content_tightens_standard_privacy() -> None:
+    response = Advisor().recommend(
+        request_for("Summarize the account for person@example.com", privacy=Privacy.STANDARD)
+    )
+    configurations = {
+        str(raw["configuration_id"]): raw for raw in BUILTIN_CATALOG.configurations
+    }
+    assert "email" in response.analysis.privacy_flags
+    assert all(
+        Privacy.NO_TRAINING.value
+        in configurations[item.configuration.configuration_id]["privacy"]
+        for item in response.recommendations
+    )
 
 
 def test_advice_causes_zero_network_calls(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -100,35 +118,35 @@ def test_prompt_uncertainty_reduces_confidence() -> None:
     assert ambiguous.recommendations[0].confidence <= clear.recommendations[0].confidence
 
 
-def test_v2_remains_the_production_default_and_v3_is_explicit() -> None:
-    request = request_for("Debug this Python function")
-    default = Advisor().recommend(request)
-    candidate = Advisor(policy_version="v3").recommend(request)
-    assert default.advisor_version.startswith("deterministic-v2")
-    assert candidate.advisor_version.startswith("deterministic-v3-candidate")
-    assert "v3_boundary_lexical_profile" in candidate.analysis.reason_codes
+def test_one_unified_policy_is_the_only_advisor_path() -> None:
+    response = Advisor().recommend(request_for("Debug this Python function"))
+    assert response.advisor_version == "deterministic-unified-v1+feedback-bayes-v1"
+    assert "boundary_lexical_profile" in response.analysis.reason_codes
+    with pytest.raises(TypeError, match="policy_version"):
+        Advisor(policy_version="v3")  # type: ignore[call-arg]
 
 
-def test_v3_score_is_stable_when_irrelevant_dominated_candidate_is_added() -> None:
+def test_ineligible_catalog_item_does_not_change_existing_recommendations() -> None:
     request = request_for("Draft a concise welcome email")
-    base = Advisor(policy_version="v3").recommend(request)
-    dominated = dict(BUILTIN_CATALOG.configurations[0])
-    dominated.update(
+    base = Advisor().recommend(request)
+    ineligible = dict(BUILTIN_CATALOG.configurations[0])
+    ineligible.update(
         {
-            "configuration_id": "zz-dominated-test-candidate",
-            "model_id": "dominated-test-candidate",
-            "display_name": "Dominated test candidate",
+            "configuration_id": "zz-ineligible-test-candidate",
+            "model_id": "ineligible-test-candidate",
+            "display_name": "Ineligible test candidate",
+            "capabilities": [],
             "input_usd_per_million": 999.0,
             "output_usd_per_million": 999.0,
             "latency_ms": 99_999.0,
-            "quality": {key: 0.01 for key in dominated["quality"]},
+            "quality": {key: 0.01 for key in ineligible["quality"]},
         }
     )
     expanded_catalog = replace(
         BUILTIN_CATALOG,
-        configurations=BUILTIN_CATALOG.configurations + (dominated,),
+        configurations=BUILTIN_CATALOG.configurations + (ineligible,),
     )
-    expanded = Advisor(catalog=expanded_catalog, policy_version="v3").recommend(request)
+    expanded = Advisor(catalog=expanded_catalog).recommend(request)
     base_scores = {
         item.configuration.configuration_id: item.score for item in base.recommendations
     }
@@ -143,8 +161,8 @@ def test_v3_score_is_stable_when_irrelevant_dominated_candidate_is_added() -> No
     ]
 
 
-def test_v3_keeps_hard_privacy_budget_latency_and_capability_authority() -> None:
-    advisor = Advisor(policy_version="v3")
+def test_unified_policy_keeps_hard_privacy_budget_latency_and_capability_authority() -> None:
+    advisor = Advisor()
     local = advisor.recommend(
         request_for(
             "Debug this Python function and protect synthetic SSN 123-45-6789",
@@ -161,3 +179,30 @@ def test_v3_keeps_hard_privacy_budget_latency_and_capability_authority() -> None
         request_for("Draft a concise welcome email", latency_slo_ms=1_000)
     )
     assert all(item.latency.expected <= 1_000 for item in fast.recommendations)
+
+    with pytest.raises(ValueError, match="No catalog configuration"):
+        advisor.recommend(request_for("Draft a concise welcome email", min_quality=1.0))
+
+
+def test_configuration_id_breaks_exact_score_ties_stably() -> None:
+    first = dict(BUILTIN_CATALOG.configurations[-2])
+    second = dict(first)
+    first.update(
+        {
+            "configuration_id": "a-identical-candidate",
+            "model_id": "identical-a",
+            "display_name": "Identical candidate A",
+        }
+    )
+    second.update(
+        {
+            "configuration_id": "b-identical-candidate",
+            "model_id": "identical-b",
+            "display_name": "Identical candidate B",
+        }
+    )
+    catalog = replace(BUILTIN_CATALOG, configurations=(second, first))
+    response = Advisor(catalog=catalog).recommend(request_for("Draft a concise welcome email"))
+    assert response.recommendations[0].configuration.configuration_id == (
+        "a-identical-candidate"
+    )

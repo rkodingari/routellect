@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from routellect.advisor import Advisor
 from routellect.cli import main
 from routellect.schemas import PromptMessage, RecommendationRequest
@@ -22,7 +24,8 @@ def test_catalog_command_returns_version(capsys) -> None:  # type: ignore[no-unt
     assert json.loads(capsys.readouterr().out)["catalog_version"]
 
 
-def test_cli_requires_explicit_v3_candidate_flag(capsys) -> None:  # type: ignore[no-untyped-def]
-    assert main(["advise", "Draft a concise email", "--policy-version", "v3", "--json"]) == 0
-    response = json.loads(capsys.readouterr().out)
-    assert response["advisor_version"].startswith("deterministic-v3-candidate")
+def test_cli_has_no_alternate_policy_selector(capsys) -> None:  # type: ignore[no-untyped-def]
+    with pytest.raises(SystemExit) as error:
+        main(["advise", "Draft a concise email", "--policy-version", "v3", "--json"])
+    assert error.value.code == 2
+    assert "unrecognized arguments" in capsys.readouterr().err

@@ -38,12 +38,6 @@ def parser() -> argparse.ArgumentParser:
     advise.add_argument("--output-tokens", type=int, default=1000)
     advise.add_argument("--max-cost", type=float)
     advise.add_argument("--feedback-profile")
-    advise.add_argument(
-        "--policy-version",
-        choices=("v2", "v3"),
-        default="v2",
-        help="Use v2 (production) or the explicit v3 experimental candidate",
-    )
     advise.add_argument("--json", action="store_true", dest="as_json")
 
     catalog = commands.add_parser("catalog", help="Inspect or manage offline catalogs")
@@ -115,7 +109,6 @@ def main(argv: list[str] | None = None) -> int:
     active_advisor = Advisor(
         catalog=manager.current(),
         feedback_signals=FeedbackLearner(store).signals,
-        policy_version=args.policy_version,
     )
     try:
         response = active_advisor.recommend(request)

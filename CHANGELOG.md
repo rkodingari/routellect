@@ -56,6 +56,20 @@ the first release is approved.
 - G8-A architecture approval for one supported deterministic policy, preserving v2 constraints and
   ranking while admitting only isolated prompt-safety hardening; implementation remains gated.
 
+### Changed
+
+- Consolidated the advisor and profiler into one
+  `deterministic-unified-v1+feedback-bayes-v1` path across the dashboard, API, CLI, and software
+  benchmark.
+- Ported reviewed Unicode normalization, boundary-aware matching, negation handling, expanded
+  privacy canaries, conservative token sizing, and deterministic reason codes while retaining the
+  supported v2 hard constraints and relative ranking.
+
+### Removed
+
+- Removed the CLI policy selector, alternate v3 advisor/profiler branches, sparse runtime module,
+  packaged G7/G7-C2 strength artifacts, and obsolete policy-training implementations.
+
 ### Security
 
 - No provider credentials, target-model adapters, prompt persistence, or runtime model downloads.

@@ -1,8 +1,8 @@
 # Routellect Phase 8 Single-Policy Consolidation Plan
 
 Date: 2026-09-24
-Status: G8-A architecture approved; awaiting G8-B implementation approval
-Production behavior: Unchanged (`deterministic-v2+feedback-bayes-v1`)
+Status: G8-B implemented and verified; awaiting sponsor decision
+Release status: Not authorized
 
 ## 1. Decision
 
@@ -105,8 +105,8 @@ G8-B implementation is not accepted until it passes:
 - differential regression checks against v2 hard constraints and shortlist behavior;
 - privacy false-positive and recall canaries;
 - score-reconciliation and cross-process determinism checks;
-- secret scanning and dependency/build verification; and
-- rootless Podman health, read-only filesystem, dropped-capability, and non-root checks.
+- secret scanning, dependency verification, and built-wheel inspection; and
+- rootless Podman health, read-only filesystem, dropped-capability, and non-root checks in G8-C.
 
 Development and validation evidence may be used to diagnose regressions. The now-open G7-E range
 must not be used for tuning, threshold selection, or another confirmatory claim. Consolidation may
@@ -145,3 +145,11 @@ release tag.
 The sponsor approved G8-A on 2026-09-24 by responding `Approve G8-A`. This approval freezes the
 design only. It does not authorize G8-B implementation, a release, a new external benchmark, or a
 change to the currently running production policy.
+
+## 9. G8-B execution record
+
+The sponsor approved G8-B on 2026-09-24 by responding `Approve G8-B`. The implementation and
+software verification are complete. The verification plan's Podman bullet conflicted with the
+explicit G8-C phase boundary; the phase boundary controls. G8-B therefore verifies the built wheel,
+while G8-C owns the image rebuild and hardened container checks. G8-C and any release remain
+unauthorized pending the G8-B sponsor decision.

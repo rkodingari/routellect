@@ -1,0 +1,97 @@
+{
+  "schema": "routellect-g8b-verification-v1",
+  "generated_at": "2026-09-24T09:40:49Z",
+  "status": "implemented_awaiting_sponsor_review",
+  "release_authorized": false,
+  "container_verification_authorized": false,
+  "policy": {
+    "advisor_version": "deterministic-unified-v1+feedback-bayes-v1",
+    "public_policy_selectors": 0,
+    "deterministic_profiler_entry_points": 1,
+    "alternate_advisor_branches": 0,
+    "sparse_runtime_modules": 0,
+    "packaged_sparse_artifacts": 0,
+    "historical_audit_policy_fields_retained": true
+  },
+  "implementation": {
+    "retained": [
+      "v2_hard_constraints",
+      "v2_objective_weights",
+      "v2_relative_cost_latency_ranking",
+      "pareto_and_specialist_shortlist",
+      "bounded_feedback_personalization",
+      "score_reconciliation",
+      "stable_configuration_id_ties"
+    ],
+    "ported_correctness_hardening": [
+      "unicode_nfkc_normalization",
+      "boundary_aware_weighted_matching",
+      "local_negation_handling",
+      "expanded_synthetic_privacy_patterns",
+      "conservative_token_estimation",
+      "explicit_deterministic_reason_codes"
+    ],
+    "excluded": [
+      "v3_absolute_cost_latency_scoring",
+      "sparse_strength_router",
+      "g7_sparse_strength_artifact",
+      "g7c2_multisource_strength_artifact"
+    ]
+  },
+  "verification": {
+    "ruff": "passed",
+    "tests": {
+      "passed": 71,
+      "failed": 0,
+      "upstream_deprecation_warnings": 2
+    },
+    "line_coverage_percent": 87.47,
+    "coverage_floor_percent": 80.0,
+    "frontend_typecheck": "passed",
+    "frontend_production_build": "passed",
+    "local_api_smoke": {
+      "status": "passed",
+      "advisor_version": "deterministic-unified-v1+feedback-bayes-v1",
+      "task_family": "code",
+      "non_executing": true
+    },
+    "cross_process_determinism": "passed",
+    "secret_scan": {
+      "scanned_files": 99,
+      "scanned_bytes": 649570,
+      "unrecognized_findings": 0,
+      "acknowledged_synthetic_canaries": 3
+    },
+    "wheel": {
+      "file": "routellect-0.5.0-py3-none-any.whl",
+      "size_bytes": 117514,
+      "sha256": "2a17d3bb450db1af160b4959987256ecba1c02205957111b2a889f0541ffade0",
+      "alternate_policy_modules": 0,
+      "sparse_artifacts": 0
+    },
+    "builtin_software_benchmark": {
+      "fixture_count": 7,
+      "task_family_accuracy": 1.0,
+      "primary_pareto_rate": 1.0,
+      "specialist_shortlist_coverage": 1.0,
+      "score_reconciliation_max_error": 1.1102230246251565e-16,
+      "advisor_latency_mean_ms": 0.616,
+      "advisor_latency_p95_ms": 2.484,
+      "target_provider_calls": 0,
+      "raw_prompts_persisted": 0
+    }
+  },
+  "source_hashes": {
+    "src/routellect/advisor.py": "d9f7324fb2a7e070124487bac62390c419d89e9651205495ccb333aedbdeaccc",
+    "src/routellect/profiler.py": "68e333e98e038370c1d945b6c510b29deffcc526675646504f56322063b4fe5f"
+  },
+  "evidence_boundaries": {
+    "g7e_outcomes_used_for_tuning": false,
+    "new_external_effectiveness_claim": false,
+    "target_models_called": false,
+    "provider_credentials_used": false,
+    "raw_prompts_persisted_by_verification": false,
+    "podman_rebuild_deferred_to_g8c": true
+  },
+  "acceptance_recommendation": "approve_g8b_and_authorize_g8c_container_verification"
+}

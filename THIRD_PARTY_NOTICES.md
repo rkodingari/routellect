@@ -25,4 +25,5 @@ catalog, or final-decision authority.
 - Dataset page: https://huggingface.co/datasets/routellm/gpt4_judge_battles
 
 A minimized 20,000-row snapshot was used only for G7-C2 auxiliary development. Raw model responses
-are neither retained nor shipped. The derived sparse artifact remains experimental and inactive.
+are neither retained nor shipped. The rejected sparse artifact is preserved only in Git history
+and prompt-free evaluation records; it is not included in the runtime package.

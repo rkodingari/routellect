@@ -295,7 +295,7 @@ class CatalogRollbackResult(StrictModel):
 class BenchmarkRunRequest(StrictModel):
     evidence_snapshot_id: str = "builtin-g2-fixtures-v1"
     advisor_versions: list[str] = Field(
-        default_factory=lambda: ["deterministic-v2+feedback-bayes-v1"]
+        default_factory=lambda: ["deterministic-unified-v1+feedback-bayes-v1"]
     )
     split: Literal["development", "validation", "hidden_test", "feedback_holdout"] = "validation"
     seed: int = 42

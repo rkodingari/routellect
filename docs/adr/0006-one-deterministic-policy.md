@@ -1,7 +1,7 @@
 # ADR 0006: Expose one deterministic recommendation policy
 
 Date: 2026-09-24
-Status: Accepted at G8-A; implementation pending G8-B
+Status: Implemented at G8-B; awaiting sponsor verification approval
 
 ## Context
 
@@ -30,3 +30,10 @@ claims require a separately preregistered untouched evaluation.
 
 The detailed migration and acceptance criteria are frozen in
 `outputs/phase-8-single-policy-consolidation-plan.md`.
+
+## Implementation
+
+G8-B removes the CLI selector, alternate advisor and profiler branches, sparse runtime module,
+packaged strength artifacts, and obsolete policy-training implementations. New responses identify
+the single path as `deterministic-unified-v1+feedback-bayes-v1`. Container rebuilding and release
+verification remain gated at G8-C.

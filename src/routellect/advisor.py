@@ -2,12 +2,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass, replace
 from datetime import UTC, datetime
-from typing import Any, Literal
+from typing import Any
 from uuid import uuid4
 
 from routellect.assessor import LocalAssessor
 from routellect.catalog import BUILTIN_CATALOG, Catalog
-from routellect.profiler import deterministic_profile, deterministic_profile_v3
+from routellect.profiler import deterministic_profile
 from routellect.schemas import (
     EvidenceReference,
     FeedbackSignal,
@@ -42,10 +42,7 @@ WEIGHTS = {
     Objective.FASTEST: (0.30, 0.10, 0.60),
 }
 
-ADVISOR_VERSION = "deterministic-v2+feedback-bayes-v1"
-EXPERIMENTAL_ADVISOR_VERSION = "deterministic-v3-candidate.1+feedback-bayes-v1"
-V3_COST_SCALE_USD = 0.01
-V3_LATENCY_SCALE_MS = 2_000.0
+ADVISOR_VERSION = "deterministic-unified-v1+feedback-bayes-v1"
 
 
 class Advisor:
@@ -54,19 +51,13 @@ class Advisor:
         catalog: Catalog = BUILTIN_CATALOG,
         assessor: LocalAssessor | None = None,
         feedback_signals: Any | None = None,
-        policy_version: Literal["v2", "v3"] = "v2",
     ) -> None:
         self.catalog = catalog
         self.assessor = assessor or LocalAssessor()
         self.feedback_signals = feedback_signals
-        self.policy_version = policy_version
 
     def recommend(self, request: RecommendationRequest) -> RecommendationResponse:
-        fast_profile = (
-            deterministic_profile_v3(request.prompt, request.assessor_mode)
-            if self.policy_version == "v3"
-            else deterministic_profile(request.prompt, request.assessor_mode)
-        )
+        fast_profile = deterministic_profile(request.prompt, request.assessor_mode)
         profile = self.assessor.assess(request.prompt, fast_profile, request.assessor_mode)
         effective_privacy = self._effective_privacy(request.privacy, profile.privacy_flags)
         required_capabilities = request.required_capabilities | profile.required_capabilities
@@ -112,11 +103,7 @@ class Advisor:
         return RecommendationResponse(
             recommendation_id=f"rec_{uuid4().hex}",
             created_at=datetime.now(UTC),
-            advisor_version=(
-                EXPERIMENTAL_ADVISOR_VERSION
-                if self.policy_version == "v3"
-                else ADVISOR_VERSION
-            ),
+            advisor_version=ADVISOR_VERSION,
             catalog_version=self.catalog.version,
             catalog_observed_at=self.catalog.observed_at,
             analysis=profile,
@@ -170,27 +157,15 @@ class Advisor:
         quality_weight, cost_weight, latency_weight = WEIGHTS[request.objective]
         candidates: list[Candidate] = []
         for raw, quality, cost, latency in eligible:
-            if self.policy_version == "v3":
-                cost_utility = 1 / (1 + cost / V3_COST_SCALE_USD)
-                latency_utility = 1 / (1 + latency / V3_LATENCY_SCALE_MS)
-                cost_explanation = (
-                    f"Frozen absolute cost transform contributes "
-                    f"{cost_weight * cost_utility:+.3f}."
-                )
-                latency_explanation = (
-                    f"Frozen absolute latency transform contributes "
-                    f"{latency_weight * latency_utility:+.3f}."
-                )
-            else:
-                cost_utility = 1 - cost / max_cost
-                latency_utility = 1 - latency / max_latency
-                cost_explanation = (
-                    f"Relative cost utility contributes {cost_weight * cost_utility:+.3f}."
-                )
-                latency_explanation = (
-                    f"Relative latency utility contributes "
-                    f"{latency_weight * latency_utility:+.3f}."
-                )
+            cost_utility = 1 - cost / max_cost
+            latency_utility = 1 - latency / max_latency
+            cost_explanation = (
+                f"Relative cost utility contributes {cost_weight * cost_utility:+.3f}."
+            )
+            latency_explanation = (
+                f"Relative latency utility contributes "
+                f"{latency_weight * latency_utility:+.3f}."
+            )
             evidence_risk = (
                 0.04 if raw["evidence"]["source_type"] == "provider_documentation" else 0.10
             )
